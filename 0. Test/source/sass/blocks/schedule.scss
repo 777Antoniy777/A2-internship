@@ -1,0 +1,36 @@
+.schedule__description {
+  font-size: $body-font-size - 6px;
+  line-height: $body-line-height - 14px;
+  text-align: center;
+  color: rgba(51, 51, 51, 0.5);
+  margin-bottom: 30px;
+}
+
+.schedule__description span {
+  font-weight: $font-bold;
+  text-transform: uppercase;
+}
+
+.schedule__description a {
+  @include link(none, rgba(51, 51, 51, 0.5));
+  font-weight: $font-bold;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $button-hover;
+  }
+
+  &:active {
+    color: $button-active;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .schedule {
+    margin-bottom: 42px;
+  }
+
+  .schedule__description {
+    margin-right: 4px;
+  }
+}

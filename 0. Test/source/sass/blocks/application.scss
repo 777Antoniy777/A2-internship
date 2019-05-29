@@ -1,0 +1,124 @@
+.application {
+  color: $text-white;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 40px 0 40px;
+}
+
+.application__title {
+  position: relative;
+  font-family: $font-acme;
+  font-size: $body-font-size + 78px;
+  line-height: $body-line-height + 80px;
+  margin-top: 0;
+
+  &--add {
+    font-family: $font-opensans;
+    font-size: $body-font-size - 6px;
+    line-height: $body-line-height - 14px;
+    letter-spacing: 0.5em;
+  }
+
+  &::before {
+    @include pseudo;
+    right: 50%;
+    bottom: -36px;
+    width: 60px;
+    height: 5px;
+    background-color: $button-hover;
+    transform: translateX(50%);
+  }
+
+  .application__title--add {
+    &::before {
+      content: none;
+    }
+  }
+}
+
+.application__link-wrapper {
+  @include flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.application__link {
+  @include flex;
+  @include link;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: $body-font-size - 6px;
+  line-height: $body-line-height - 8px;
+  font-weight: $font-bold;
+  width: 200px;
+  min-height: 60px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: $text-black;
+  }
+
+  &:active {
+    background-color: rgba($text-black, 0.7);
+  }
+
+  &--booking {
+    background-color: $form-button-color;
+    border: none;
+    margin-bottom: 30px;
+
+    &:hover {
+      background-color: $button-hover;
+    }
+  
+    &:active {
+      background-color: $button-active;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .application__link-wrapper {
+    justify-content: space-around;
+  }
+
+  .application__link {
+    margin: 0 20px 30px 20px;
+
+    &--booking {
+      margin: 0 20px 30px 20px;
+    }
+  }
+
+  .application__image {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .application {
+    min-height: 489px;
+    padding-top: 89px;
+  }
+
+  .application__title {
+    display: block;
+    line-height: $body-line-height + 47px;
+
+    &--add {
+      display: inline;
+      margin-left: 11px;
+    }
+  }
+
+  .application__link-wrapper {
+    justify-content: center;
+    margin-top: 67px;
+  }
+}

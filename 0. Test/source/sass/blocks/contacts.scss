@@ -1,0 +1,124 @@
+.contacts__title {
+  font-family: $font-acme;
+  font-size: $body-font-size + 18px;
+  line-height: $body-line-height + 20px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.contacts__description {
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+  font-weight: $font-bold;
+  margin-bottom: 35px;
+}
+
+.contacts__form input,
+.contacts__form textarea {
+  display: block;
+  font-size: $body-font-size - 4px;
+  line-height: $body-line-height - 9px;
+  min-width: 280px;
+  min-height: 45px;
+  margin: 0 auto 25px;
+  padding: 12px 20px;
+  background-color: $input-color;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.contacts__form textarea {
+  min-height: 100px;
+  padding-top: 10px;
+}
+
+.contacts input::placeholder,
+.contacts textarea::placeholder {
+  font-size: $body-font-size - 4px;
+  line-height: $body-line-height - 9px;
+  color: $placeholder-color;
+}
+
+.contacts textarea {
+  resize: none;
+}
+
+.contacts__button {
+  @include link;
+  display: block;
+  font-size: $body-font-size - 6px;
+  line-height: $body-line-height - 8px;
+  font-weight: $font-bold;
+  min-width: 280px;
+  min-height: 60px;
+  text-transform: uppercase;
+  background-color: $form-button-color;
+  margin: 0 auto;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $button-hover;
+  }
+
+  &:active {
+    background-color: $button-active;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__form input,
+  .contacts__form textarea {
+    width: 90%;
+  }
+
+  .contacts__button {
+    width: 90%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    text-align: center;
+    margin-top: 89px;
+    margin-bottom: 71px;
+  }
+
+  .contacts__title {
+    margin-right: 5px;
+    margin-bottom: 33px;
+  }
+
+  .contacts__description {
+    width: 565px;
+    margin: 0 auto 48px;
+  }
+
+  .contacts__form {
+    @include flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .contacts__form input {
+    width: 380px;
+    height: 60px;
+    margin: 0;
+  }
+
+  .contacts__form textarea {
+    width: 1155px;
+    height: 120px;
+    padding-top: 19px;
+    margin-top: 9px;
+    margin-bottom: 43px;
+  }
+
+  .contacts__button {
+    width: 640px;
+    min-height: 60px;
+  }
+}

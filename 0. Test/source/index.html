@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Frontent test</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link href="/fonts/opensans.woff2" as="font" rel="preload">
+    <link href="/fonts/opensansbold.woff2" as="font" rel="preload">
+    <link href="/fonts/acme.woff2" as="font" rel="preload">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement("picture");
+    </script>
+    <script src="js/picturefill.min.js" async></script>
+  </head>
+  <body class="main-page">
+    <!--Хедер гл.стр-->
+    <header class="main-header">
+      <div class="main-navigation main-navigation--closed main-navigation--nojs">
+        <div class="main-navigation__button-wrapper">
+          <button class="main-navigation__button" type="button"><span class="visually-hidden">Меню сайта</span></button>
+        </div>
+        <div class="main-navigation__inner-wrapper">
+          <nav class="main-navigation__nav">
+            <ul class="main-navigation__list site-list">
+              <li class="site-list__item site-list__item--active"><a class="site-list__link site-list__link--active">Home</a></li>
+              <li class="site-list__item"><a class="site-list__link" href="#">About</a></li>
+              <li class="site-list__item"><a class="site-list__link" href="#">Team</a></li>
+              <li class="site-list__item"><a class="site-list__link" href="#">Booking</a></li>
+            </ul>
+          </nav>
+          <a class="main-navigation__logo-link">
+            <img src="img/svg/logo.svg" width="150" height="150" alt="Лого Fancy Sailor">
+          </a>
+          <nav class="main-navigation__nav">
+            <ul class="main-navigation__list site-list">
+              <li class="site-list__item"><a class="site-list__link" href="#">Menu</a></li>
+              <li class="site-list__item"><a class="site-list__link" href="#">Galerie</a></li>
+              <li class="site-list__item"><a class="site-list__link" href="#">Events</a></li>
+              <li class="site-list__item"><a class="site-list__link" href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!--Приветствие-->
+      <section class="application">
+        <div class="site-wrapper">
+          <h1 class="application__title"><span class="application__title application__title--add">Restaurant</span><br>Fancy SaIlor</h1>
+          <div class="application__link-wrapper">
+            <a class="application__link application__link--booking" href="#">Book table</a>
+            <a class="application__link" href="#">Explore</a>
+          </div>
+        </div>
+      </section>
+    </header>
+    <!--Основная часть гл.стр-->
+    <main class="main">
+      <!--О нас-->
+      <section class="about">
+        <div class="site-wrapper">
+          <div class="about__inner-wrapper">
+            <h2 class="about__title">About us</h2>
+            <p class="about__description about__description--sup">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</p>
+            <p class="about__description">Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non<br> ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.</p>
+          </div>
+          <picture>
+            <source type="image/webp" media="(min-width: 960px)" srcset="img/fire-desktop.webp 1x, img/fire-desktop@2x.webp 2x">
+            <source media="(min-width: 960px)" srcset="img/fire-desktop.png, img/fire-desktop@2x.png 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/fire-tablet.webp 1x, img/fire-tablet@2x.webp 2x">
+            <source media="(min-width: 660px)" srcset="img/fire-tablet.png, img/fire-tablet@2x.png 2x">
+            <source type="image/webp" srcset="img/fire-mobile.webp 1x, img/fire-desktop.webp 2x">
+            <img class="about__image" src="img/fire-mobile.png" srcset="img/fire-desktop.png 2x" alt="Горящие дрова">
+          </picture>
+        </div>
+      </section>
+      <!--Бронирование-->
+      <section class="booking">
+        <div class="site-wrapper">
+          <div class="booking__inner-wrapper">
+            <h2 class="booking__title">Book a table</h2>
+            <form class="booking__form" name="booking" action="https://echo.htmlacademy.ru" method="post">
+              <label class="visually-hidden" for="booking-name">Введите ваше имя:</label>
+              <input type="text" name="name" placeholder="Name" id="booking-name" required>
+              <label class="visually-hidden" for="booking-email">Введите ваш email:</label>
+              <input type="email" name="email" placeholder="Email" id="booking-email" required>
+              <label class="visually-hidden" for="booking-phone">Введите ваш телефон:</label>
+              <input type="tel" name="phone" placeholder="Phone" id="booking-phone" required>
+              <label class="visually-hidden" for="booking-people">Выберите количество человек:</label>
+              <div>
+              <select name="people" id="booking-people" required>
+                <option value="" selected disabled>People</option>
+                <option value="1">One person</option>
+                <option value="2">Two person</option>
+                <option value="3">Other</option>
+              </select>
+              </div>
+              <label class="visually-hidden" for="booking-date">Введите дату:</label>
+              <input type="text" name="date" placeholder="Date (mm/dd)" id="booking-date" required>
+              <label class="visually-hidden" for="booking-time">Выберите время:</label>
+              <div>
+              <select name="time" id="booking-time" required>
+                <option value="" selected disabled>Time</option>
+                <option value="1">Before 12:00</option>
+                <option value="2">After 12:00</option>
+              </select>
+              </div>
+              <button class="booking__button" type="submit">Book now</button>
+            </form>
+          </div>
+          <picture>
+            <source type="image/webp" media="(min-width: 960px)" srcset="img/clock-desktop.webp 1x, img/clock-desktop@2x.webp 2x">
+            <source media="(min-width: 960px)" srcset="img/clock-desktop.png, img/clock-desktop@2x.png 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/clock-tablet.webp 1x, img/clock-tablet@2x.webp 2x">
+            <source media="(min-width: 660px)" srcset="img/clock-tablet.png, img/clock-tablet@2x.png 2x">
+            <source type="image/webp" srcset="img/clock-mobile.webp 1x, img/clock-desktop.webp 2x">
+            <img class="booking__image" src="img/clock-mobile.png" srcset="img/clock-desktop.png 2x" alt="Механизм">
+          </picture>
+        </div>
+      </section>
+      <!--Расписание-->
+      <section class="schedule">
+        <div class="site-wrapper">
+          <h2 class="visually-hidden">Время работы ресторана</h2>
+          <p class="schedule__description">
+              Mon - Fri: <span>8pm - 10pm</span>, Sat - Sun: <span>8am - 3am</span>,
+              Phone: <a href="tel:+40729131637">+40 729 131 637</a>/<a href="tel:+40726458782">+40 726 458 782</a>
+          </p>
+        </div>
+      </section>
+      <!--Особенности-->
+      <section class="special">
+        <div class="site-wrapper">
+          <h2 class="special__title">Specialties</h2>
+          <div class="special__inner-wrapper">
+            <div class="special__subtitle-wrapper">
+                <h3 class="special__subtitle">Chocolate pancakes</h3>
+                <p class="special__description special__description--sup">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</p>
+                <p class="special__description">Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.</p>
+            </div>
+            <picture>
+              <source type="image/webp" media="(min-width: 960px)" srcset="img/ice-cream-desktop.webp 1x, img/ice-cream-desktop@2x.webp 2x">
+              <source media="(min-width: 960px)" srcset="img/ice-cream-desktop.png, img/ice-cream-desktop@2x.png 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/ice-cream-tablet.webp 1x, img/ice-cream-tablet@2x.webp 2x">
+              <source media="(min-width: 660px)" srcset="img/ice-cream-tablet.png, img/ice-cream-tablet@2x.png 2x">
+              <source type="image/webp" srcset="img/ice-cream-mobile.webp 1x, img/ice-cream-desktop.webp 2x">
+              <img class="special__image" src="img/ice-cream-mobile.png" srcset="img/ice-cream-desktop.png 2x" alt="Мороженое">
+            </picture>
+          </div>
+        </div>
+      </section>
+      <!--Контакты-->
+      <section class="contacts">
+        <div class="site-wrapper">
+          <h2 class="contacts__title">Contact</h2>
+          <p class="contacts__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</p>
+          <form class="contacts__form" name="contacts" action="https://echo.htmlacademy.ru" method="post">
+            <label class="visually-hidden" for="contacts-name">Введите ваше имя:</label>
+            <input type="text" name="name" placeholder="Name" id="contacts-name" required>
+            <label class="visually-hidden" for="contacts-email">Введите ваш email:</label>
+            <input type="email" name="email" placeholder="Email" id="contacts-email" required>
+            <label class="visually-hidden" for="contacts-phone">Введите ваш телефон:</label>
+            <input type="tel" name="phone" placeholder="Phone" id="contacts-phone" required>
+            <label class="visually-hidden" for="contacts-message">Введите ваше сообщение:</label>
+            <textarea name="message" placeholder="Message" maxlength="350" id="contacts-message"></textarea>
+            <button class="contacts__button" type="submit">Send message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!--Футер гл.стр-->
+    <footer class="main-footer">
+      <div class="site-wrapper">
+        <div class="copyright">
+          <p class="copyright__description">© Copyright <a href="#">Fancy Sailor</a> 2014</p>
+        </div>
+      </div>
+    </footer>
+    <script src='js/all.min.js'></script>
+  </body>
+</html>

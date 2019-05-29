@@ -1,0 +1,30 @@
+.copyright__description {
+  font-size: $body-font-size - 6px;
+  line-height: $body-line-height - 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.copyright__description a {
+  &:hover {
+    color: $button-hover;
+  }
+
+  &:active {
+    color: $button-active;
+  }
+}
+
+.copyright__description a {
+  @include link(none, rgba(255, 255, 255, 0.5));
+  font-weight: $font-bold;
+}
+
+@media (min-width: $desktop-width) {
+  .copyright {
+    margin-top: 19px;
+  }
+
+  .copyright__description {
+    letter-spacing: 0.01em;
+  }
+}

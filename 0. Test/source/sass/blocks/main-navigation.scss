@@ -1,0 +1,157 @@
+.main-navigation {
+  @include flex(flex, column);
+  width: 100%;
+}
+
+.main-navigation__button-wrapper {
+  @include flex;
+  justify-content: flex-end;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.main-navigation__button {
+  position: relative;
+  width: 50px;
+  height: 24px;
+  margin: 20px 20px 20px 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.main-navigation__inner-wrapper {
+  box-shadow: 0 1px 0 0 $text-white,
+              0 -1px 0 0 $text-white;
+}
+
+.main-navigation__list {
+  @include list;
+}
+
+.main-navigation__logo-link {
+  display: none;
+}
+
+//  стили для js гл.меню
+.main-navigation--closed .main-navigation__button {
+  &::before,
+  &::after {
+    @include pseudo;
+    right: 0;
+    width: 50px;
+    height: 4px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    top: 21px;
+    box-shadow: 0 -10px 0 0 #ffffff;
+  }
+
+  &::after {
+    top: 1px;
+    box-shadow: none;
+  }
+}
+
+.main-navigation--opened .main-navigation__button {
+  width: 20px;
+
+  &::before,
+  &::after {
+    @include pseudo;
+    top: 10px;
+    right: -4px;
+    width: 30px;
+    height: 4px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(135deg);
+  }
+}
+
+.main-navigation--closed {
+  position: relative;
+  min-height: 64px;
+  background-color: transparent;
+  margin-bottom: 1px;
+  box-shadow: 0 1px 0 0 $text-white;
+  z-index: 1;
+}
+
+.main-navigation--opened,
+.main-navigation--nojs {
+  position: relative;
+  min-height: 200px;
+  background-color: $background-color;
+  z-index: 1;
+}
+
+.main-navigation--nojs {
+  margin-bottom: 0;
+}
+
+.main-navigation--closed .main-navigation__inner-wrapper {
+  display: none;
+}
+
+.main-navigation--nojs .main-navigation__inner-wrapper {
+  display: block;
+}
+
+.main-navigation--nojs .main-navigation__button {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .main-navigation__button-wrapper {
+    width: 600px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-navigation--closed {
+    box-shadow: none;
+  }
+
+  .main-navigation--closed .main-navigation__inner-wrapper {
+    @include flex;
+  }
+
+  .main-navigation {
+    @include flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 1360px;
+    // min-height: 108px;
+    margin: 0 auto;
+  }
+
+  .main-navigation__button {
+    display: none;
+  }
+
+  .main-navigation__inner-wrapper {
+    @include flex;
+    justify-content: center;
+    width: 1360px;
+    box-shadow: none;
+  }
+
+  .main-navigation__logo-link {
+    display: block;
+    margin: 25px 35px 0;
+  }
+
+  .main-navigation__nav {
+    width: 532px;
+  }
+}
