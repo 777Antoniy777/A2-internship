@@ -31,6 +31,16 @@
   box-sizing: border-box;
 }
 
+/* stylelint-disable */
+@-moz-document url-prefix() {
+  .booking__form input,
+  .booking__form select {
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+}
+/* stylelint-enable */
+
 .booking__form input::placeholder,
 .booking__form select {
   font-size: $body-font-size - 4px;
@@ -55,6 +65,10 @@
 
 .booking__form select {
   appearance: none;
+}
+
+.booking__form select option:first-child {
+  display: none;
 }
 
 .booking__form select option:not(:first-child) {

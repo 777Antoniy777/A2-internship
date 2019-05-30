@@ -20,10 +20,21 @@
 }
 
 .special__subtitle {
+  position: relative;
   font-family: $font-acme;
   font-size: $body-font-size + 18px;
   line-height: $body-line-height + 20px;
   text-transform: uppercase;
+
+  &::before {
+    @include pseudo;
+    right: 50%;
+    bottom: -14px;
+    width: 60px;
+    height: 5px;
+    background-color: $button-hover;
+    transform: translateX(50%);
+  }
 }
 
 .special__description {
