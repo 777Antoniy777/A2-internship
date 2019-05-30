@@ -55,11 +55,11 @@
     @include pseudo;
     right: 25px;
     top: 17px;
+    width: 15px;
+    height: 16px;
     background-image: url("../img/svg/icon.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
-    width: 15px;
-    height: 16px;
   }
 }
 
@@ -83,9 +83,9 @@
   font-weight: $font-bold;
   min-width: 280px;
   min-height: 60px;
-  text-transform: uppercase;
-  background-color: $form-button-color;
   margin: 0 auto;
+  background-color: $form-button-color;
+  text-transform: uppercase;
   border: none;
   border-radius: 5px;
   box-sizing: border-box;

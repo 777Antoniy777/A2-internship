@@ -3,8 +3,8 @@
   font-family: $font-acme;
   font-size: $body-font-size + 18px;
   line-height: $body-line-height + 20px;
-  text-transform: uppercase;
   margin-bottom: 15px;
+  text-transform: uppercase;
 
   &::before {
     @include pseudo;
@@ -31,8 +31,8 @@
   line-height: $body-line-height - 9px;
   min-width: 280px;
   min-height: 45px;
-  margin: 0 auto 25px;
   padding: 12px 20px;
+  margin: 0 auto 25px;
   background-color: $input-color;
   border: none;
   border-radius: 5px;
@@ -72,9 +72,9 @@
   font-weight: $font-bold;
   min-width: 280px;
   min-height: 60px;
-  text-transform: uppercase;
-  background-color: $form-button-color;
   margin: 0 auto;
+  background-color: $form-button-color;
+  text-transform: uppercase;
   border: none;
   border-radius: 5px;
   box-sizing: border-box;
@@ -108,9 +108,9 @@
 
 @media (min-width: $desktop-width) {
   .contacts {
-    text-align: center;
     margin-top: 89px;
     margin-bottom: 71px;
+    text-align: center;
   }
 
   .contacts__title {

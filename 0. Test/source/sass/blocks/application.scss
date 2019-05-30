@@ -1,8 +1,8 @@
 .application {
+  padding: 40px 0 40px;
   color: $text-white;
   text-align: center;
   text-transform: uppercase;
-  padding: 40px 0 40px;
 }
 
 .application__title {
@@ -68,14 +68,14 @@
   }
 
   &--booking {
+    margin-bottom: 30px;
     background-color: $form-button-color;
     border: none;
-    margin-bottom: 30px;
 
     &:hover {
       background-color: $button-hover;
     }
-  
+
     &:active {
       background-color: $button-active;
     }

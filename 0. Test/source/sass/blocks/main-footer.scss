@@ -1,9 +1,9 @@
 .main-footer {
   min-height: 50px;
-  text-align: center;
-  background-color: $footer-color;
   padding: 20px 0;
   margin-top: 40px;
+  background-color: $footer-color;
+  text-align: center;
 }
 
 @media (min-width: $desktop-width) {

@@ -1,14 +1,14 @@
 .special {
   min-height: 675px;
-  text-align: center;
+  padding-top: 30px;
+  color: $text-white;
   background-image: url("../img/background-2.jpg");
   background-color: $background-color;
   background-attachment: fixed;
   background-size: 1440px 100%;
   background-position: 50% 0;
   background-repeat: no-repeat;
-  color: $text-white;
-  padding-top: 30px;
+  text-align: center;
 }
 
 .special__title {

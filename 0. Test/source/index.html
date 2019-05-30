@@ -97,7 +97,7 @@
               </select>
               </div>
               <label class="visually-hidden" for="booking-date">Введите дату:</label>
-              <input type="text" name="date" placeholder="Date (mm/dd)" id="booking-date" required>
+              <input type="text" name="date" placeholder="Date (mm/dd)" pattern="^\s*(1[012]|0?[1-9])\.(3[01]|[12][0-9]|0?[1-9])" id="booking-date" required>
               <label class="visually-hidden" for="booking-time">Выберите время:</label>
               <div>
               <select name="time" id="booking-time" required>

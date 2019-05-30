@@ -15,8 +15,8 @@
   width: 50px;
   height: 24px;
   margin: 20px 20px 20px 0;
-  border: none;
   background-color: transparent;
+  border: none;
   cursor: pointer;
 }
 
@@ -80,8 +80,8 @@
 .main-navigation--closed {
   position: relative;
   min-height: 64px;
-  background-color: transparent;
   margin-bottom: 1px;
+  background-color: transparent;
   box-shadow: 0 1px 0 0 $text-white;
   z-index: 1;
 }
@@ -131,7 +131,6 @@
     align-items: flex-start;
     flex-wrap: wrap;
     width: 1360px;
-    // min-height: 108px;
     margin: 0 auto;
   }
 

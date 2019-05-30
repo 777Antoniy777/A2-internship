@@ -5,6 +5,9 @@
 }
 
 .copyright__description a {
+  @include link(none, rgba(255, 255, 255, 0.5));
+  font-weight: $font-bold;
+
   &:hover {
     color: $button-hover;
   }
@@ -12,11 +15,6 @@
   &:active {
     color: $button-active;
   }
-}
-
-.copyright__description a {
-  @include link(none, rgba(255, 255, 255, 0.5));
-  font-weight: $font-bold;
 }
 
 @media (min-width: $desktop-width) {
