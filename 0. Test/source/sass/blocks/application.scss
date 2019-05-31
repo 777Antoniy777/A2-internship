@@ -1,5 +1,8 @@
 .application {
-  padding: 40px 0 40px;
+  @include flex;
+  align-items: center;
+  padding: 0;
+  margin: auto;
   color: $text-white;
   text-align: center;
   text-transform: uppercase;
@@ -104,7 +107,6 @@
 @media (min-width: $desktop-width) {
   .application {
     min-height: 489px;
-    padding-top: 89px;
   }
 
   .application__title {
