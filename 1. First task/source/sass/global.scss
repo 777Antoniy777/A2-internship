@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "Crimson Text";
+  src: url("../fonts/CrimsonText-Roman.woff2") format("woff2"),
+    url("../fonts/CrimsonText-Roman.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Crimson Text";
+  src: url("../fonts/CrimsonText-Italic.woff2") format("woff2"),
+    url("../fonts/CrimsonText-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Black.woff2") format("woff2"),
+    url("../fonts/Montserrat-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-montserrat;
+  font-weight: $font-normal;
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+  min-width: 1400px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.site-wrapper {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+// @media (min-width: $tablet-width) {
+//   body {
+//     min-width: $tablet-width;
+//   }
+
+//   .site-wrapper {
+//     width: 600px;
+//   }
+// }
+
+// @media (min-width: $desktop-width) {
+//   body {
+//     min-width: 1360px;
+//   }
+
+//   .site-wrapper {
+//     width: 1155px;
+//   }
+// }
