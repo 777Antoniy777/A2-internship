@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Frontent test</title>
+    <title>Portland</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link href="css/style.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
         <div class="main-navigation__wrapper">
           <div class="main-navigation__inner-wrapper">
             <button class="main-navigation__button" type="button"><span class="visually-hidden">Меню сайта</span></button>
-            <a class="main-navigation__logo-link">
+            <a class="main-navigation__logo-link" href="#">
               <img class="main-navigation__logo" src="img/svg/logo.svg" width="92" height="25" alt="Лого Portland">
             </a>
           </div>
@@ -140,6 +140,7 @@
         <button class="slider__button slider__button--right" type="button"><span class="visually-hidden">Следующий слайд</span></button>
       </section>
       <!--Главный фильтр-->
+      <div class="main__inner-wrapper">
       <section class="filter">
         <h2 class="visually-hidden">Главный фильтр</h2>
         <label class="filter__sort">Sort By:
@@ -321,13 +322,14 @@
           </ul>
         </div>
       </aside>
+      <!--Товары-->
       <section class="goods">
         <h2 class="visually-hidden">Товары магазина</h2>
         <ul class="goods__list">
           <li class="goods__item">
             <div class="goods__item-wrapper">
               <h3 class="goods__title"><a class="goods__link" href="#">Apple TV 32GB</a></h3>
-              <span class="goods__description goods__description--color">Black</span>
+              <span class="goods__description">Black</span>
               <span class="goods__description goods__description--price">$49.99</span>
             </div>
             <a class="goods__link" href="#">
@@ -337,7 +339,7 @@
           <li class="goods__item">
             <div class="goods__item-wrapper">
               <h3 class="goods__title"><a class="goods__link" href="#">Pebble Time</a></h3>
-              <span class="goods__description goods__description--color">Red</span>
+              <span class="goods__description">Red</span>
               <span class="goods__description goods__description--price">$29.99</span>
             </div>
             <a class="goods__link" href="#">
@@ -347,7 +349,7 @@
           <li class="goods__item">
             <div class="goods__item-wrapper">
               <h3 class="goods__title"><a class="goods__link" href="#">Zendure 4-Port USB</a></h3>
-              <span class="goods__description goods__description--color">White</span>
+              <span class="goods__description">White</span>
               <span class="goods__description goods__description--price">$49.99</span>
             </div>
             <a class="goods__link" href="#">
@@ -357,7 +359,7 @@
           <li class="goods__item">
             <div class="goods__item-wrapper">
               <h3 class="goods__title"><a class="goods__link" href="#">Withings Smart Body Analyzer ws-50</a></h3>
-              <span class="goods__description goods__description--color">Black</span>
+              <span class="goods__description">Black</span>
               <span class="goods__description goods__description--price">$39.99</span>
             </div>
             <a class="goods__link" href="#">
@@ -368,7 +370,7 @@
             <div class="goods__item-wrapper">
               <div class="goods__item-inner-wrapper">
                 <h3 class="goods__title"><a class="goods__link" href="#">JBL Charge 2+</a></h3>
-                <span class="goods__description goods__description--color">Black</span>
+                <span class="goods__description">Black</span>
               </div>
               <span class="goods__description goods__description--storage">16 Gb</span>
               <span class="goods__description goods__description--buy">Buy Now</span>
@@ -380,7 +382,7 @@
           <li class="goods__item">
             <div class="goods__item-wrapper">
               <h3 class="goods__title"><a class="goods__link" href="#">Bose SoundLink On-Ear Headphones</a></h3>
-              <span class="goods__description goods__description--color">White</span>
+              <span class="goods__description">White</span>
               <span class="goods__description goods__description--price">$119.99</span>
             </div>
             <a class="goods__link" href="#">
@@ -390,7 +392,7 @@
           <li class="goods__item">
             <div class="goods__item-wrapper">
               <h3 class="goods__title"><a class="goods__link" href="#">Sonos Play-1 Wireless HiFi System</a></h3>
-              <span class="goods__description goods__description--color">Black</span>
+              <span class="goods__description">Black</span>
               <span class="goods__description goods__description--price">$99.99</span>
             </div>
             <a class="goods__link" href="#">
@@ -409,6 +411,7 @@
         </ul>
       </section>
       </div>
+      <!--Пэгинатор-->
       <section class="paginator">
         <h2 class="visually-hidden">Номера страниц сайта</h2>
         <ul class="paginator__list">
@@ -424,9 +427,155 @@
         <button class="paginator__button paginator__button--left" type="button"><span class="visually-hidden">Предыдущий страница</span></button>
         <button class="paginator__button paginator__button--right" type="button"><span class="visually-hidden">Следующий страница</span></button>
       </section>
+      <!--Популярное-->
+      <section class="popular">
+        <h2 class="popular__title">Best Sellers</h2>
+        <ul class="popular__list">
+          <li class="popular__item">
+            <div class="popular__item-wrapper">
+              <h3 class="popular__title"><a class="popular__link" href="#">Beanie</a></h3>
+              <span class="popular__description">Green</span>
+              <div>
+                <span class="popular__description popular__description--old-price">£39.99</span>
+                <span class="popular__description popular__description--new-price">£29.99</span>
+              </div>
+            </div>
+            <a class="popular__link" href="#">
+              <img class="popular__image" src="" width="" height="" alt="Beanie">
+            </a>
+          </li>
+          <li class="popular__item">
+            <div class="popular__item-wrapper">
+              <h3 class="popular__title"><a class="popular__link" href="#">T-Shirt With a Print</a></h3>
+              <span class="popular__description">Dark Blue</span>
+              <div>
+                <span class="popular__description popular__description--old-price">£29.99</span>
+                <span class="popular__description popular__description--new-price">£19.99</span>
+              </div>
+            </div>
+            <a class="popular__link" href="#">
+              <img class="popular__image" src="" width="" height="" alt="T-Shirt With a Print">
+            </a>
+          </li>
+          <li class="popular__item">
+            <div class="popular__item-wrapper">
+              <h3 class="popular__title"><a class="popular__link" href="#">Pile-Lined Hooded Jacket</a></h3>
+              <span class="popular__description">Dark Blue</span>
+              <div>
+                <span class="popular__description popular__description--old-price">£49.99</span>
+                <span class="popular__description popular__description--new-price">£39.99</span>
+              </div>
+            </div>
+            <a class="popular__link" href="#">
+              <img class="popular__image" src="" width="" height="" alt="Pile-Lined Hooded Jacket">
+            </a>
+          </li>
+          <li class="popular__item">
+            <div class="popular__item-wrapper">
+              <h3 class="popular__title"><a class="popular__link" href="#">Trainers</a></h3>
+              <span class="popular__description">Space Grey</span>
+              <div>
+                <span class="popular__description popular__description--old-price">£39.99</span>
+                <span class="popular__description popular__description--new-price">£29.99</span>
+              </div>
+            </div>
+            <a class="popular__link" href="#">
+              <img class="popular__image" src="" width="" height="" alt="Trainers">
+            </a>
+          </li>
+        </ul>
+      </section>
+      </div>
+      <!--Отзывы-->
+      <section class="feedback">
+        <h2 class="feedback__title">What Our Customers Have to Say</h2>
+        <p class="feedback__description">Couple of Words About This Stories Section</p>
+        <ul class="feedback__list">
+          <li class="feedback__item">
+            <div class="feedback__wrapper">
+              <div class="feedback__inner-wrapper">
+                <h3 class="feedback__subtitle">Celia Fields</h3>
+                <span class="feedback__item-description feedback__item-description--profession">UX Expert</span>
+              </div>
+              <img class="feedback__image" src="" width="" height="" alt="Celia Fields">
+            </div>
+            <p class="feedback__item-description">This I have produced as a scantling of Jack’s great eloquence and the force of his reasoning upon such abstruse matters.</p>
+          </li>
+          <li class="feedback__item">
+            <div class="feedback__wrapper">
+              <div class="feedback__inner-wrapper">
+                <h3 class="feedback__subtitle">Alexander Lee</h3>
+                <span class="feedback__item-description feedback__item-description--profession">Founder</span>
+              </div>
+              <img class="feedback__image" src="" width="" height="" alt="Alexander Lee">
+            </div>
+            <p class="feedback__item-description">Looking cautiously round, to ascertain that they were not overheard, the two hags cowered nearer to the fire, and chuckled heartily.</p>
+          </li>
+          <li class="feedback__item">
+            <div class="feedback__wrapper">
+              <div class="feedback__inner-wrapper">
+                <h3 class="feedback__subtitle">Lenora Sandoval</h3>
+                <span class="feedback__item-description feedback__item-description--profession">Product Manager</span>
+              </div>
+              <img class="feedback__image" src="" width="" height="" alt="Alexander Lee">
+            </div>
+            <p class="feedback__item-description">This sounded a very good reason, and Alice was quite pleased to know it. 'I never thought of that before!' she said.</p>
+          </li>
+        </ul>
+      </section>
     </main>
     <!--Футер гл.стр-->
     <footer class="main-footer">
+      <div class="main-footer__wrapper">
+        <a class="main-footer__logo-link" href="#">
+          <img class="main-footer__logo" src="img/svg/logo.svg" width="" height="" alt="Лого Portland">
+        </a>
+        <ul class="main-footer__company-list">
+          <li class="main-footer__company-item">
+            <a class="main-footer__company-link" href="#">Home</a>
+          </li>
+          <li class="main-footer__company-item">
+            <a class="main-footer__company-link" href="#">Shop</a>
+          </li>
+          <li class="main-footer__company-item">
+            <a class="main-footer__company-link" href="#">Team</a>
+          </li>
+          <li class="main-footer__company-item">
+            <a class="main-footer__company-link" href="#">About Us</a>
+          </li>
+          <li class="main-footer__company-item">
+            <a class="main-footer__company-link" href="#">Contacts</a>
+          </li>
+        </ul>
+        <ul class="main-footer__social-list">
+          <li class="main-footer__social-item">
+            <a class="main-footer__social-link" href="#">
+              <span class="visually-hidden">Twitter</span>
+            </a>
+          </li>
+          <li class="main-footer__social-item">
+            <a class="main-footer__social-link" href="#">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li class="main-footer__social-item">
+            <a class="main-footer__social-link" href="#">
+              <span class="visually-hidden">Google+</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-footer__wrapper">
+        <p class="main-footer__description">She gave my mother such a turn, that I have always been convinced I am indebted to Miss Betsey for having been born on a Friday.</p>
+        <ul class="main-footer__privacy-list">
+          <li class="main-footer__privacy-item">
+            <a class="main-footer__privacy-link" href="#">Privacy Policy</a>
+          </li>
+          <li class="main-footer__privacy-item">
+            <a class="main-footer__privacy-link" href="#">Terms and Conditions</a>
+          </li>
+        </ul>
+      </div>
 
     </footer>
     <script src='js/all.min.js'></script>
