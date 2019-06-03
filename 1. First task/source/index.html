@@ -19,6 +19,7 @@
   <body class="main-page">
     <!--Хедер гл.стр-->
     <header class="main-header">
+      <h1 class="visually-hidden">Сайт Portland</h1>
       <nav class="main-navigation">
         <div class="main-navigation__wrapper">
           <div class="main-navigation__inner-wrapper">
@@ -69,7 +70,7 @@
           </ul>
           <div class="main-navigation__inner-wrapper">
             <a class="main-navigation__category-link" href="#">Support</a>
-            <form class="main-navigation__form">
+            <form class="main-navigation__form" name="search" action="https://echo.htmlacademy.ru" method="get">
               <label class="visually-hidden" for="nav-search"></label>
               <input class="main-navigation__form-input" type="search" name="nav-search" id="nav-search" placeholder="I’m looking for ...">
               <button class="main-navigation__form-button" type="submit"><span class="visually-hidden">Искать товар</span></button>
@@ -80,7 +81,349 @@
     </header>
     <!--Основная часть гл.стр-->
     <main class="main">
-
+      <!--Слайдер-->
+      <section class="slider">
+        <h2 class="visually-hidden">Слайдер</h2>
+        <ul class="slider__content-list">
+          <li class="slider__content-item">
+            <div class="slider__content-wrapper">
+              <h3 class="slider__content-title">iPhone 6 32Gb Black</h3>
+              <p class="slider__content-description">At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
+              <a class="slider__content-link" href="#">Buy Now</a>
+            </div>
+            <img class="slider__image" src="" width="" height="" alt="iPhone 6 32Gb Black">
+          </li>
+          <li class="slider__content-item">
+            <div class="slider__content-wrapper">
+              <h3 class="slider__content-title">iPhone 6 32Gb Black</h3>
+              <p class="slider__content-description">At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
+              <a class="slider__content-link" href="#">Buy Now</a>
+            </div>
+            <img class="slider__image" src="" width="" height="" alt="iPhone 6 32Gb Black">
+          </li>
+          <li class="slider__content-item">
+            <div class="slider__content-wrapper">
+              <h3 class="slider__content-title">iPhone 6 32Gb Black</h3>
+              <p class="slider__content-description">At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
+              <a class="slider__content-link" href="#">Buy Now</a>
+            </div>
+            <img class="slider__image" src="" width="" height="" alt="iPhone 6 32Gb Black">
+          </li>
+          <li class="slider__content-item">
+            <div class="slider__content-wrapper">
+              <h3 class="slider__content-title">iPhone 6 32Gb Black</h3>
+              <p class="slider__content-description">At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
+              <a class="slider__content-link" href="#">Buy Now</a>
+            </div>
+            <img class="slider__image" src="" width="" height="" alt="iPhone 6 32Gb Black">
+          </li>
+        </ul>
+        <ul class="slider__button-list">
+          <li class="slider__button-item">
+            <label for="first-slide"><span class="visually-hidden">Первый слайд</span></label>
+            <input type="radio" name="slide-button" id="first-slide" checked>
+          </li>
+          <li class="slider__button-item">
+            <label for="second-slide"><span class="visually-hidden">Второй слайд</span></label>
+            <input type="radio" name="slide-button" id="second-slide">
+          </li>
+          <li class="slider__button-item">
+            <label for="third-slide"><span class="visually-hidden">Третий слайд</span></label>
+            <input type="radio" name="slide-button" id="third-slide">
+          </li>
+          <li class="slider__button-item">
+            <label for="forth-slide"><span class="visually-hidden">Четвертый слайд</span></label>
+            <input type="radio" name="slide-button" id="forth-slide">
+          </li>
+        </ul>
+        <button class="slider__button slider__button--left" type="button"><span class="visually-hidden">Предыдущий слайд</span></button>
+        <button class="slider__button slider__button--right" type="button"><span class="visually-hidden">Следующий слайд</span></button>
+      </section>
+      <!--Главный фильтр-->
+      <section class="filter">
+        <h2 class="visually-hidden">Главный фильтр</h2>
+        <label class="filter__sort">Sort By:
+          <select name="sort">
+            <option value="1" selected>Best Match</option>
+          </select>
+        </label>
+        <label class="filter__keywords">Keywords
+          <input type="search" name="keywords" placeholder="Tablet">
+        </label>
+        <label class="filter__goods-price">Price
+          <input type="text" name="start-number" value="10" minlength="10" placeholder="10">-
+          <input type="text" name="finish-number" value="1000" placeholder="1000">
+        </label>
+        <span class="filter__ship-price">Free Shipping</span>
+        <label class="filter__ship">Ship To:
+          <select name="ship">
+            <option value="1" selected>Usa</option>
+            <option value="2">Russia</option>
+          </select>
+        </label>
+      </section>
+      <div class="main__wrapper">
+      <!--Сайдбар-->
+      <aside class="sidebar">
+        <h2 class="visually-hidden">Дополнительный фильтр</h2>
+        <!--Категории-->
+        <div class="sidebar__categories categories">
+          <h3 class="visually-hidden">Категории</h3>
+          <ul class="categories__list">
+            <li class="categories__item">Top Sales
+              <ul class="categories__goods-list">
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Cell Phones</a></li>
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Cameras</a></li>
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Computers</a></li>
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Tv, Audio</a></li>
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Video Games</a></li>
+              </ul>
+            </li>
+            <li class="categories__item">Brand Focus
+              <ul class="categories__goods-list">
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Cell Phones</a></li>
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Cameras</a></li>
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Computers</a></li>
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Tv, Audio</a></li>
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Video Games</a></li>
+              </ul>
+            </li>
+            <li class="categories__item">Hi-Tech
+              <ul class="categories__goods-list">
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Cell Phones</a></li>
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Cameras</a></li>
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Computers</a></li>
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Tv, Audio</a></li>
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Video Games</a></li>
+              </ul>
+            </li>
+            <li class="categories__item">Home
+              <ul class="categories__goods-list">
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Cell Phones</a></li>
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Cameras</a></li>
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Computers</a></li>
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Tv, Audio</a></li>
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Video Games</a></li>
+              </ul>
+            </li>
+            <li class="categories__item">Sale
+              <ul class="categories__goods-list">
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Cell Phones</a></li>
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Cameras</a></li>
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Computers</a></li>
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Tv, Audio</a></li>
+                <li class="categories__goods-item"><a class="categories__goods-link" href="#">Video Games</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar__wrapper">
+          <!--Доступность-->
+          <div class="sidebar__available available">
+            <h3 class="available__title">Available</h3>
+            <ul class="available__list">
+              <li class="available__item">
+                <label>In Storage
+                  <input type="radio" name="available" checked>
+                </label>
+                <span>45</span>
+              </li>
+              <li class="available__item">
+                <label>In Online-Shop
+                  <input type="radio" name="available">
+                </label>
+                <span>12</span>
+              </li>
+            </ul>
+          </div>
+          <!--Бренды-->
+          <div class="sidebar__available brands">
+            <div class="brands__wrapper">
+              <h3 class="brands__title">Brands</h3>
+              <a class="brands__link" href="#">All</a>
+            </div>
+            <ul class="brands__list">
+              <li class="brands__item">
+                <label>Apple
+                  <input type="checkbox" name="apple" checked>
+                </label>
+                <span>32</span>
+              </li>
+              <li class="brands__item">
+                <label>JBL
+                  <input type="checkbox" name="jbl">
+                </label>
+                <span>14</span>
+              </li>
+              <li class="brands__item">
+                <label>Bose
+                  <input type="checkbox" name="bose">
+                </label>
+                <span>3</span>
+              </li>
+              <li class="brands__item">
+                <label>Nest
+                  <input type="checkbox" name="nest">
+                </label>
+                <span>5</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--Условия-->
+        <div class="sidebar__condition condition">
+          <div class="condition__wrapper">
+            <h3 class="condition__title">Condition</h3>
+            <a class="condition__link" href="#">See All</a>
+          </div>
+          <ul class="condition__list">
+            <li class="condition__item">
+              <label>New
+                <input type="checkbox" name="new" checked>
+              </label>
+            </li>
+            <li class="condition__item">
+              <label>Manufacturer Refurbished
+                <input type="checkbox" name="manufacturer-refurbished">
+              </label>
+            </li>
+            <li class="condition__item">
+              <label>Seller Refurbished
+                <input type="checkbox" name="seller-refurbished">
+              </label>
+            </li>
+            <li class="condition__item">
+              <label>Used
+                <input type="checkbox" name="used" checked>
+              </label>
+            </li>
+            <li class="condition__item">
+              <label>For Parts or not Working
+                <input type="checkbox" name="not-working">
+              </label>
+            </li>
+          </ul>
+        </div>
+        <!--Доставка-->
+        <div class="sidebar__delivery delivery">
+          <h3 class="delivery__title">Delivery Options</h3>
+          <ul>
+            <li>
+              <label>Free
+                <input type="radio" name="delivery" checked>
+              </label>
+            </li>
+            <li>
+              <label>$4.99
+                <input type="radio" name="delivery">
+              </label>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <section class="goods">
+        <h2 class="visually-hidden">Товары магазина</h2>
+        <ul class="goods__list">
+          <li class="goods__item">
+            <div class="goods__item-wrapper">
+              <h3 class="goods__title"><a class="goods__link" href="#">Apple TV 32GB</a></h3>
+              <span class="goods__description goods__description--color">Black</span>
+              <span class="goods__description goods__description--price">$49.99</span>
+            </div>
+            <a class="goods__link" href="#">
+              <img class="goods__image" src="" width="" height="" alt="Apple TV 32GB">
+            </a>
+          </li>
+          <li class="goods__item">
+            <div class="goods__item-wrapper">
+              <h3 class="goods__title"><a class="goods__link" href="#">Pebble Time</a></h3>
+              <span class="goods__description goods__description--color">Red</span>
+              <span class="goods__description goods__description--price">$29.99</span>
+            </div>
+            <a class="goods__link" href="#">
+              <img class="goods__image" src="" width="" height="" alt="Pebble Time">
+            </a>
+          </li>
+          <li class="goods__item">
+            <div class="goods__item-wrapper">
+              <h3 class="goods__title"><a class="goods__link" href="#">Zendure 4-Port USB</a></h3>
+              <span class="goods__description goods__description--color">White</span>
+              <span class="goods__description goods__description--price">$49.99</span>
+            </div>
+            <a class="goods__link" href="#">
+              <img class="goods__image" src="" width="" height="" alt="Zendure 4-Port USB">
+            </a>
+          </li>
+          <li class="goods__item">
+            <div class="goods__item-wrapper">
+              <h3 class="goods__title"><a class="goods__link" href="#">Withings Smart Body Analyzer ws-50</a></h3>
+              <span class="goods__description goods__description--color">Black</span>
+              <span class="goods__description goods__description--price">$39.99</span>
+            </div>
+            <a class="goods__link" href="#">
+              <img class="goods__image" src="" width="" height="" alt="Withings Smart Body Analyzer ws-50">
+            </a>
+          </li>
+          <li class="goods__item goods__item--special">
+            <div class="goods__item-wrapper">
+              <div class="goods__item-inner-wrapper">
+                <h3 class="goods__title"><a class="goods__link" href="#">JBL Charge 2+</a></h3>
+                <span class="goods__description goods__description--color">Black</span>
+              </div>
+              <span class="goods__description goods__description--storage">16 Gb</span>
+              <span class="goods__description goods__description--buy">Buy Now</span>
+            </div>
+            <a class="goods__link" href="#">
+              <img class="goods__image" src="" width="" height="" alt="JBL Charge 2+">
+            </a>
+          </li>
+          <li class="goods__item">
+            <div class="goods__item-wrapper">
+              <h3 class="goods__title"><a class="goods__link" href="#">Bose SoundLink On-Ear Headphones</a></h3>
+              <span class="goods__description goods__description--color">White</span>
+              <span class="goods__description goods__description--price">$119.99</span>
+            </div>
+            <a class="goods__link" href="#">
+              <img class="goods__image" src="" width="" height="" alt="Bose SoundLink On-Ear Headphones">
+            </a>
+          </li>
+          <li class="goods__item">
+            <div class="goods__item-wrapper">
+              <h3 class="goods__title"><a class="goods__link" href="#">Sonos Play-1 Wireless HiFi System</a></h3>
+              <span class="goods__description goods__description--color">Black</span>
+              <span class="goods__description goods__description--price">$99.99</span>
+            </div>
+            <a class="goods__link" href="#">
+              <img class="goods__image" src="" width="" height="" alt="Sonos Play-1 Wireless HiFi System">
+            </a>
+          </li>
+          <li class="goods__item goods__item--unique">
+            <div class="goods__item-wrapper">
+              <h3 class="goods__title"><a class="goods__link" href="#">Nest Learning Thermostat, 3rd Generation</a></h3>
+              <span class="goods__description goods__description--price">$49.99</span>
+            </div>
+            <a class="goods__link" href="#">
+              <img class="goods__image" src="" width="" height="" alt="Nest Learning Thermostat, 3rd Generation">
+            </a>
+          </li>
+        </ul>
+      </section>
+      </div>
+      <section class="paginator">
+        <h2 class="visually-hidden">Номера страниц сайта</h2>
+        <ul class="paginator__list">
+          <li class="paginator__item"><a class="paginator__link" href="#">1</a></li>
+          <li class="paginator__item"><a class="paginator__link" href="#">2</a></li>
+          <li class="paginator__item"><a class="paginator__link" href="#">3</a></li>
+          <li class="paginator__item"><a class="paginator__link paginator__link--active">4</a></li>
+          <li class="paginator__item"><a class="paginator__link" href="#">5</a></li>
+          <li class="paginator__item"><a class="paginator__link" href="#">6</a></li>
+          <li class="paginator__item"><a class="paginator__link" href="#">7</a></li>
+          <li class="paginator__item"><a class="paginator__link" href="#">8</a></li>
+        </ul>
+        <button class="paginator__button paginator__button--left" type="button"><span class="visually-hidden">Предыдущий страница</span></button>
+        <button class="paginator__button paginator__button--right" type="button"><span class="visually-hidden">Следующий страница</span></button>
+      </section>
     </main>
     <!--Футер гл.стр-->
     <footer class="main-footer">
