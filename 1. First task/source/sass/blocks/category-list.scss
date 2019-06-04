@@ -1,0 +1,24 @@
+.category-list {
+  @include list;
+  @include flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 518px;
+  box-sizing: border-box;
+}
+
+.category-list__item {
+  padding-right: 36px;
+}
+
+.category-list__link {
+  @include link(none, $nav-color);
+  font-size: $body-font-size - 3px;
+  line-height: $body-line-height - 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.1px;
+
+  &--active {
+    color: $text-color;
+  }
+}

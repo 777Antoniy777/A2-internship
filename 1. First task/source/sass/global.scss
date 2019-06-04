@@ -41,9 +41,10 @@ html {
 
 body {
   font-family: $font-montserrat;
-  font-weight: $font-normal;
   font-size: $body-font-size;
   line-height: $body-line-height;
+  font-weight: $font-normal;
+  font-style: $style-normal;
   min-width: 1400px;
 }
 

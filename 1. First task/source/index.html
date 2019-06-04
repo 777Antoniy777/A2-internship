@@ -20,149 +20,167 @@
     <!--Хедер гл.стр-->
     <header class="main-header">
       <h1 class="visually-hidden">Сайт Portland</h1>
-      <nav class="main-navigation">
-        <div class="main-navigation__wrapper">
-          <div class="main-navigation__inner-wrapper">
-            <button class="main-navigation__button" type="button"><span class="visually-hidden">Меню сайта</span></button>
-            <a class="main-navigation__logo-link" href="#">
-              <img class="main-navigation__logo" src="img/svg/logo.svg" width="92" height="25" alt="Лого Portland">
-            </a>
+        <nav class="main-navigation">
+
+          <div class="main-navigation__wrapper">
+            <div class="site-wrapper">
+              <div class="main-navigation__inner-wrapper main-navigation__inner-wrapper--mobile">
+                <button class="main-navigation__button" type="button"><span class="visually-hidden">Меню сайта</span></button>
+                <a class="main-navigation__logo-link" href="#">
+                  <img class="main-navigation__logo" src="img/svg/logo.svg" width="92" height="25" alt="Лого Portland">
+                </a>
+              </div>
+              <ul class="main-navigation__company-list company-list">
+                <li class="company-list__item">
+                  <a class="company-list__link" href="#">Home</a>
+                </li>
+                <li class="company-list__item">
+                  <a class="company-list__link" href="#">Devices</a>
+                </li>
+                <li class="company-list__item">
+                  <a class="company-list__link" href="#">Delivery & Payment</a>
+                </li>
+                <li class="company-list__item">
+                  <a class="company-list__link" href="#">Guarantee</a>
+                </li>
+                <li class="company-list__item">
+                  <a class="company-list__link" href="#">About Us</a>
+                </li>
+              </ul>
+              <div class="main-navigation__inner-wrapper">
+                <a class="main-navigation__link" href="#">Cart</a>
+                <a class="main-navigation__link main-navigation__link--sign" href="#">Sign In</a>
+              </div>
+            </div>
           </div>
-          <ul class="main-navigation__company-list company-list">
-            <li class="company-list__item">
-              <a class="company-list__link" href="#">Home</a>
-            </li>
-            <li class="company-list__item">
-              <a class="company-list__link" href="#">Devices</a>
-            </li>
-            <li class="company-list__item">
-              <a class="company-list__link" href="#">Delivery & Payment</a>
-            </li>
-            <li class="company-list__item">
-              <a class="company-list__link" href="#">Guarantee</a>
-            </li>
-            <li class="company-list__item">
-              <a class="company-list__link" href="#">About Us</a>
-            </li>
-          </ul>
-          <div class="main-navigation__inner-wrapper">
-            <a class="main-navigation__busket-link" href="#">Cart</a>
-            <a class="main-navigation__sign-link" href="#">Sign In</a>
+
+          <div class="main-navigation__wrapper">
+            <div class="site-wrapper">
+              <ul class="main-navigation__category-list category-list">
+                <li class="category-list__item">
+                  <a class="category-list__link" href="#">Top Sales</a>
+                </li>
+                <li class="category-list__item">
+                  <a class="category-list__link" href="#">Brand Focus</a>
+                </li>
+                <li class="category-list__item">
+                  <a class="category-list__link category-list__link--active">Hi-tech</a>
+                </li>
+                <li class="category-list__item">
+                  <a class="category-list__link" href="#">Best Sellers</a>
+                </li>
+                <li class="category-list__item">
+                  <a class="category-list__link" href="#">Projects</a>
+                </li>
+              </ul>
+              <div class="main-navigation__inner-wrapper main-navigation__inner-wrapper--support">
+                <a class="main-navigation__link main-navigation__link--support" href="#">Support</a>
+                <form class="main-navigation__form" name="search" action="https://echo.htmlacademy.ru" method="get">
+                  <label class="visually-hidden" for="nav-search"></label>
+                  <input class="main-navigation__form-input" type="search" name="nav-search" id="nav-search" maxlength="50" placeholder="I’m looking for ...">
+                  <button class="main-navigation__form-button" type="submit"><span class="visually-hidden">Искать товар</span></button>
+                </form>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="main-navigation__wrapper">
-          <ul class="main-navigation__category-list category-list">
-            <li class="category-list__item">
-              <a class="category-list__link" href="#">Top Sales</a>
-            </li>
-            <li class="category-list__item">
-              <a class="category-list__link" href="#">Brand Focus</a>
-            </li>
-            <li class="category-list__item">
-              <a class="category-list__link category-list__link--active">Hi-tech</a>
-            </li>
-            <li class="category-list__item">
-              <a class="category-list__link" href="#">Best Sellers</a>
-            </li>
-            <li class="category-list__item">
-              <a class="category-list__link" href="#">Projects</a>
-            </li>
-          </ul>
-          <div class="main-navigation__inner-wrapper">
-            <a class="main-navigation__category-link" href="#">Support</a>
-            <form class="main-navigation__form" name="search" action="https://echo.htmlacademy.ru" method="get">
-              <label class="visually-hidden" for="nav-search"></label>
-              <input class="main-navigation__form-input" type="search" name="nav-search" id="nav-search" placeholder="I’m looking for ...">
-              <button class="main-navigation__form-button" type="submit"><span class="visually-hidden">Искать товар</span></button>
-            </form>
-          </div>
-        </div>
-      </nav>
+
+        </nav>
     </header>
+
     <!--Основная часть гл.стр-->
     <main class="main">
+
       <!--Слайдер-->
       <section class="slider">
         <h2 class="visually-hidden">Слайдер</h2>
-        <ul class="slider__content-list">
-          <li class="slider__content-item">
-            <div class="slider__content-wrapper">
-              <h3 class="slider__content-title">iPhone 6 32Gb Black</h3>
-              <p class="slider__content-description">At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
-              <a class="slider__content-link" href="#">Buy Now</a>
-            </div>
-            <img class="slider__image" src="" width="" height="" alt="iPhone 6 32Gb Black">
-          </li>
-          <li class="slider__content-item">
-            <div class="slider__content-wrapper">
-              <h3 class="slider__content-title">iPhone 6 32Gb Black</h3>
-              <p class="slider__content-description">At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
-              <a class="slider__content-link" href="#">Buy Now</a>
-            </div>
-            <img class="slider__image" src="" width="" height="" alt="iPhone 6 32Gb Black">
-          </li>
-          <li class="slider__content-item">
-            <div class="slider__content-wrapper">
-              <h3 class="slider__content-title">iPhone 6 32Gb Black</h3>
-              <p class="slider__content-description">At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
-              <a class="slider__content-link" href="#">Buy Now</a>
-            </div>
-            <img class="slider__image" src="" width="" height="" alt="iPhone 6 32Gb Black">
-          </li>
-          <li class="slider__content-item">
-            <div class="slider__content-wrapper">
-              <h3 class="slider__content-title">iPhone 6 32Gb Black</h3>
-              <p class="slider__content-description">At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
-              <a class="slider__content-link" href="#">Buy Now</a>
-            </div>
-            <img class="slider__image" src="" width="" height="" alt="iPhone 6 32Gb Black">
-          </li>
-        </ul>
-        <ul class="slider__button-list">
-          <li class="slider__button-item">
-            <label for="first-slide"><span class="visually-hidden">Первый слайд</span></label>
-            <input type="radio" name="slide-button" id="first-slide" checked>
-          </li>
-          <li class="slider__button-item">
-            <label for="second-slide"><span class="visually-hidden">Второй слайд</span></label>
-            <input type="radio" name="slide-button" id="second-slide">
-          </li>
-          <li class="slider__button-item">
-            <label for="third-slide"><span class="visually-hidden">Третий слайд</span></label>
-            <input type="radio" name="slide-button" id="third-slide">
-          </li>
-          <li class="slider__button-item">
-            <label for="forth-slide"><span class="visually-hidden">Четвертый слайд</span></label>
-            <input type="radio" name="slide-button" id="forth-slide">
-          </li>
-        </ul>
-        <button class="slider__button slider__button--left" type="button"><span class="visually-hidden">Предыдущий слайд</span></button>
-        <button class="slider__button slider__button--right" type="button"><span class="visually-hidden">Следующий слайд</span></button>
+
+        <div class="site-wrapper">
+          <ul class="slider__content-list">
+            <li class="slider__content-item">
+              <div class="slider__content-wrapper">
+                <h3 class="slider__content-title">iPhone 6 32Gb Black</h3>
+                <p class="slider__content-description">At first, for some time, I was not able to answer him one word;<wbr> but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
+                <a class="slider__content-link" href="#">Buy Now</a>
+              </div>
+              <img class="slider__image" src="img/iPhone.png" width="300" height="875" alt="iPhone 6 32Gb Black">
+            </li>
+            <li class="slider__content-item">
+              <div class="slider__content-wrapper">
+                <h3 class="slider__content-title">iPhone 6 32Gb Black</h3>
+                <p class="slider__content-description">At first, for some time, I was not able to answer him one word;<wbr> but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
+                <a class="slider__content-link" href="#">Buy Now</a>
+              </div>
+              <img class="slider__image" src="img/iPhone.png" width="300" height="875" alt="iPhone 6 32Gb Black">
+            </li>
+            <li class="slider__content-item">
+              <div class="slider__content-wrapper">
+                <h3 class="slider__content-title">iPhone 6 32Gb Black</h3>
+                <p class="slider__content-description">At first, for some time, I was not able to answer him one word;<wbr> but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
+                <a class="slider__content-link" href="#">Buy Now</a>
+              </div>
+              <img class="slider__image" src="img/iPhone.png" width="300" height="875" alt="iPhone 6 32Gb Black">
+            </li>
+            <li class="slider__content-item">
+              <div class="slider__content-wrapper">
+                <h3 class="slider__content-title">iPhone 6 32Gb Black</h3>
+                <p class="slider__content-description">At first, for some time, I was not able to answer him one word;<wbr> but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
+                <a class="slider__content-link" href="#">Buy Now</a>
+              </div>
+              <img class="slider__image" src="img/iPhone.png" width="300" height="875" alt="iPhone 6 32Gb Black">
+            </li>
+          </ul>
+
+          <ul class="slider__button-list">
+            <li class="slider__button-item">
+              <input type="radio" name="slide-button" id="first-slide" checked>
+              <label for="first-slide"><span class="visually-hidden">Первый слайд</span></label>
+            </li>
+            <li class="slider__button-item">
+              <input type="radio" name="slide-button" id="second-slide">
+              <label for="second-slide"><span class="visually-hidden">Второй слайд</span></label>
+            </li>
+            <li class="slider__button-item">
+              <input type="radio" name="slide-button" id="third-slide">
+              <label for="third-slide"><span class="visually-hidden">Третий слайд</span></label>
+            </li>
+            <li class="slider__button-item">
+              <input type="radio" name="slide-button" id="forth-slide">
+              <label for="forth-slide"><span class="visually-hidden">Четвертый слайд</span></label>
+            </li>
+          </ul>
+
+          <button class="slider__button slider__button--left" type="button"><span class="visually-hidden">Предыдущий слайд</span></button>
+          <button class="slider__button slider__button--right" type="button"><span class="visually-hidden">Следующий слайд</span></button>
+
+        </div>
       </section>
+
       <!--Главный фильтр-->
       <div class="main__inner-wrapper">
-      <section class="filter">
-        <h2 class="visually-hidden">Главный фильтр</h2>
-        <label class="filter__sort">Sort By:
-          <select name="sort">
-            <option value="1" selected>Best Match</option>
-          </select>
-        </label>
-        <label class="filter__keywords">Keywords
-          <input type="search" name="keywords" placeholder="Tablet">
-        </label>
-        <label class="filter__goods-price">Price
-          <input type="text" name="start-number" value="10" minlength="10" placeholder="10">-
-          <input type="text" name="finish-number" value="1000" placeholder="1000">
-        </label>
-        <span class="filter__ship-price">Free Shipping</span>
-        <label class="filter__ship">Ship To:
-          <select name="ship">
-            <option value="1" selected>Usa</option>
-            <option value="2">Russia</option>
-          </select>
-        </label>
-      </section>
+
+        <section class="filter">
+          <h2 class="visually-hidden">Главный фильтр</h2>
+          <label class="filter__sort">Sort By:
+            <select name="sort">
+              <option value="1" selected>Best Match</option>
+            </select>
+          </label>
+          <label class="filter__keywords">Keywords
+            <input type="search" name="keywords" placeholder="Tablet">
+          </label>
+          <label class="filter__goods-price">Price
+            <input type="text" name="start-number" value="10" minlength="10" placeholder="10">-
+            <input type="text" name="finish-number" value="1000" placeholder="1000">
+          </label>
+          <span class="filter__ship-price">Free Shipping</span>
+          <label class="filter__ship">Ship To:
+            <select name="ship">
+              <option value="1" selected>Usa</option>
+              <option value="2">Russia</option>
+            </select>
+          </label>
+        </section>
+
       <div class="main__wrapper">
       <!--Сайдбар-->
       <aside class="sidebar">
@@ -424,8 +442,8 @@
           <li class="paginator__item"><a class="paginator__link" href="#">7</a></li>
           <li class="paginator__item"><a class="paginator__link" href="#">8</a></li>
         </ul>
-        <button class="paginator__button paginator__button--left" type="button"><span class="visually-hidden">Предыдущий страница</span></button>
-        <button class="paginator__button paginator__button--right" type="button"><span class="visually-hidden">Следующий страница</span></button>
+        <button class="paginator__button paginator__button--left" type="button"><span class="visually-hidden">Предыдущая страница</span></button>
+        <button class="paginator__button paginator__button--right" type="button"><span class="visually-hidden">Следующая страница</span></button>
       </section>
       <!--Популярное-->
       <section class="popular">
