@@ -8,7 +8,7 @@
 }
 
 .category-list__item {
-  padding-right: 36px;
+  padding-right: 29px;
 }
 
 .category-list__link {
@@ -16,7 +16,7 @@
   font-size: $body-font-size - 3px;
   line-height: $body-line-height - 3px;
   text-transform: uppercase;
-  letter-spacing: 0.1px;
+  letter-spacing: 0.7px;
 
   &--active {
     color: $text-color;

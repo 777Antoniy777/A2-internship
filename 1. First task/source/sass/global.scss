@@ -27,6 +27,24 @@
 
 @font-face {
   font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"),
+    url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"),
+    url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
   src: url("../fonts/Montserrat-Black.woff2") format("woff2"),
     url("../fonts/Montserrat-Black.woff") format("woff");
   font-weight: 900;
@@ -43,7 +61,8 @@ body {
   font-family: $font-montserrat;
   font-size: $body-font-size;
   line-height: $body-line-height;
-  font-weight: $font-normal;
+  // font-weight: $font-normal;
+  font-weight: $font-semibold;
   font-style: $style-normal;
   min-width: 1400px;
 }

@@ -1,0 +1,90 @@
+.delivery {
+  padding-top: 4px;
+  color: $text-color;
+  background-color: $text-white;
+  border-radius: 5px;
+}
+
+.delivery__title {
+  font-size: $body-font-size - 3px;
+  line-height: $body-line-height - 3px;
+  font-weight: $font-semibold;
+  margin-left: 19px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.delivery__list {
+  @include list;
+  @include flex;
+  justify-content: space-between;
+  min-height: 47px;
+  border-top: 1px solid #f0f2f7;
+}
+
+.delivery__item {
+  @include flex;
+  justify-content: center;
+  width: 135px;
+  min-height: inherit;
+  padding: 12px 0 14px 0;
+  box-sizing: border-box;
+
+  &:nth-child(1) {
+    border-right: 1px solid #f0f2f7;
+  }
+}
+
+.delivery__item input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.delivery__item label {
+  position: relative;
+  font-size: $body-font-size - 2px;
+  line-height: $body-line-height - 2px;
+  text-transform: uppercase;
+
+  &::before,
+  &::after {
+    @include pseudo;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &::before {
+    top: 2px;
+    left: -30px;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #e4e8f0;
+  }
+
+  &::after {
+    display: none;
+    top: 7px;
+    left: -25px;
+    width: 8px;
+    height: 8px;
+    background-color: #00deea;
+  }
+}
+
+.delivery__item label[for=delivery-free] {
+  margin-right: 7px;
+}
+
+.delivery__item label[for=delivery-cost] {
+  margin-right: 2px;
+}
+
+// состояния input
+.delivery__item input:checked + label {
+  &::after {
+    display: block;
+  }
+}

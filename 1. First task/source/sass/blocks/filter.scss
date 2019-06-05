@@ -1,0 +1,197 @@
+.filter {
+  @include flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: $body-font-size - 3px;
+  line-height: $body-line-height - 3px;
+  min-height: 56px;
+  padding: 0 24px 0 21px;
+  margin-bottom: 30px;
+  color: $sort-color;
+  background-color: $text-white;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  box-sizing: border-box;
+}
+
+.filter__wrapper {
+  @include flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 695px;
+  padding-left: 31px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.filter__sort {
+  @include flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 226px;
+  padding-right: 15px;
+  border-right: 2px solid rgba($text-black, 0.05);
+  box-sizing: border-box;
+
+  &::before {
+    @include background;
+    @include pseudo;
+    top: 25px;
+    right: 19px;
+    width: 10px;
+    height: 6px;
+    background-image: url("../img/svg/select-arrow.svg");
+  }
+}
+
+.filter__sort select {
+  font-weight: $font-semibold;
+  width: 118px;
+  min-height: 26px;
+  padding: 0 15px;
+  color: $text-color;
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  appearance: none;
+  box-sizing: border-box;
+}
+
+.filter__keywords {
+  @include flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 247px;
+  margin-right: 28px;
+  box-sizing: border-box;
+}
+
+.filter__keywords input {
+  font-size: $body-font-size - 1px;
+  line-height: $body-line-height - 1px;
+  width: 163px;
+  height: 32px;
+  padding: 0 10px 0 14px;
+  background-color: #f0f2f7;
+  border: 1px solid #e3e8f0;
+  border-radius: 16px;
+  box-sizing: border-box;
+
+  &::placeholder {
+    font-size: $body-font-size - 1px;
+    line-height: $body-line-height - 1px;
+    color: $search-placeholder-color;
+  }
+}
+
+.filter__goods-price {
+  @include flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 230px;
+  margin-right: 24px;
+  box-sizing: border-box;
+}
+
+.filter__goods-price input {
+  font-size: $body-font-size - 1px;
+  line-height: $body-line-height - 1px;
+  width: 64px;
+  height: 32px;
+  padding: 0 10px 0 14px;
+  background-color: #f0f2f7;
+  border: 1px solid #e3e8f0;
+  border-radius: 16px;
+  box-sizing: border-box;
+
+  &:nth-child(1) {
+    margin-left: 12px;
+    margin-right: 5px;
+  }
+
+  &:nth-child(2) {
+    margin-left: 6px;
+    margin-right: 5px;
+  }
+
+  &::placeholder {
+    font-size: $body-font-size - 1px;
+    line-height: $body-line-height - 1px;
+    color: $search-placeholder-color;
+  }
+}
+
+.filter__ship {
+  @include flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 204px;
+  padding-left: 24px;
+  border-left: 2px solid rgba($text-black, 0.05);
+  box-sizing: border-box;
+
+  &::before {
+    @include background;
+    @include pseudo;
+    top: 25px;
+    right: -1px;
+    width: 10px;
+    height: 6px;
+    background-image: url("../img/svg/select-arrow.svg");
+  }
+}
+
+.filter__ship select {
+  font-weight: $font-semibold;
+  width: 59px;
+  min-height: 26px;
+  padding-left: 14px;
+  color: $text-color;
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  appearance: none;
+  box-sizing: border-box;
+}
+
+.filter__ship-price {
+  position: relative;
+  font-size: $body-font-size - 1px;
+  line-height: $body-line-height - 1px;
+  color: $text-color;
+  letter-spacing: 0;
+  text-transform: capitalize;
+
+  &::before,
+  &::after {
+    @include pseudo;
+  }
+
+  &::before {
+    top: 1px;
+    left: -28px;
+    width: 20px;
+    height: 20px;
+    background-color: #00e2aa;
+    border-radius: 50%;
+  }
+
+  &::after {
+    display: inline-block;
+    vertical-align: top;
+    top: 3px;
+    left: -24px;
+    width: 8px;
+    height: 6px;
+    background-color: transparent;
+    border: 2px solid white;
+    clip: rect(3px, auto, auto, 2px);
+    transform: scale(-1, 1) rotate(45deg);
+  }
+}

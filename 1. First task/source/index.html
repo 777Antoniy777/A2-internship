@@ -158,30 +158,34 @@
       <!--Главный фильтр-->
       <div class="main__inner-wrapper">
 
-        <section class="filter">
-          <h2 class="visually-hidden">Главный фильтр</h2>
-          <label class="filter__sort">Sort By:
-            <select name="sort">
-              <option value="1" selected>Best Match</option>
-            </select>
-          </label>
-          <label class="filter__keywords">Keywords
-            <input type="search" name="keywords" placeholder="Tablet">
-          </label>
-          <label class="filter__goods-price">Price
-            <input type="text" name="start-number" value="10" minlength="10" placeholder="10">-
-            <input type="text" name="finish-number" value="1000" placeholder="1000">
-          </label>
-          <span class="filter__ship-price">Free Shipping</span>
-          <label class="filter__ship">Ship To:
-            <select name="ship">
-              <option value="1" selected>Usa</option>
-              <option value="2">Russia</option>
-            </select>
-          </label>
-        </section>
+        <div class="site-wrapper">
+          <section class="filter">
+            <h2 class="visually-hidden">Главный фильтр</h2>
+            <label class="filter__sort">Sort By:
+              <select name="sort">
+                <option value="1" selected>Best Match</option>
+              </select>
+            </label>
+            <div class="filter__wrapper">
+              <label class="filter__keywords">Keywords
+                <input type="search" name="keywords" maxlength="50" placeholder="Tablet">
+              </label>
+              <label class="filter__goods-price">Price
+                <input type="text" name="start-number" value="10" minlength="10" placeholder="10">-
+                <input type="text" name="finish-number" value="1000" placeholder="1000">
+              </label>
+              <span class="filter__ship-price">Free Shipping</span>
+            </div>
+            <label class="filter__ship">Ship To:
+              <select name="ship">
+                <option value="1" selected>Usa</option>
+                <option value="2">Russia</option>
+              </select>
+            </label>
+          </section>
+        </div>
 
-      <div class="main__wrapper">
+      <div class="site-wrapper">
       <!--Сайдбар-->
       <aside class="sidebar">
         <h2 class="visually-hidden">Дополнительный фильтр</h2>
@@ -189,7 +193,7 @@
         <div class="sidebar__categories categories">
           <h3 class="visually-hidden">Категории</h3>
           <ul class="categories__list">
-            <li class="categories__item">Top Sales
+            <li class="categories__item"><a class="categories__link" href="#">Top Sales</a>
               <ul class="categories__goods-list">
                 <li class="categories__goods-item"><a class="categories__goods-link" href="#">Cell Phones</a></li>
                 <li class="categories__goods-item"><a class="categories__goods-link" href="#">Cameras</a></li>
@@ -198,7 +202,7 @@
                 <li class="categories__goods-item"><a class="categories__goods-link" href="#">Video Games</a></li>
               </ul>
             </li>
-            <li class="categories__item">Brand Focus
+            <li class="categories__item"><a class="categories__link" href="#">Brand Focus</a>
               <ul class="categories__goods-list">
                 <li class="categories__goods-item"><a class="categories__goods-link" href="#">Cell Phones</a></li>
                 <li class="categories__goods-item"><a class="categories__goods-link" href="#">Cameras</a></li>
@@ -207,7 +211,7 @@
                 <li class="categories__goods-item"><a class="categories__goods-link" href="#">Video Games</a></li>
               </ul>
             </li>
-            <li class="categories__item">Hi-Tech
+            <li class="categories__item"><a class="categories__link" href="#">Hi-Tech</a>
               <ul class="categories__goods-list">
                 <li class="categories__goods-item"><a class="categories__goods-link" href="#">Cell Phones</a></li>
                 <li class="categories__goods-item"><a class="categories__goods-link" href="#">Cameras</a></li>
@@ -216,7 +220,7 @@
                 <li class="categories__goods-item"><a class="categories__goods-link" href="#">Video Games</a></li>
               </ul>
             </li>
-            <li class="categories__item">Home
+            <li class="categories__item"><a class="categories__link" href="#">Home</a>
               <ul class="categories__goods-list">
                 <li class="categories__goods-item"><a class="categories__goods-link" href="#">Cell Phones</a></li>
                 <li class="categories__goods-item"><a class="categories__goods-link" href="#">Cameras</a></li>
@@ -225,7 +229,7 @@
                 <li class="categories__goods-item"><a class="categories__goods-link" href="#">Video Games</a></li>
               </ul>
             </li>
-            <li class="categories__item">Sale
+            <li class="categories__item"><a class="categories__link" href="#">Sale</a>
               <ul class="categories__goods-list">
                 <li class="categories__goods-item"><a class="categories__goods-link" href="#">Cell Phones</a></li>
                 <li class="categories__goods-item"><a class="categories__goods-link" href="#">Cameras</a></li>
@@ -242,15 +246,13 @@
             <h3 class="available__title">Available</h3>
             <ul class="available__list">
               <li class="available__item">
-                <label>In Storage
-                  <input type="radio" name="available" checked>
-                </label>
+                <input type="radio" name="available" id="storage" checked>
+                <label for="storage">In Storage</label>
                 <span>45</span>
               </li>
               <li class="available__item">
-                <label>In Online-Shop
-                  <input type="radio" name="available">
-                </label>
+                <input type="radio" name="available" id="online-shop">
+                <label for="online-shop">In Online-Shop</label>
                 <span>12</span>
               </li>
             </ul>
@@ -263,27 +265,23 @@
             </div>
             <ul class="brands__list">
               <li class="brands__item">
-                <label>Apple
-                  <input type="checkbox" name="apple" checked>
-                </label>
+                <input type="checkbox" name="apple" id="apple" checked>
+                <label for="apple">Apple</label>
                 <span>32</span>
               </li>
               <li class="brands__item">
-                <label>JBL
-                  <input type="checkbox" name="jbl">
-                </label>
+                <input type="checkbox" name="jbl" id="jbl">
+                <label for="jbl">JBL</label>
                 <span>14</span>
               </li>
               <li class="brands__item">
-                <label>Bose
-                  <input type="checkbox" name="bose">
-                </label>
+                <input type="checkbox" name="bose" id="bose">
+                <label for="bose">Bose</label>
                 <span>3</span>
               </li>
               <li class="brands__item">
-                <label>Nest
-                  <input type="checkbox" name="nest">
-                </label>
+                <input type="checkbox" name="nest" id="nest">
+                <label for="nest">Nest</label>
                 <span>5</span>
               </li>
             </ul>
@@ -297,45 +295,38 @@
           </div>
           <ul class="condition__list">
             <li class="condition__item">
-              <label>New
-                <input type="checkbox" name="new" checked>
-              </label>
+              <input type="checkbox" name="new" id="new" checked>
+              <label for="new">New</label>
             </li>
             <li class="condition__item">
-              <label>Manufacturer Refurbished
-                <input type="checkbox" name="manufacturer-refurbished">
-              </label>
+              <input type="checkbox" name="manufacturer-refurbished" id="manufacturer-refurbished">
+              <label for="manufacturer-refurbished">Manufacturer Refurbished</label>
             </li>
             <li class="condition__item">
-              <label>Seller Refurbished
-                <input type="checkbox" name="seller-refurbished">
-              </label>
+              <input type="checkbox" name="seller-refurbished" id="seller-refurbished">
+              <label for="seller-refurbished">Seller Refurbished</label>
             </li>
             <li class="condition__item">
-              <label>Used
-                <input type="checkbox" name="used" checked>
-              </label>
+              <input type="checkbox" name="used" id="used" checked>
+              <label for="used">Used</label>
             </li>
             <li class="condition__item">
-              <label>For Parts or not Working
-                <input type="checkbox" name="not-working">
-              </label>
+              <input type="checkbox" name="not-working" id="not-working">
+              <label for="not-working">For Parts or not Working</label>
             </li>
           </ul>
         </div>
         <!--Доставка-->
         <div class="sidebar__delivery delivery">
           <h3 class="delivery__title">Delivery Options</h3>
-          <ul>
-            <li>
-              <label>Free
-                <input type="radio" name="delivery" checked>
-              </label>
+          <ul class="delivery__list">
+            <li class="delivery__item">
+              <input type="radio" name="delivery" id="delivery-free" checked>
+              <label for="delivery-free">Free</label>
             </li>
-            <li>
-              <label>$4.99
-                <input type="radio" name="delivery">
-              </label>
+            <li class="delivery__item">
+              <input type="radio" name="delivery" id="delivery-cost">
+              <label for="delivery-cost">$4.99</label>
             </li>
           </ul>
         </div>

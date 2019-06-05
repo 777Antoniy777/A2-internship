@@ -1,0 +1,12 @@
+.sidebar {
+  width: 270px;
+  box-sizing: border-box;
+}
+
+.sidebar__wrapper {
+  min-height: 143px;
+  padding-bottom: 1px;
+  margin-bottom: 28px;
+  background-color: $text-white;
+  border-radius: 5px;
+}

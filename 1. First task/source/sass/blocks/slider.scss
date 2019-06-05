@@ -46,6 +46,7 @@
 .slider__content-description {
   font-family: $font-crimson;
   font-size: $body-font-size + 2px;
+  font-weight: $font-regular;
   margin-left: 1px;
   margin-bottom: 62px;
   word-spacing: 4.1px;
@@ -124,7 +125,7 @@
     top: 15px;
     width: 10px;
     height: 6px;
-    background-image: url("../../img/svg/slider-arrow.svg");
+    background-image: url("../img/svg/slider-arrow.svg");
   }
 
   &--left {
