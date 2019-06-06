@@ -1,5 +1,13 @@
 .main__inner-wrapper {
   padding-top: 50px;
+  padding-bottom: 51px;
   background-color: $main-bg;
+
+  &--goods {
+    @include flex;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
