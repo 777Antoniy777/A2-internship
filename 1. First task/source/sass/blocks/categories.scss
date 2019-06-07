@@ -75,7 +75,7 @@
   letter-spacing: 0.7px;
 }
 
-// ховеры списка
+// *:hover
 .categories__item:hover .categories__goods-list {
   max-height: 215px;
   transition: max-height 1s;
@@ -84,4 +84,21 @@
 .categories__item:hover::before {
   transform: rotate(0deg);
   transition: transform 1s;
+}
+
+.categories__item:hover .categories__link {
+  color: rgba($text-color, 0.7);
+}
+
+.categories__goods-item:hover .categories__goods-link {
+  color: rgba($text-color, 0.7);
+}
+
+// *:active
+.categories__item:active .categories__link {
+  color: rgba($text-color, 0.5);
+}
+
+.categories__goods-item:active .categories__goods-link {
+  color: rgba($text-color, 0.5);
 }

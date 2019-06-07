@@ -13,3 +13,13 @@
 .company-list__link {
   @include link(none, $text-color);
 }
+
+// *:hover
+.company-list__item:hover .company-list__link {
+  color: rgba($text-black, 0.7);
+}
+
+// *:active
+.company-list__item:active .company-list__link {
+  color: rgba($text-black, 0.5);
+}

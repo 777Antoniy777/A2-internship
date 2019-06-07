@@ -115,3 +115,31 @@
   color: rgba($text-white, 0.3);
   letter-spacing: -0.33px;
 }
+
+// *:hover
+.main-footer__logo-link:hover,
+.main-footer__social-item:hover {
+  opacity: 0.7;
+}
+
+.main-footer__company-item:hover .main-footer__company-link {
+  color: rgba($text-white, 0.7);
+}
+
+.main-footer__privacy-item:hover .main-footer__privacy-link {
+  color: $text-white;
+}
+
+// *:active
+.main-footer__logo-link:active,
+.main-footer__social-item:active {
+  opacity: 0.5;
+}
+
+.main-footer__company-item:active .main-footer__company-link {
+  color: rgba($text-white, 0.5);
+}
+
+.main-footer__privacy-item:active .main-footer__privacy-link {
+  color: rgba($text-white, 0.7);
+}

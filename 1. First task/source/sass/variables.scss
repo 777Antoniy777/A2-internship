@@ -1,15 +1,18 @@
+// font-family
 $font-crimson: "Crimson Text", "Times New Roman", serif;
 $font-montserrat: "Montserrat", "Arial", sans-serif;
+// font-weight
 $font-regular: 400;
 $font-medium: 500;
 $font-semibold: 600;
 $font-black: 900;
+// font-style
 $style-normal: normal;
 $style-italic: italic;
+// font-size && line-height
 $body-font-size: 14px;
 $body-line-height: 24px;
-$link-hover: #ff8b00;
-$link-active: rgba(#ff8b00, 0.6);
+// color
 $text-color: #343e5c;
 $nav-color: #b9bed1;
 $good-title-color: #1c1e23;
@@ -21,8 +24,6 @@ $slider-button-color: #2754eb;
 $footer-bg: #222328;
 $text-white: white;
 $text-black: black;
-// $mobile-width: 320px;
-// $tablet-width: 660px;
-// $desktop-width: 960px;
+// background-retina
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;

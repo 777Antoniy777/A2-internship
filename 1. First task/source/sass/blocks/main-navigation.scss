@@ -165,3 +165,38 @@
     background-image: url("../img/svg/search.svg");
   }
 }
+
+// *:hover
+.main-navigation__logo-link:hover {
+  opacity: 0.7;
+}
+
+.main-navigation__link:hover {
+  color: rgba($text-black, 0.7);
+}
+
+.main-navigation__link--sign:hover {
+  color: $text-white;
+  background-color: $text-black;
+}
+
+.main-navigation__link--support:hover {
+  color: $text-black;
+}
+
+// *:active
+.main-navigation__logo-link:active {
+  opacity: 0.5;
+}
+
+.main-navigation__link:active {
+  color: rgba($text-black, 0.5);
+}
+
+.main-navigation__link--sign:active {
+  color: rgba($text-white, 0.7);
+}
+
+.main-navigation__link--support:active {
+  color: rgba($text-black, 0.7);
+}

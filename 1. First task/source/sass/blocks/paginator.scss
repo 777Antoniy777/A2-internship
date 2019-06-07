@@ -12,6 +12,7 @@
   @include flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   width: 570px;
   margin-right: 22px;
 }
@@ -58,4 +59,30 @@
     transform: rotate(-90deg);
     margin-right: 75px;
   }
+}
+
+// *:hover
+.paginator__item:hover .paginator__link {
+  color: rgba($text-black, 0.7);
+
+  &--active {
+    color: $text-color;
+  }
+}
+
+.paginator__button:hover {
+  opacity: 0.7;
+}
+
+// *:active
+.paginator__item:active .paginator__link {
+  color: rgba($text-black, 0.5);
+
+  &--active {
+    color: $text-color;
+  }
+}
+
+.paginator__button:active {
+  opacity: 0.5;
 }

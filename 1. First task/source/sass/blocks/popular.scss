@@ -91,3 +91,13 @@
 .popular__item-link {
   @include link(none, $text-color);
 }
+
+// *:hover
+.popular__item-title:hover .popular__item-link {
+  color: rgba($text-black, 0.7);
+}
+
+// *:active
+.popular__item-title:active .popular__item-link {
+  color: rgba($text-black, 0.5);
+}

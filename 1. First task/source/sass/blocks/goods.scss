@@ -183,3 +183,13 @@
   margin-top: 0;
   margin-bottom: -8px;
 }
+
+// *:hover
+.goods__link:hover {
+  color: rgba($text-black, 0.7);
+}
+
+// *:active
+.goods__link:active {
+  color: rgba($text-black, 0.5);
+}
