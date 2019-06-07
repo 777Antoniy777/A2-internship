@@ -16,7 +16,6 @@
 }
 
 .delivery__list {
-  @include list;
   @include flex;
   justify-content: space-between;
   min-height: 47px;
@@ -29,7 +28,6 @@
   width: 135px;
   min-height: inherit;
   padding: 12px 0 14px 0;
-  box-sizing: border-box;
 
   &:nth-child(1) {
     border-right: 1px solid #f0f2f7;

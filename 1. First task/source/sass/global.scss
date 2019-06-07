@@ -52,16 +52,10 @@
   font-display: swap;
 }
 
-html {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-family: $font-montserrat;
   font-size: $body-font-size;
   line-height: $body-line-height;
-  // font-weight: $font-normal;
   font-weight: $font-semibold;
   font-style: $style-normal;
   min-width: 1400px;

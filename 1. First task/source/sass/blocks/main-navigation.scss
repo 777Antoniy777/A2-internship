@@ -1,6 +1,4 @@
 .main-navigation__wrapper {
-  box-sizing: border-box;
-
   &:nth-child(1) {
     min-height: 89px;
     border-bottom: 1px solid #f0f2f7;
@@ -18,7 +16,6 @@
   align-items: center;
   flex-wrap: wrap;
   min-height: inherit;
-  box-sizing: border-box;
 }
 
 .main-navigation__inner-wrapper {
@@ -29,7 +26,6 @@
   width: 200px;
   min-height: inherit;
   padding-left: 23px;
-  box-sizing: border-box;
 
   &--mobile {
     padding-left: 0;
@@ -50,8 +46,6 @@
   border: none;
   border-top: 2px solid #3e425a;
   border-bottom: 2px solid #3e425a;
-  box-sizing: border-box;
-  cursor: pointer;
 
   &::before {
     @include pseudo;
@@ -95,7 +89,6 @@
     padding: 2px 8px;
     background-color: #e3e8f0;
     border-radius: 50%;
-    box-sizing: border-box;
   }
 
   &::after {
@@ -119,7 +112,6 @@
     text-align: center;
     border-radius: 16px;
     letter-spacing: 0.1px;
-    box-sizing: border-box;
 
     &::before,
     &::after {
@@ -140,7 +132,6 @@
 
 .main-navigation__form {
   @include flex(flex, row-reverse);
-  box-sizing: border-box;
 }
 
 .main-navigation__form-input {
@@ -150,7 +141,6 @@
   color: $sort-color;
   background-color: transparent;
   border: none;
-  box-sizing: border-box;
 
   &::placeholder {
     font-size: $body-font-size;
@@ -165,7 +155,6 @@
   height: 30px;
   background-color: transparent;
   border: none;
-  cursor: pointer;
 
   &::before {
     @include pseudo;

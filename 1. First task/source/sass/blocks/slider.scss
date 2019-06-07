@@ -2,7 +2,6 @@
   min-height: 500px;
   color: $text-white;
   background-color: $slider-bg;
-  box-sizing: border-box;
 }
 
 .slider .site-wrapper {
@@ -12,11 +11,9 @@
 }
 
 .slider__content-list {
-  @include list;
   @include flex;
   width: 400%;
   min-height: inherit;
-  box-sizing: border-box;
 }
 
 .slider__content-item {
@@ -24,14 +21,12 @@
   justify-content: space-between;
   align-items: center;
   width: 1170px;
-  box-sizing: border-box;
 }
 
 .slider__content-wrapper {
   width: 475px;
   margin-top: 99px;
   margin-left: 96px;
-  box-sizing: border-box;
 }
 
 .slider__content-title {
@@ -74,7 +69,6 @@
 }
 
 .slider__button-list {
-  @include list;
   @include flex;
   justify-content: space-between;
   position: absolute;
@@ -82,7 +76,6 @@
   left: 50%;
   width: 56px;
   transform: translate(-50%);
-  box-sizing: border-box;
 }
 
 .slider__button-item input {
@@ -100,8 +93,6 @@
   background-color: transparent;
   border: 2px solid rgba($text-white, 0.5);
   border-radius: 50%;
-  box-sizing: border-box;
-  cursor: pointer;
 }
 
 .slider__button-item input:checked + label {
@@ -116,8 +107,6 @@
   background-color: transparent;
   border: 2px solid rgba($text-white, 0.2);
   border-radius: 50%;
-  box-sizing: border-box;
-  cursor: pointer;
 
   &::before {
     @include background;

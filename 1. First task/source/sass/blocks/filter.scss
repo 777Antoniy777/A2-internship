@@ -12,7 +12,6 @@
   border-radius: 5px;
   text-transform: uppercase;
   letter-spacing: 0.7px;
-  box-sizing: border-box;
 }
 
 .filter__wrapper {
@@ -23,7 +22,6 @@
   width: 695px;
   padding-left: 31px;
   padding-right: 20px;
-  box-sizing: border-box;
 }
 
 .filter__sort {
@@ -34,7 +32,6 @@
   width: 226px;
   padding-right: 15px;
   border-right: 2px solid rgba($text-black, 0.05);
-  box-sizing: border-box;
 
   &::before {
     @include background;
@@ -58,7 +55,6 @@
   text-transform: uppercase;
   letter-spacing: 0.7px;
   appearance: none;
-  box-sizing: border-box;
 }
 
 .filter__keywords {
@@ -67,7 +63,6 @@
   align-items: center;
   width: 247px;
   margin-right: 28px;
-  box-sizing: border-box;
 }
 
 .filter__keywords input {
@@ -79,7 +74,6 @@
   background-color: #f0f2f7;
   border: 1px solid #e3e8f0;
   border-radius: 16px;
-  box-sizing: border-box;
 
   &::placeholder {
     font-size: $body-font-size - 1px;
@@ -94,7 +88,6 @@
   align-items: center;
   width: 230px;
   margin-right: 24px;
-  box-sizing: border-box;
 }
 
 .filter__goods-price input {
@@ -106,7 +99,6 @@
   background-color: #f0f2f7;
   border: 1px solid #e3e8f0;
   border-radius: 16px;
-  box-sizing: border-box;
 
   &:nth-child(1) {
     margin-left: 12px;
@@ -133,7 +125,6 @@
   width: 204px;
   padding-left: 24px;
   border-left: 2px solid rgba($text-black, 0.05);
-  box-sizing: border-box;
 
   &::before {
     @include background;
@@ -157,7 +148,6 @@
   text-transform: uppercase;
   letter-spacing: 0.7px;
   appearance: none;
-  box-sizing: border-box;
 }
 
 .filter__ship-price {

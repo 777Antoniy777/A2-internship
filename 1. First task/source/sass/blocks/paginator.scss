@@ -9,13 +9,11 @@
 }
 
 .paginator__list {
-  @include list;
   @include flex;
   justify-content: center;
   align-items: center;
   width: 570px;
   margin-right: 22px;
-  box-sizing: border-box;
 }
 
 .paginator__item {
@@ -25,7 +23,6 @@
   width: 48px;
   height: 48px;
   margin: 0 6px 0 6px;
-  box-sizing: border-box;
 }
 
 .paginator__link {
@@ -51,7 +48,6 @@
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
-  cursor: pointer;
 
   &--left {
     transform: rotate(90deg);

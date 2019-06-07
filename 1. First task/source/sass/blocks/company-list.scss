@@ -1,11 +1,9 @@
 .company-list {
-  @include list;
   @include flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 570px;
   padding: 0 13px 0 42px;
-  box-sizing: border-box;
 }
 
 .company-list__item {

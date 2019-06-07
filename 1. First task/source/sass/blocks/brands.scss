@@ -29,10 +29,6 @@
   letter-spacing: 0.7px;
 }
 
-.brands__list {
-  @include list;
-}
-
 .brands__item {
   @include flex;
   justify-content: space-between;
@@ -63,7 +59,6 @@
   &::after {
     @include pseudo;
     cursor: pointer;
-    box-sizing: border-box;
   }
 
   &::before {

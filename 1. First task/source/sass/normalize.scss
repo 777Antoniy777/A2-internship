@@ -341,3 +341,46 @@ template {
 [hidden] {
   display: none;
 }
+
+/**
+ * Добавление box-sizing: border-box для всех блочных элементов и элементов форм для упрощения верстки
+   Обнуление отступов html
+ */
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+input,
+textarea,
+select,
+option,
+optgroup,
+button,
+legend,
+fieldset {
+  box-sizing: border-box;
+}
+
+/**
+ * Изменение всех элементов ul
+ */
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/**
+ * Добавление всем кнопкам cursor: pointer
+ */
+
+button {
+  cursor: pointer;
+}

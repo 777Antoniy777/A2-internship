@@ -1,6 +1,5 @@
 .feedback {
   min-height: 430px;
-  box-sizing: border-box;
 }
 
 .feedback .site-wrapper {
@@ -33,19 +32,16 @@
 }
 
 .feedback__list {
-  @include list;
   @include flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 1040px;
   margin-right: -68px;
-  box-sizing: border-box;
 }
 
 .feedback__item {
   width: 270px;
   margin-right: 68px;
-  box-sizing: border-box;
 
   &:nth-child(2) {
     margin-right: 93px;

@@ -13,10 +13,6 @@
   letter-spacing: 0.7px;
 }
 
-.available__list {
-  @include list;
-}
-
 .available__item {
   @include flex;
   justify-content: space-between;
