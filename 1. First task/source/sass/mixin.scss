@@ -1,17 +1,11 @@
-@mixin link($underline: none, $link-color: white) {
-  text-decoration: $underline;
-  color: $link-color;
-}
-
-@mixin list($list-style: none, $margin: 0, $padding: 0) {
-  list-style: $list-style;
-  margin: $margin;
-  padding: $padding;
-}
-
 @mixin flex($flex: flex, $flex-direction: row) {
   display: $flex;
   flex-direction: $flex-direction;
+}
+
+@mixin link($underline: none, $link-color: white) {
+  text-decoration: $underline;
+  color: $link-color;
 }
 
 @mixin background {
