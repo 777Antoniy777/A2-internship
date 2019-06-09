@@ -173,10 +173,13 @@
               <label class="filter__keywords">Keywords
               <input type="search" name="keywords" maxlength="50" placeholder="Tablet">
               </label>
-              <label class="filter__goods-price">Price
-              <input type="text" name="start-number" value="10" minlength="10" placeholder="10">-
-              <input type="text" name="finish-number" value="1000" placeholder="1000">
-              </label>
+              <div class="filter__goods-price">
+                <span>Price</span>
+                <label for="start-price"><span class="visually-hidden">Начальная цена</span></label>
+                <input type="text" name="start-price" id="start-price" value="10" minlength="10" placeholder="10">-
+                <label for="finish-price"><span class="visually-hidden">Конечная цена</span></label>
+                <input type="text" name="finish-price" id="finish-price" value="1000" placeholder="1000">
+              </div>
               <span class="filter__ship-price">Free Shipping</span>
             </div>
             <label class="filter__ship">
