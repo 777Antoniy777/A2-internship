@@ -78,8 +78,7 @@
             <div class="main-navigation__inner-wrapper main-navigation__inner-wrapper--support">
               <a class="main-navigation__link main-navigation__link--support" href="#">Support</a>
               <form class="main-navigation__form" name="search" action="https://echo.htmlacademy.ru" method="get">
-                <label class="visually-hidden" for="nav-search"></label>
-                <input class="main-navigation__form-input" type="search" name="nav-search" id="nav-search" maxlength="50" placeholder="I’m looking for ...">
+                <input class="main-navigation__form-input" type="search" name="nav-search" aria-label="Поиск по сайту" maxlength="50" placeholder="I’m looking for ...">
                 <button class="main-navigation__form-button" type="submit"><span class="visually-hidden">Искать товар</span></button>
               </form>
             </div>
@@ -175,10 +174,8 @@
               </label>
               <div class="filter__goods-price">
                 <span>Price</span>
-                <label for="start-price"><span class="visually-hidden">Начальная цена</span></label>
-                <input type="text" name="start-price" id="start-price" value="10" minlength="10" placeholder="10">-
-                <label for="finish-price"><span class="visually-hidden">Конечная цена</span></label>
-                <input type="text" name="finish-price" id="finish-price" value="1000" placeholder="1000">
+                <input type="text" name="start-price" aria-label="Начальная цена" value="10" minlength="10" placeholder="10">-
+                <input type="text" name="finish-price" aria-label="Конечная цена" value="1000" placeholder="1000">
               </div>
               <span class="filter__ship-price">Free Shipping</span>
             </div>
