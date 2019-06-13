@@ -1,0 +1,19 @@
+@mixin flex($flex: flex, $flex-direction: row) {
+  display: $flex;
+  flex-direction: $flex-direction;
+}
+
+@mixin link($underline: none, $link-color: white) {
+  text-decoration: $underline;
+  color: $link-color;
+}
+
+@mixin background {
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+@mixin pseudo {
+  content: "";
+  position: absolute;
+}
