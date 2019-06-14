@@ -7,34 +7,122 @@ html(lang="ru")
     meta(name="viewport" content="width=device-width,initial-scale=1")
     meta(name="format-detection" content="telephone=no")
     link(href="css/style.min.css" rel="stylesheet")
-    link(href="/fonts/Montserrat-Black.woff2" as="font" rel="preload")
+    link(href="/fonts/SourceSansPro-Regular.woff2" as="font" rel="preload")
+    link(href="/fonts/SourceSansPro-SemiBold.woff2" as="font" rel="preload")
+    link(href="/fonts/Actor-Regular.woff2" as="font" rel="preload")
     //- script
     //-   // Picture element HTML5 shiv
     //-   - document.createElement("picture");
     script(src="js/picturefill.min.js" async)
 
-  body(class="main-page")
+  body.main-page
+
     // Хедер
-    header(class="main-header")
+    header.main-header
+
+      nav.main-header__navigation.main-navigation
+        .main-navigation__wrapper
+          button.main-navigation__button(type="button")
+            span.visually-hidden Меню сайта
+          a.main-navigation__logo-link
+            img.main-navigation__logo(src="" width="" height="" alt="Лого Sity")
+
+          .main-navigation__user-wrapper
+
+            form.main-navigation__form(name="search" action="https://echo.htmlacademy.ru" method="get")
+              .main-navigation__form-wrapper
+                input(type="search" name="nav-search" aria-label="Поиск по сайту" maxlength="50" placeholder="Search New York")
+                button.main-navigation__form-button(type="submit")
+                  span.visually-hidden Искать музеи
+              select(name="nav-select" aria-label="Выберите известный город")
+                option(value="1" selected) New York
+                option(value="2") Moscow
+                option(value="3") Honkong
+
+            ul.main-navigation__list
+              li.main-navigation__item
+                a.main-navigation__link.main-navigation__link--question(href="#")
+                  span Help
+              li.main-navigation__item
+                a.main-navigation__link.main-navigation__link--favorites(href="#")
+                  span Favorites
+              li.main-navigation__item
+                a.main-navigation__link.main-navigation__link--cart(href="#")
+                  span Cart
+              li.main-navigation__item.main-navigation__item--mobile
+                a.main-navigation__link.main-navigation__link--search(href="#")
+                  span.visually-hidden Search
+              li.main-navigation__item
+                a.main-navigation__link.main-navigation__link--user(href="#")
+                  span Log In | Register
+
+        .main-navigation__wrapper--hiiden
+          ul.main-navigation__list
+            each val in ['Tours', 'Attractions', 'Museums', 'Discount passes', 'Neighborhoods']
+              li.main-navigation__item
+                a.main-navigation__link(href="#")= val
 
     // Осн.часть
-    main(class="main")
-      p Hello world!
-      ul
-        each val in ['zero', 'one', 'two']
-          li
-            a.ffff= val
+    main.main
 
-      //- mixin pet(name)
-      //-   li.pet= name
-      //- //- use
-      //- ul.fdf
-      //-   +pet('cat')
-      //-   +pet('dog')
-      //-   +pet('pig')
+      //- Хлебные крошки
+      section.main__breadcrumbs.breadcrumbs
+        h2.visually-hidden Навигация сайта
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Category
+          li.breadcrumbs__item
+            a.breadcrumbs__link.breadcrumbs__link--active Museums
+
+      h1.main__title New York City Museum
+
+      //- Слайдер
+      section.main__slider.slider
+        h2.visually-hidden Слайдер
+        ul.slider__list
+          - for (var x = 0; x < 3; x++)
+            li.slider__item
+              h3.visually-hidden Слайд с картинкой
+
+        button.slider__button.slider__button--left(type="button")
+          span.visually-hidden Предыдущий слайд
+        button.slider__button.slider__button--right(type="button")
+          span.visually-hidden Следующий слайд
+
+      //- Фильтр
+      section.main__filter.filter
+        h2.filter__title Museums
+
+        .filter__wrapper
+          ul.filter__list
+            li.filter__item
+              select(name="subcategories" aria-label="Выберите подкатегорию")
+                option(value="1" selected) Art Museums
+                option(value="2") History Museums
+                option(value="3") Outdoor Museums
+            li.filter__item
+              select(name="neighborhoods" aria-label="Выберите соседей")
+                option(value="1" selected) Flatiron
+                option(value="2") Chelsea
+                option(value="3") Financial District
+                option(value="4") Upper East Side
+                option(value="5") Upper West Side
+            li.filter__item
+              select(name="duration" aria-label="Выберите продолжительность")
+                option(value="1" selected) Up to 1 Hour
+                option(value="2") 1-6 Hours
+                option(value="3") 4 Hours to 1 Day
+                option(value="4") More Than 1 Day
+
+        .filter__wrapper
+          select(name="sort" aria-label="Выберите сортировку")
+            option(value="" selected) Sort
+            option(value="1") less
+            option(value="2") more
+
 
     // Футер
-    footer(class="main-footer")
+    footer.main-footer
 
     //- div(style="display: none;")
     //-   include(src="build/img/svg-sprite.svg")
