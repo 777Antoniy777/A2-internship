@@ -7,9 +7,18 @@ $font-semibold: 600;
 // font-style
 $style-normal: normal;
 // font-size && line-height
-$body-font-size: 14px;
-$body-line-height: 24px;
+// mobile
+$font-size-mobile: 14px;
+$line-height-mobile: 24px;
+// tablet
+$font-size-tablet: 14px;
+$line-height-tablet: 24px;
+// desktop
+$font-size-desktop: 14px;
+$line-height-desktop: 24px;
 // color
+$header-bg: #0084ba;
+
 $text-color: #343e5c;
 $nav-color: #b9bed1;
 $good-title-color: #1c1e23;

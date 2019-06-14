@@ -16,51 +16,71 @@ html(lang="ru")
     script(src="js/picturefill.min.js" async)
 
   body.main-page
+    //- Mixins
+    //- Declaration
+    //- mixin option(atribute, name)
+    //-   option(atribute)= name
+
+    //- Declaration
+    mixin list(title, description, index)
+      li.museums__item
+        a.museums__link(href="#")
+          h3.museums__title= title
+        p.museums__description= description
+        a.museums__link(href="#")
+          img.museums__image(src="img/museum-" + index + ".jpg", alt= title)
+
+    //- Declaration
+    mixin filter(title, id)
+      li.filter-mobile__item
+        input(type="checkbox" name= id id= id)
+        label(for= id)= title
 
     // Хедер
     header.main-header
+      .site-wrapper
 
-      nav.main-header__navigation.main-navigation
-        .main-navigation__wrapper
-          button.main-navigation__button(type="button")
-            span.visually-hidden Меню сайта
-          a.main-navigation__logo-link
-            img.main-navigation__logo(src="" width="" height="" alt="Лого Sity")
+        nav.main-header__navigation.main-navigation
+          .main-navigation__wrapper
+            button.main-navigation__button(type="button")
+              span.visually-hidden Меню сайта
+            a.main-navigation__logo-link
+              img.main-navigation__logo(src="img/svg/logo.svg" width="53" height="37" alt="Лого Sity")
 
-          .main-navigation__user-wrapper
+            .main-navigation__user-wrapper
 
-            form.main-navigation__form(name="search" action="https://echo.htmlacademy.ru" method="get")
-              .main-navigation__form-wrapper
-                input(type="search" name="nav-search" aria-label="Поиск по сайту" maxlength="50" placeholder="Search New York")
-                button.main-navigation__form-button(type="submit")
-                  span.visually-hidden Искать музеи
-              select(name="nav-select" aria-label="Выберите известный город")
-                option(value="1" selected) New York
-                option(value="2") Moscow
-                option(value="3") Honkong
+              form.main-navigation__form(name="search" action="https://echo.htmlacademy.ru" method="get")
+                .main-navigation__form-wrapper
+                  input(type="search" name="nav-search" aria-label="Поиск по сайту" maxlength="50" placeholder="Search New York")
+                  button.main-navigation__form-button(type="submit")
+                    span.visually-hidden Искать музеи
+                select(name="nav-select" aria-label="Выберите известный город")
+                  option(value="1" selected) New York
+                  option(value="2") Moscow
+                  option(value="3") Honkong
 
+              ul.main-navigation__list
+                li.main-navigation__item.main-navigation__item--mobile
+                  a.main-navigation__link.main-navigation__link--question(href="#")
+                    span Help
+                li.main-navigation__item
+                  a.main-navigation__link.main-navigation__link--favorites(href="#")
+                    span Favorites
+                li.main-navigation__item
+                  a.main-navigation__link.main-navigation__link--cart(href="#")
+                    span Cart
+                li.main-navigation__item.main-navigation__item--mobile
+                  button.main-navigation__button.main-navigation__button--search(type="button")
+                    span.visually-hidden Search
+                li.main-navigation__item.main-navigation__item--mobile
+                  a.main-navigation__link.main-navigation__link--user(href="#")
+                    span Log In | Register
+
+          .main-navigation__wrapper--hiiden
             ul.main-navigation__list
-              li.main-navigation__item
-                a.main-navigation__link.main-navigation__link--question(href="#")
-                  span Help
-              li.main-navigation__item
-                a.main-navigation__link.main-navigation__link--favorites(href="#")
-                  span Favorites
-              li.main-navigation__item
-                a.main-navigation__link.main-navigation__link--cart(href="#")
-                  span Cart
-              li.main-navigation__item.main-navigation__item--mobile
-                a.main-navigation__link.main-navigation__link--search(href="#")
-                  span.visually-hidden Search
-              li.main-navigation__item
-                a.main-navigation__link.main-navigation__link--user(href="#")
-                  span Log In | Register
-
-        .main-navigation__wrapper--hiiden
-          ul.main-navigation__list
-            each val in ['Tours', 'Attractions', 'Museums', 'Discount passes', 'Neighborhoods']
-              li.main-navigation__item
-                a.main-navigation__link(href="#")= val
+              each val in ['Tours', 'Attractions', 'Museums', 'Discount passes', 'Neighborhoods']
+                li.main-navigation__item
+                  a.main-navigation__link(href="#")= val
 
     // Осн.часть
     main.main
@@ -114,11 +134,24 @@ html(lang="ru")
                 option(value="3") 4 Hours to 1 Day
                 option(value="4") More Than 1 Day
 
-        .filter__wrapper
+      //- Музеи
+      section.main__museums.museums
+        h2.visually-hidden Музеи
+        .museums__wrapper
+          p.museums__description.museums__description--results
+
           select(name="sort" aria-label="Выберите сортировку")
             option(value="" selected) Sort
-            option(value="1") less
-            option(value="2") more
+            option(value="1") Less
+            option(value="2") More
+
+        ul.museums__list
+          +list('American Folk Art Museum Tour with Skip-the-Line Access', 'from $26 per person', 1)
+          +list('Guggenheim Tour with Skip-the-Line Access', 'from $26 per person', 2)
+          +list('The Frick Collection Tour with Skip-the-Line Access', 'from $26 per person', 3)
+          +list('9/11 Memorial & Museum Admission: Skip the Ticket Line', 'from $26 per person', 4)
+          +list('9/11 Memorial & Museum Admission: Skip the Ticket Line', 'from $26 per person', 5)
+          +list('9/11 Memorial & Museum Admission: Skip the Ticket Line', 'from $26 per person', 6)
 
 
     // Футер
@@ -126,5 +159,46 @@ html(lang="ru")
 
     //- div(style="display: none;")
     //-   include(src="build/img/svg-sprite.svg")
+
+    // Попапы
+    .filter-mobile
+      h2.visually-hidden Мобильный фильтр
+      .filter-mobile__wrapper
+        span Filter
+        button.filter-mobile__button.filter-mobile__button--close
+          span.visually-hidden Закрыть фильтр
+
+      form.filter-mobile__form(name="filter-mobile" action="https://echo.htmlacademy.ru" method="post")
+
+        fieldset
+          legend.filter-mobile__title Subcategories
+          ul.filter-mobile__list
+            +filter('Art Museums', 'art-museums')
+            +filter('History Museums', 'history-museums')
+            +filter('Outdoor Museums', 'outdoor-museums')
+
+        fieldset
+          legend.filter-mobile__title Neighborhoods
+          ul.filter-mobile__list
+            +filter('Flatiron', 'flatiron')
+            +filter('Chelsea', 'chelsea')
+            +filter('Financial District', 'financial-district')
+            +filter('Upper East Side', 'upper-east-side')
+            +filter('Upper West Side', 'upper-west-side')
+
+        fieldset
+          legend.filter-mobile__title Duration
+          ul.filter-mobile__list
+            +filter('Up to 1 Hour', 'up-to-1-hour')
+            +filter('1-6 Hours', '1-6-hours')
+            +filter('4 Hours to 1 Day', '4-hours-to-1-day')
+            +filter('More Than 1 Day', 'more-than-1-day')
+
+        .filter-mobile__wrapper.filter-mobile__wrapper--button
+          button(type="reset").filter-mobile__button.filter-mobile__button--reset Reset
+          button(type="submit").filter-mobile__button.filter-mobile__button--submit Go
+
+    .map
+      iframe.map__iframe(src="")
 
     script(src='js/all.min.js')

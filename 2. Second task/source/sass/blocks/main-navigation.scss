@@ -1,0 +1,80 @@
+.main-navigation__wrapper {
+  @include flex;
+}
+
+.main-navigation__form {
+  display: none;
+}
+
+.main-navigation__list {
+  @include flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 116px;
+}
+
+.main-navigation__item {
+  @include flex;
+  justify-content: center;
+  display: none;
+
+  &--mobile {
+    display: block;
+  }
+}
+
+.main-navigation__link {
+  position: relative;
+  width: 20px;
+  height: 24px;
+
+  & > span {
+    display: none;
+  }
+
+  &--question,
+  &--favorites,
+  &--cart,
+  &--user {
+    @include pseudo;
+    @include background;
+  }
+
+  &--question {
+    background-image: url("../img/svg/question.svg");
+  }
+
+  &--user {
+    background-image: url("../img/svg/user.svg");
+  }
+}
+
+.main-navigation__button {
+  position: relative;
+
+  &--search {
+    @include pseudo;
+    @include background;
+    width: 20px;
+    height: 24px;
+    background-color: transparent;
+    background-image: url("../img/svg/search.svg");
+    border: none;
+  }
+}
+
+.main-navigation__wrapper--hiiden {
+  // display: block;
+}
+
+.main-navigation__wrapper--hiiden .main-navigation__item {
+  display: block;
+}
+
+.main-navigation__wrapper--hiiden .main-navigation__link {
+  @include link;
+}
+
+.main-navigation__wrapper--hiiden > .main-navigation__link {
+  display: block;
+}

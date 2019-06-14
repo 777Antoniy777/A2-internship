@@ -27,8 +27,8 @@
 
 body {
   font-family: $font-sanspro;
-  font-size: $body-font-size;
-  line-height: $body-line-height;
+  font-size: $font-size-mobile;
+  line-height: $line-height-mobile;
   font-weight: $font-regular;
   font-style: $style-normal;
   min-width: 320px;
@@ -45,7 +45,7 @@ body {
 }
 
 .site-wrapper {
-  width: 300px;
+  width: 280px;
   margin: 0 auto;
   padding: 0;
 }
