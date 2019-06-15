@@ -7,9 +7,24 @@ $font-semibold: 600;
 // font-style
 $style-normal: normal;
 // font-size && line-height
+$font-size-nav: 18px;
+$line-height-nav: 24px;
+$font12: 12px;
+$font16: 16px;
+$font18: 18px;
+$font20: 20px;
+//
+$line15: 15px;
+$line16: 16px;
+$line19: 19px;
+$line21: 21px;
+$line24: 24px;
+$line25: 25px;
+$line27: 27px;
+$line38: 38px;
 // mobile
 $font-size-mobile: 14px;
-$line-height-mobile: 24px;
+$line-height-mobile: 16px;
 // tablet
 $font-size-tablet: 14px;
 $line-height-tablet: 24px;
@@ -18,16 +33,11 @@ $font-size-desktop: 14px;
 $line-height-desktop: 24px;
 // color
 $header-bg: #0084ba;
+$text-color: #1c2e36;
+$text-description: #0084ba;
+$filter-color: #666666;
+$btn-slider-color: #e26d5a;
 
-$text-color: #343e5c;
-$nav-color: #b9bed1;
-$good-title-color: #1c1e23;
-$search-placeholder-color: #b9bfd3;
-$sort-color: #a1a8bd;
-$slider-bg: #1c1e23;
-$main-bg: #e4e5e7;
-$slider-button-color: #2754eb;
-$footer-bg: #222328;
 $text-white: white;
 $text-black: black;
 // background-retina

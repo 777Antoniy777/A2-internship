@@ -1,0 +1,47 @@
+.breadcrumbs {
+  padding-top: 7px;
+}
+
+.breadcrumbs__list {
+  @include flex;
+  flex-wrap: wrap;
+  width: 280px;
+}
+
+.breadcrumbs__item {
+  position: relative;
+  padding-right: 18px;
+
+  &::before,
+  &::after {
+    @include pseudo;
+    width: 5px;
+    height: 1px;
+    background-color: #e25d5a;
+  }
+
+  &::before {
+    top: 8px;
+    right: 8px;
+    transform: rotate(17deg);
+  }
+
+  &::after {
+    top: 10px;
+    right: 8px;
+    transform: rotate(-17deg);
+  }
+
+  &:last-child {
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.breadcrumbs__link {
+  @include link(none, $text-color);
+  font-size: $font12;
+  line-height: $font16;
+}

@@ -38,14 +38,16 @@ html(lang="ru")
 
     // Хедер
     header.main-header
-      .site-wrapper
 
-        nav.main-header__navigation.main-navigation
-          .main-navigation__wrapper
-            button.main-navigation__button(type="button")
-              span.visually-hidden Меню сайта
-            a.main-navigation__logo-link
-              img.main-navigation__logo(src="img/svg/logo.svg" width="53" height="37" alt="Лого Sity")
+      nav.main-header__navigation.main-navigation.main-navigation--closed.main-navigation--nojs
+        .main-navigation__wrapper
+          .site-wrapper
+            .main-navigation__button-wrapper
+
+              button.main-navigation__button(type="button")
+                span.visually-hidden Меню сайта
+              a.main-navigation__logo-link
+                img.main-navigation__logo(src="img/svg/logo.svg" width="53" height="37" alt="Лого Sity")
 
             .main-navigation__user-wrapper
 
@@ -76,25 +78,27 @@ html(lang="ru")
                   a.main-navigation__link.main-navigation__link--user(href="#")
                     span Log In | Register
 
-          .main-navigation__wrapper--hiiden
-            ul.main-navigation__list
-              each val in ['Tours', 'Attractions', 'Museums', 'Discount passes', 'Neighborhoods']
-                li.main-navigation__item
-                  a.main-navigation__link(href="#")= val
+        .main-navigation__wrapper--hiiden
+          ul.main-navigation__list
+            each val in ['Tours', 'Attractions', 'Museums', 'Discount passes', 'Neighborhoods']
+              li.main-navigation__item
+                a.main-navigation__link(href="#")= val
 
     // Осн.часть
     main.main
 
       //- Хлебные крошки
       section.main__breadcrumbs.breadcrumbs
-        h2.visually-hidden Навигация сайта
-        ul.breadcrumbs__list
-          li.breadcrumbs__item
-            a.breadcrumbs__link(href="#") Category
-          li.breadcrumbs__item
-            a.breadcrumbs__link.breadcrumbs__link--active Museums
+        .site-wrapper
+          h2.visually-hidden Навигация сайта
+          ul.breadcrumbs__list
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="#") Category
+            li.breadcrumbs__item
+              a.breadcrumbs__link.breadcrumbs__link--active Museums
 
-      h1.main__title New York City Museum
+      .site-wrapper
+        h1.main__title New York City Museums
 
       //- Слайдер
       section.main__slider.slider

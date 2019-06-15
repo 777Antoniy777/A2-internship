@@ -2,3 +2,17 @@
   min-height: 48px;
   background-color: $header-bg;
 }
+
+.main__breadcrumbs {
+  margin-bottom: 7px;
+}
+
+.main__title {
+  font-family: $font-actor;
+  font-size: $font20;
+  font-weight: $font-regular;
+  line-height: $line38;
+  padding-left: 1px;
+  margin: 0;
+}
+
