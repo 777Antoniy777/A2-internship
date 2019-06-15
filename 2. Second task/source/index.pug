@@ -102,7 +102,7 @@ html(lang="ru")
             li.breadcrumbs__item
               a.breadcrumbs__link.breadcrumbs__link--active Museums
 
-      .site-wrapper
+      .site-wrapper.site-wrapper--main-title
         h1.main__title New York City Museums
 
       //- Слайдер
@@ -168,51 +168,53 @@ html(lang="ru")
             +list('9/11 Memorial & Museum Admission: Skip the Ticket Line', 'from $26 per person', 6)
 
 
-    // Футер
-    footer.main-footer
-
     //- div(style="display: none;")
     //-   include(src="build/img/svg-sprite.svg")
 
     // Попапы
     .filter-mobile
-      h2.visually-hidden Мобильный фильтр
       .filter-mobile__wrapper
-        span Filter
-        button.filter-mobile__button.filter-mobile__button--close
-          span.visually-hidden Закрыть фильтр
+        h2.visually-hidden Мобильный фильтр
+        .filter-mobile__inner-wrapper
+          span Filter
+          button.filter-mobile__button.filter-mobile__button--close
+            span.visually-hidden Закрыть фильтр
 
-      form.filter-mobile__form(name="filter-mobile" action="https://echo.htmlacademy.ru" method="post")
+        form.filter-mobile__form(name="filter-mobile" action="https://echo.htmlacademy.ru" method="post")
 
-        fieldset
-          legend.filter-mobile__title Subcategories
-          ul.filter-mobile__list
-            +filter('Art Museums', 'art-museums')
-            +filter('History Museums', 'history-museums')
-            +filter('Outdoor Museums', 'outdoor-museums')
+          fieldset
+            legend.filter-mobile__title Subcategories
+            ul.filter-mobile__list
+              +filter('Art Museums', 'art-museums')
+              +filter('History Museums', 'history-museums')
+              +filter('Outdoor Museums', 'outdoor-museums')
 
-        fieldset
-          legend.filter-mobile__title Neighborhoods
-          ul.filter-mobile__list
-            +filter('Flatiron', 'flatiron')
-            +filter('Chelsea', 'chelsea')
-            +filter('Financial District', 'financial-district')
-            +filter('Upper East Side', 'upper-east-side')
-            +filter('Upper West Side', 'upper-west-side')
+          fieldset
+            legend.filter-mobile__title Neighborhoods
+            ul.filter-mobile__list
+              +filter('Flatiron', 'flatiron')
+              +filter('Chelsea', 'chelsea')
+              +filter('Financial District', 'financial-district')
+              +filter('Upper East Side', 'upper-east-side')
+              +filter('Upper West Side', 'upper-west-side')
 
-        fieldset
-          legend.filter-mobile__title Duration
-          ul.filter-mobile__list
-            +filter('Up to 1 Hour', 'up-to-1-hour')
-            +filter('1-6 Hours', '1-6-hours')
-            +filter('4 Hours to 1 Day', '4-hours-to-1-day')
-            +filter('More Than 1 Day', 'more-than-1-day')
+          fieldset
+            legend.filter-mobile__title Duration
+            ul.filter-mobile__list
+              +filter('Up to 1 Hour', 'up-to-1-hour')
+              +filter('1-6 Hours', '1-6-hours')
+              +filter('4 Hours to 1 Day', '4-hours-to-1-day')
+              +filter('More Than 1 Day', 'more-than-1-day')
 
-        .filter-mobile__wrapper.filter-mobile__wrapper--button
-          button(type="reset").filter-mobile__button.filter-mobile__button--reset Reset
-          button(type="submit").filter-mobile__button.filter-mobile__button--submit Go
+          .filter-mobile__inner-wrapper.filter-mobile__inner-wrapper--button
+            button(type="reset").filter-mobile__button.filter-mobile__button--reset Reset
+            button(type="submit").filter-mobile__button.filter-mobile__button--submit Go
 
     .map
-      iframe.map__iframe(src="")
+      .map__wrapper
+        .site-wrapper
+          button.map__button.map__button--left List
+          button.map__button.map__button--right Filter
+      iframe.map__iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6122088171858!2d30.32330489093596!3d59.93857674840233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538679898464" width="100%" height="100%" border="none" allowfullscreen="")
 
     script(src='js/all.min.js')

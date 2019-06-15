@@ -7,6 +7,10 @@
   margin-bottom: 7px;
 }
 
+.site-wrapper--main-title {
+  width: calc(280 * 100% / 320);
+}
+
 .main__title {
   font-family: $font-actor;
   font-size: $font20;

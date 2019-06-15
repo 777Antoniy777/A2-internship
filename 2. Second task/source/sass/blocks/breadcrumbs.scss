@@ -2,6 +2,10 @@
   padding-top: 7px;
 }
 
+.breadcrumbs .site-wrapper {
+  width: calc(280 * 100% / 320);
+}
+
 .breadcrumbs__list {
   @include flex;
   flex-wrap: wrap;

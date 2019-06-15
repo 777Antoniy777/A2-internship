@@ -6,7 +6,7 @@
 }
 
 .main-navigation__wrapper .site-wrapper {
-  width: 300px;
+  width: calc(300 * 100% / 320);
   min-height: 48px;
   padding-left: 5px;
   padding-right: 2px;
