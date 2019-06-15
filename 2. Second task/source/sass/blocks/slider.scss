@@ -1,4 +1,5 @@
-.slider .site-wrapper {
+.slider {
+  position: relative;
   width: 100%;
   min-height: 241px;
   overflow: hidden;
@@ -8,7 +9,6 @@
   @include flex;
   width: 300%;
   min-height: inherit;
-  // overflow: hidden;
 }
 
 .slider__item {
@@ -18,5 +18,41 @@
   background-color: #8c8d91;
   background-image: url("../img/slider-bg-mobile.jpg");
   background-size: cover;
-  // overflow: hidden;
+}
+
+.slider__button {
+  position: absolute;
+  top: 95px;
+  width: 50px;
+  height: 50px;
+  background-color: $btn-slider-color;
+  border: none;
+
+  &::before {
+    @include pseudo;
+    @include background;
+    width: 22px;
+    height: 26px;
+    background-image: url("../img/svg/slider-arrow.svg");
+  }
+
+  &--left {
+    left: 0%;
+
+    &::before {
+      top: 13px;
+      left: 16px;
+    }
+  }
+
+  &--right {
+    left: 100%;
+    transform: translateX(-100%);
+
+    &::before {
+      top: 11px;
+      left: 12px;
+      transform: rotate(180deg);
+    }
+  }
 }

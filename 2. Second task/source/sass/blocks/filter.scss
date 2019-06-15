@@ -1,0 +1,62 @@
+.filter .site-wrapper {
+  width: calc(280 * 100% / 320);
+}
+
+.filter__title {
+  font-family: $font-actor;
+  font-size: $font18;
+  line-height: $line24;
+  font-weight: $font-regular;
+}
+
+.filter__wrapper {
+  @include flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.filter__list {
+  display: none;
+}
+
+.filter__button {
+  font-size: $font12;
+  line-height: $line15;
+  font-weight: $font-semibold;
+  min-height: 32px;
+  color: $filter-color;
+  background-color: transparent;
+  border: 1px solid #c2c2c2;
+  border-radius: 3px;
+
+  &--left {
+    width: 45px;
+  }
+
+  &--right {
+    position: relative;
+    width: 56px;
+    padding-left: 7px;
+    text-align: left;
+
+    &::before,
+    &::after {
+      @include pseudo;
+      width: 5px;
+      height: 2px;
+      background-color: $filter-color;
+    }
+
+    &::before {
+      top: 14px;
+      right: 8px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      top: 16px;
+      right: 8px;
+      transform: rotate(-45deg);
+    }
+  }
+}

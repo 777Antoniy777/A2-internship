@@ -1,0 +1,90 @@
+.museums__description--results,
+select {
+  display: none;
+}
+
+.museums .site-wrapper {
+  width: calc(300 * 100% / 320);
+}
+
+.museums__list {
+  @include flex;
+  flex-wrap: wrap;
+}
+
+.museums__item {
+  width: 50%;
+  padding: 0 10px;
+}
+
+.museums__article {
+  @include flex(flex, column);
+  justify-content: flex-start;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.museums__title {
+  font-family: $font-actor;
+  font-size: $font-size-mobile;
+  line-height: $line-height-mobile;
+  font-weight: $font-regular;
+  min-height: 49px;
+  margin: 0;
+}
+
+.museums__description {
+  order: 3;
+  font-family: $font-actor;
+  font-size: $font12;
+  line-height: $line21;
+  color: $header-bg;
+  margin: 0;
+}
+
+.museums__link {
+  @include link(none, $text-color);
+
+  &:nth-of-type(1) {
+    order: 2;
+  }
+
+  &:nth-of-type(2) {
+    order: 1;
+    margin-bottom: 2px;
+  }
+}
+
+.museums__image {
+  width: 100%;
+  height: auto;
+}
+
+.museums__input-wrapper {
+  position: absolute;
+  top: 10px;
+  right: 4px;
+  z-index: 2;
+}
+
+.museums__input-wrapper input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.museums__input-wrapper label {
+  @include background;
+  display: inline-block;
+  width: 20px;
+  height: 24px;
+  background-image: url("../img/svg/star.svg");
+  cursor: pointer;
+}
+
+// Состояния input
+.museums__input-wrapper input:checked + label {
+  background-image: url("../img/svg/star-fav.svg");
+}

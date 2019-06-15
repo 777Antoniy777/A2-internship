@@ -24,11 +24,16 @@ html(lang="ru")
     //- Declaration
     mixin list(title, description, index)
       li.museums__item
-        a.museums__link(href="#")
-          h3.museums__title= title
-        p.museums__description= description
-        a.museums__link(href="#")
-          img.museums__image(src="img/museum-" + index + ".jpg", alt= title)
+        article.museums__article
+          a.museums__link(href="#")
+            h3.museums__title= title
+          p.museums__description= description
+          a.museums__link(href="#")
+            img.museums__image(src="img/museum-" + index + ".jpg", alt= title)
+          .museums__input-wrapper
+            input(type="checkbox" name="favorites-" + index id="favorites-" + index)
+            label(for="favorites-" + index)
+              span.visually-hidden Добавить в избранное
 
     //- Declaration
     mixin filter(title, id)
@@ -102,61 +107,65 @@ html(lang="ru")
 
       //- Слайдер
       section.main__slider.slider
-        .site-wrapper
-          h2.visually-hidden Слайдер
-          ul.slider__list
-            - for (var x = 0; x < 3; x++)
-              li.slider__item
-                h3.visually-hidden Слайд с картинкой
+        h2.visually-hidden Слайдер
+        ul.slider__list
+          - for (var x = 0; x < 3; x++)
+            li.slider__item
+              h3.visually-hidden Слайд с картинкой
 
-          button.slider__button.slider__button--left(type="button")
-            span.visually-hidden Предыдущий слайд
-          button.slider__button.slider__button--right(type="button")
-            span.visually-hidden Следующий слайд
+        button.slider__button.slider__button--left(type="button")
+          span.visually-hidden Предыдущий слайд
+        button.slider__button.slider__button--right(type="button")
+          span.visually-hidden Следующий слайд
 
       //- Фильтр
       section.main__filter.filter
-        h2.filter__title Museums
+        .site-wrapper
+          h2.filter__title Museums
 
-        .filter__wrapper
-          ul.filter__list
-            li.filter__item
-              select(name="subcategories" aria-label="Выберите подкатегорию")
-                option(value="1" selected) Art Museums
-                option(value="2") History Museums
-                option(value="3") Outdoor Museums
-            li.filter__item
-              select(name="neighborhoods" aria-label="Выберите соседей")
-                option(value="1" selected) Flatiron
-                option(value="2") Chelsea
-                option(value="3") Financial District
-                option(value="4") Upper East Side
-                option(value="5") Upper West Side
-            li.filter__item
-              select(name="duration" aria-label="Выберите продолжительность")
-                option(value="1" selected) Up to 1 Hour
-                option(value="2") 1-6 Hours
-                option(value="3") 4 Hours to 1 Day
-                option(value="4") More Than 1 Day
+          .filter__wrapper
+            ul.filter__list
+              li.filter__item
+                select(name="subcategories" aria-label="Выберите подкатегорию")
+                  option(value="1" selected) Art Museums
+                  option(value="2") History Museums
+                  option(value="3") Outdoor Museums
+              li.filter__item
+                select(name="neighborhoods" aria-label="Выберите соседей")
+                  option(value="1" selected) Flatiron
+                  option(value="2") Chelsea
+                  option(value="3") Financial District
+                  option(value="4") Upper East Side
+                  option(value="5") Upper West Side
+              li.filter__item
+                select(name="duration" aria-label="Выберите продолжительность")
+                  option(value="1" selected) Up to 1 Hour
+                  option(value="2") 1-6 Hours
+                  option(value="3") 4 Hours to 1 Day
+                  option(value="4") More Than 1 Day
+
+            button.filter__button.filter__button--left Map
+            button.filter__button.filter__button--right Filter
 
       //- Музеи
       section.main__museums.museums
-        h2.visually-hidden Музеи
-        .museums__wrapper
-          p.museums__description.museums__description--results
+        .site-wrapper
+          h2.visually-hidden Музеи
+          .museums__wrapper
+            p.museums__description.museums__description--results 38 Results
 
-          select(name="sort" aria-label="Выберите сортировку")
-            option(value="" selected) Sort
-            option(value="1") Less
-            option(value="2") More
+            select(name="sort" aria-label="Выберите сортировку")
+              option(value="" selected) Sort
+              option(value="1") Less
+              option(value="2") More
 
-        ul.museums__list
-          +list('American Folk Art Museum Tour with Skip-the-Line Access', 'from $26 per person', 1)
-          +list('Guggenheim Tour with Skip-the-Line Access', 'from $26 per person', 2)
-          +list('The Frick Collection Tour with Skip-the-Line Access', 'from $26 per person', 3)
-          +list('9/11 Memorial & Museum Admission: Skip the Ticket Line', 'from $26 per person', 4)
-          +list('9/11 Memorial & Museum Admission: Skip the Ticket Line', 'from $26 per person', 5)
-          +list('9/11 Memorial & Museum Admission: Skip the Ticket Line', 'from $26 per person', 6)
+          ul.museums__list
+            +list('American Folk Art Museum Tour with Skip-the-Line Access', 'from $26 per person', 1)
+            +list('Guggenheim Tour with Skip-the-Line Access', 'from $26 per person', 2)
+            +list('The Frick Collection Tour with Skip-the-Line Access', 'from $26 per person', 3)
+            +list('9/11 Memorial & Museum Admission: Skip the Ticket Line', 'from $26 per person', 4)
+            +list('9/11 Memorial & Museum Admission: Skip the Ticket Line', 'from $26 per person', 5)
+            +list('9/11 Memorial & Museum Admission: Skip the Ticket Line', 'from $26 per person', 6)
 
 
     // Футер
