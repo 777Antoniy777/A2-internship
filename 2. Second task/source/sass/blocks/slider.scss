@@ -1,0 +1,22 @@
+.slider .site-wrapper {
+  width: 100%;
+  min-height: 241px;
+  overflow: hidden;
+}
+
+.slider__list {
+  @include flex;
+  width: 300%;
+  min-height: inherit;
+  // overflow: hidden;
+}
+
+.slider__item {
+  @include background;
+  width: 100%;
+  min-height: inherit;
+  background-color: #8c8d91;
+  background-image: url("../img/slider-bg-mobile.jpg");
+  background-size: cover;
+  // overflow: hidden;
+}

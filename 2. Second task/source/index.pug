@@ -7,9 +7,9 @@ html(lang="ru")
     meta(name="viewport" content="width=device-width,initial-scale=1")
     meta(name="format-detection" content="telephone=no")
     link(href="css/style.min.css" rel="stylesheet")
-    link(href="/fonts/SourceSansPro-Regular.woff2" as="font" rel="preload")
-    link(href="/fonts/SourceSansPro-SemiBold.woff2" as="font" rel="preload")
-    link(href="/fonts/Actor-Regular.woff2" as="font" rel="preload")
+    link(href="/fonts/SourceSansPro-Regular.woff2" as="font" rel="preload" crossorigin="anonymous")
+    link(href="/fonts/SourceSansPro-SemiBold.woff2" as="font" rel="preload" crossorigin="anonymous")
+    link(href="/fonts/Actor-Regular.woff2" as="font" rel="preload" crossorigin="anonymous")
     //- script
     //-   // Picture element HTML5 shiv
     //-   - document.createElement("picture");
@@ -102,16 +102,17 @@ html(lang="ru")
 
       //- Слайдер
       section.main__slider.slider
-        h2.visually-hidden Слайдер
-        ul.slider__list
-          - for (var x = 0; x < 3; x++)
-            li.slider__item
-              h3.visually-hidden Слайд с картинкой
+        .site-wrapper
+          h2.visually-hidden Слайдер
+          ul.slider__list
+            - for (var x = 0; x < 3; x++)
+              li.slider__item
+                h3.visually-hidden Слайд с картинкой
 
-        button.slider__button.slider__button--left(type="button")
-          span.visually-hidden Предыдущий слайд
-        button.slider__button.slider__button--right(type="button")
-          span.visually-hidden Следующий слайд
+          button.slider__button.slider__button--left(type="button")
+            span.visually-hidden Предыдущий слайд
+          button.slider__button.slider__button--right(type="button")
+            span.visually-hidden Следующий слайд
 
       //- Фильтр
       section.main__filter.filter
