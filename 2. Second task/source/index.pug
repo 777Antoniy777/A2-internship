@@ -29,7 +29,13 @@ html(lang="ru")
             h3.museums__title= title
           p.museums__description= description
           a.museums__link(href="#")
-            img.museums__image(src="img/museum-" + index + ".jpg", alt= title)
+            picture
+              source(type="image/webp" media="(min-width: 960px)" srcset="img/museum-desktop-" + index + ".webp 1x, img/museum-desktop-" + index + ".webp 2x")
+              source(media="(min-width: 960px)" srcset="img/museum-desktop-" + index + ".jpg, img/museum-desktop-" + index + "@2x.jpg 2x")
+              source(type="image/webp" media="(min-width: 768px)" srcset="img/museum-tablet-" + index + ".webp 1x, img/museum-tablet-" + index + ".webp 2x")
+              source(media="(min-width: 768px)" srcset="img/museum-tablet-" + index + ".jpg, img/museum-tablet-" + index + "@2x.jpg 2x")
+              source(type="image/webp" srcset="img/museum-" + index + ".webp 1x, img/museum-" + index + ".webp 2x")
+              img.museums__image(src="img/museum-" + index + ".jpg", alt= title)
           .museums__input-wrapper
             input(type="checkbox" name="favorites-" + index id="favorites-" + index)
             label(for="favorites-" + index)
@@ -79,7 +85,7 @@ html(lang="ru")
                 li.main-navigation__item.main-navigation__item--mobile
                   button.main-navigation__button.main-navigation__button--search(type="button")
                     span.visually-hidden Search
-                li.main-navigation__item.main-navigation__item--mobile
+                li.main-navigation__item.main-navigation__item--mobile.main-navigation__item--tablet
                   a.main-navigation__link.main-navigation__link--user(href="#")
                     span Log In | Register
 
@@ -125,21 +131,24 @@ html(lang="ru")
 
           .filter__wrapper
             ul.filter__list
-              li.filter__item
+              li.filter__item.filter__item--subcategories
                 select(name="subcategories" aria-label="Выберите подкатегорию")
-                  option(value="1" selected) Art Museums
+                  option(value="" selected) Subcategories
+                  option(value="1") Art Museums
                   option(value="2") History Museums
                   option(value="3") Outdoor Museums
-              li.filter__item
+              li.filter__item.filter__item--neighborhoods
                 select(name="neighborhoods" aria-label="Выберите соседей")
-                  option(value="1" selected) Flatiron
+                  option(value="" selected) Neighborhoods
+                  option(value="1") Flatiron
                   option(value="2") Chelsea
                   option(value="3") Financial District
                   option(value="4") Upper East Side
                   option(value="5") Upper West Side
-              li.filter__item
+              li.filter__item.filter__item--duration
                 select(name="duration" aria-label="Выберите продолжительность")
-                  option(value="1" selected) Up to 1 Hour
+                  option(value="" selected) Duration
+                  option(value="1") Up to 1 Hour
                   option(value="2") 1-6 Hours
                   option(value="3") 4 Hours to 1 Day
                   option(value="4") More Than 1 Day
@@ -147,25 +156,41 @@ html(lang="ru")
             button.filter__button.filter__button--left Map
             button.filter__button.filter__button--right Filter
 
-      //- Музеи
-      section.main__museums.museums
-        .site-wrapper
-          h2.visually-hidden Музеи
-          .museums__wrapper
-            p.museums__description.museums__description--results 38 Results
+      .main__wrapper
 
-            select(name="sort" aria-label="Выберите сортировку")
-              option(value="" selected) Sort
-              option(value="1") Less
-              option(value="2") More
+        //- Музеи
+        section.main__museums.museums
+          .site-wrapper
+            h2.visually-hidden Музеи
+            .museums__wrapper
+              p.museums__description.museums__description--results 38 Results
 
-          ul.museums__list
-            +list('American Folk Art Museum Tour with Skip-the-Line Access', 'from $26 per person', 1)
-            +list('Guggenheim Tour with Skip-the-Line Access', 'from $26 per person', 2)
-            +list('The Frick Collection Tour with Skip-the-Line Access', 'from $26 per person', 3)
-            +list('9/11 Memorial & Museum Admission: Skip the Ticket Line', 'from $26 per person', 4)
-            +list('9/11 Memorial & Museum Admission: Skip the Ticket Line', 'from $26 per person', 5)
-            +list('9/11 Memorial & Museum Admission: Skip the Ticket Line', 'from $26 per person', 6)
+              .museums__select-wrapper
+                select(name="sort" aria-label="Выберите сортировку")
+                  option(value="" selected) Sort
+                  option(value="1") Less
+                  option(value="2") More
+
+            ul.museums__list
+              +list('American Folk Art Museum Tour with Skip-the-Line Access', 'from $26 per person', 1)
+              +list('Guggenheim Tour with Skip-the-Line Access', 'from $26 per person', 2)
+              +list('The Frick Collection Tour with Skip-the-Line Access', 'from $26 per person', 3)
+              +list('The New Museum Tour with Skip-the-Line Access', 'from $26 per person', 4)
+              +list('The Museum of the Moving Image Tour with Skip-the-Line Access', 'from $26 per person', 5)
+              +list('The Museum of Modern Art Admission with Skip-the-Line Access', 'from $26 per person', 6)
+              +list('The Bronx Museum of the Arts Tour with Skip-the-Line Access', 'from $26 per person', 7)
+              +list('NYC Museum of Art Tour with Skip-the-Line Access', 'from $26 per person', 8)
+              +list('Brooklyn Museum of the Arts Tour with Skip-the-Line Access', 'from $26 per person', 9)
+              +list('Hall of Science Tour with Skip-the-Line Access', 'from $26 per person', 10)
+              +list('The Intrepid Museum Tour with Skip-the-Line Access', 'from $26 per person', 11)
+              +list('Metropolitan Museum of Art Tour with Skip-the-Line Access', 'from $26 per person', 12)
+              +list('Morgan Library Tour with Skip-the-Line Access', 'from $26 per person', 13)
+              +list('The New Museum Tour with Skip-the-Line Access', 'from $26 per person', 14)
+              +list('International Center of Photography Tour with Skip-the-Line Access', 'from $26 per person', 15)
+
+        //- Карта
+        section.map
+          iframe.map-popup__iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6122088171858!2d30.32330489093596!3d59.93857674840233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538679898464" width="100%" height="100%" border="none" allowfullscreen="")
 
 
     //- div(style="display: none;")
@@ -210,11 +235,11 @@ html(lang="ru")
             button(type="reset").filter-mobile__button.filter-mobile__button--reset Reset
             button(type="submit").filter-mobile__button.filter-mobile__button--submit Go
 
-    .map
-      .map__wrapper
+    .map-popup
+      .map-popup__wrapper
         .site-wrapper
-          button.map__button.map__button--left List
-          button.map__button.map__button--right Filter
-      iframe.map__iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6122088171858!2d30.32330489093596!3d59.93857674840233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538679898464" width="100%" height="100%" border="none" allowfullscreen="")
+          button.map-popup__button.map-popup__button--left List
+          button.map-popup__button.map-popup__button--right Filter
+      iframe.map-popup__iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6122088171858!2d30.32330489093596!3d59.93857674840233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538679898464" width="100%" height="100%" border="none" allowfullscreen="")
 
     script(src='js/all.min.js')

@@ -24,6 +24,7 @@
 }
 
 .main-navigation__user-wrapper {
+  width: calc(152 * 100% / 300);
   min-height: inherit;
 }
 
@@ -67,9 +68,9 @@
 .main-navigation__list {
   @include flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
-  width: 144px;
+  width: 100%;
   min-height: inherit;
   padding-top: 4px;
 }
@@ -78,7 +79,7 @@
   justify-content: flex-end;
   align-items: center;
   display: none;
-  width: calc(100% / 3);
+  width: 48px;
   min-height: 24px;
 
   &--mobile {
@@ -186,5 +187,199 @@
 
 .main-navigation--nojs .main-navigation__button {
   display: none;
+}
+
+@media (min-width: $width-tablet) {
+  .main-navigation,
+  .main-navigation__wrapper,
+  .main-navigation__wrapper .site-wrapper {
+    min-height: inherit;
+  }
+
+  .main-navigation__wrapper .site-wrapper {
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 22px;
+  }
+
+  .main-navigation__button-wrapper {
+    width: 129px;
+    padding-top: 3px;
+  }
+
+  .main-navigation__button {
+    width: 26px;
+    height: 21px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+
+    &::before {
+      top: 4px;
+      left: 0;
+      width: 26px;
+      height: 4px;
+    }
+  }
+
+  .main-navigation__logo {
+    width: 73px;
+    height: 51px;
+  }
+
+  .main-navigation__user-wrapper {
+    justify-content: space-between;
+    width: calc(510 * 100% / 706);
+  }
+
+  .main-navigation__wrapper--hiiden .main-navigation__item {
+    min-height: 45px;
+  }
+
+  .main-navigation__form {
+    display: block;
+    width: calc(295 * 100% / 521);
+  }
+
+  .main-navigation__form-wrapper {
+    @include flex(flex, row-reverse);
+  }
+
+  .main-navigation__form input {
+    line-height: $line20;
+    width: 88%;
+    height: 54px;
+    padding-left: 6px;
+    border: none;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  .main-navigation__form input::placeholder {
+    line-height: $line20;
+    color: $text-black;
+  }
+
+  .main-navigation__form-button {
+    position: relative;
+    width: 40px;
+    height: 54px;
+    background-color: $text-white;
+    border: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+    &::before {
+      @include pseudo;
+      top: 18px;
+      left: 15px;
+      width: 20px;
+      height: 20px;
+      background-image: url("../img/svg/search-tablet.svg");
+    }
+  }
+
+  .main-navigation__list {
+    width: calc(178 * 100% / 510);
+  }
+
+  .main-navigation__item {
+    display: none;
+
+    &--tablet {
+      position: relative;
+      display: block;
+      width: 137px;
+      padding-left: 27px;
+
+      &::before {
+        @include background;
+        @include pseudo;
+        top: 0;
+        left: 1px;
+        background-image: url("../img/svg/user.svg");
+        background-size: 20px 22px;
+        width: 20px;
+        height: 22px;
+        transform: scale(0.82);
+      }
+    }
+  }
+
+  .main-navigation__link {
+    @include link(none, $text-white);
+    line-height: $line20;
+    font-weight: $font-semibold;
+
+    &--user {
+      background-image: none;
+      width: 110px;
+
+      & > span {
+        display: block;
+        width: inherit;
+      }
+    }
+  }
+
+  //  стили для js гл.меню
+  .main-navigation--opened .main-navigation__button-wrapper .main-navigation__button {
+    &::before,
+    &::after {
+      top: 9px;
+      width: 23px;
+      height: 3px;
+    }
+
+    &::before {
+      left: 1px;
+    }
+
+    &::after {
+      right: 1px;
+    }
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .main-navigation__button {
+    display: none;
+  }
+
+  .main-navigation--closed .main-navigation__wrapper--hiiden {
+    @include flex;
+    justify-content: center;
+    min-height: 45px;
+    background-color: #0098d7;
+  }
+
+  .main-navigation__user-wrapper {
+    width: calc(1300 * 100% / 1440);
+  }
+
+  .main-navigation__form {
+    @include flex;
+    justify-content: space-between;
+    width: calc(500 * 100% / 1300);
+  }
+
+  .main-navigation__wrapper--hiiden .main-navigation__list {
+    @include flex;
+    justify-content: center;
+    width: 1000px;
+  }
+
+  .main-navigation__wrapper--hiiden .main-navigation__item {
+    width: 150px;
+  }
+
+  .main-navigation__item,
+  .main-navigation__link,
+  .main-navigation__form select {
+    display: block;
+
+    & > span {
+      display: block;
+    }
+  }
 }
 

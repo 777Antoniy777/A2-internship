@@ -13,8 +13,18 @@ select {
 }
 
 .museums__item {
+  display: none;
   width: 50%;
   padding: 0 10px;
+
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(3),
+  &:nth-child(4),
+  &:nth-child(5),
+  &:nth-child(6) {
+    display: block;
+  }
 }
 
 .museums__article {
@@ -87,4 +97,145 @@ select {
 // Состояния input
 .museums__input-wrapper input:checked + label {
   background-image: url("../img/svg/star-fav.svg");
+}
+
+@media (min-width: $width-tablet) {
+  .museums {
+    width: 50%;
+    padding-top: 12px;
+    padding-left: 14px;
+  }
+
+  .museums .site-wrapper {
+    width: 350px;
+  }
+
+  .museums__wrapper {
+    @include flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6px;
+    margin-bottom: 16px;
+  }
+
+  .museums__wrapper select,
+  .museums__description--results {
+    display: block;
+  }
+
+  .museums__select-wrapper {
+    position: relative;
+
+    &::before,
+    &::after {
+      @include pseudo;
+      top: 9px;
+      width: 8px;
+      height: 3px;
+      background-color: $filter-color;
+    }
+
+    &::before {
+      right: -6px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      right: -10px;
+      transform: rotate(-47deg);
+    }
+  }
+
+  .museums__wrapper select {
+    font-size: $font14;
+    line-height: $line18;
+    background-color: transparent;
+    border: none;
+    appearance: none;
+  }
+
+  .museums__item {
+    padding: 0 6px 23px 6px;
+
+    &:nth-child(7),
+    &:nth-child(8),
+    &:nth-child(9) {
+      display: block;
+    }
+
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6) {
+      display: none;
+    }
+
+    &:nth-child(7) {
+      order: 2;
+    }
+
+    &:nth-child(8) {
+      order: 1;
+    }
+
+    &:nth-child(9) {
+      order: 3;
+    }
+
+    &:nth-child(1) {
+      order: 4;
+    }
+
+    &:nth-child(2) {
+      order: 6;
+    }
+
+    &:nth-child(3) {
+      order: 5;
+    }
+  }
+
+  .museums__image {
+    margin-bottom: 6px;
+  }
+
+  .museums__title {
+    font-size: $font16;
+    line-height: $line19;
+    min-height: 64px;
+    padding-bottom: 7px;
+  }
+
+  .museums__description {
+    font-size: $font16;
+    line-height: $line21;
+
+    &--results {
+      font-family: $font-sanspro;
+      font-size: $font14;
+      line-height: $line18;
+      color: $text-color;
+    }
+  }
+
+  .museums__input-wrapper {
+    top: 6px;
+    right: 6px;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .museums .site-wrapper {
+    width: 720px;
+  }
+
+  .museums__item {
+    display: block;
+    width: 33.3%;
+
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6) {
+      display: block;
+    }
+  }
 }

@@ -49,3 +49,17 @@
   font-size: $font12;
   line-height: $font16;
 }
+
+@media (min-width: $width-tablet) {
+  .breadcrumbs .site-wrapper {
+    width: calc(708 * 100% / 768);
+  }
+
+  .breadcrumbs__item {
+    padding-right: 19px;
+  }
+
+  .breadcrumbs__link {
+    font-size: $font13;
+  }
+}

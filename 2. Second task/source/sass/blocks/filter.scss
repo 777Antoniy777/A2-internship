@@ -60,3 +60,103 @@
     }
   }
 }
+
+@media (min-width: $width-tablet) {
+  .filter .site-wrapper {
+    @include flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: calc(767 * 100% / 786);
+    padding-top: 1px;
+    padding-left: 17px;
+    padding-right: 4px;
+  }
+
+  .filter__title {
+    font-size: $font24;
+    line-height: $line44;
+  }
+
+  .filter__button {
+    display: none;
+  }
+
+  .filter__list,
+  .filter__item select {
+    display: block;
+  }
+
+  .filter__wrapper {
+    width: calc(500 * 100% / 690);
+    padding-bottom: 3px;
+  }
+
+  .filter__list {
+    @include flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .filter__item {
+    position: relative;
+    padding: 10px 6px 10px 6px;
+
+    &--subcategories {
+      width: calc(139 * 100% / 527);
+    }
+
+    &--neighborhoods {
+      width: calc(171 * 100% / 527);
+    }
+
+    &--duration {
+      width: calc(126 * 100% / 527);
+    }
+
+    &::before,
+    &::after {
+      @include pseudo;
+      top: 38px;
+      width: 8px;
+      height: 3px;
+      background-color: $filter-color;
+    }
+
+    &::before {
+      right: 20px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      right: 16px;
+      transform: rotate(-47deg);
+    }
+  }
+
+  .filter__item select {
+    font-size: $font14;
+    line-height: $line18;
+    height: 55px;
+    padding-left: 5px;
+    color: $filter-color;
+    border: 1px solid #c2c2c2;
+    border-radius: 3px;
+    appearance: none;
+  }
+
+  .filter__item select option[value=""] {
+    display: none;
+  }
+
+  .filter__item select[name="subcategories"],
+  .filter__item select[name="neighborhoods"],
+  .filter__item select[name="duration"] {
+    width: 100%;
+  }
+
+  .filter__item select[name="neighborhoods"] {
+    padding-left: 6px;
+  }
+}

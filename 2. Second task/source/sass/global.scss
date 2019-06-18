@@ -49,4 +49,40 @@ body {
   width: 280px;
   margin: 0 auto;
   padding: 0;
+
+  &--main-title {
+    width: calc(280 * 100% / 320);
+  }
+}
+
+@media (min-width: $width-tablet) {
+  body {
+    font-size: $font-size-tablet;
+    line-height: $line-height-tablet;
+    min-width: $width-tablet;
+  }
+
+  .site-wrapper {
+    width: 706px;
+
+    &--main-title {
+      width: calc(708 * 100% / 768);
+    }
+  }
+}
+
+@media (min-width: $width-desktop) {
+  body {
+    font-size: $font-size-desktop;
+    line-height: $line-height-desktop;
+    min-width: 1440px;
+  }
+
+  .site-wrapper {
+    width: 1388px;
+
+    &--main-title {
+      width: calc(1388 * 100% / 1440);
+    }
+  }
 }

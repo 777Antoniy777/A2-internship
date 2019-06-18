@@ -56,3 +56,28 @@
     }
   }
 }
+
+@media (min-width: $width-tablet) {
+  .slider {
+    min-height: 339px;
+  }
+
+  .slider__item {
+    background-image: url("../img/slider-bg-tablet.jpg");
+  }
+
+  .slider__button {
+    top: 151px;
+
+    &--left {
+      left: 45px;
+    }
+
+    &--right {
+      left: unset;
+      right: 45px;
+      transform: translateX(0);
+    }
+  }
+
+}

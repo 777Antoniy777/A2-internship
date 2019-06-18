@@ -1,0 +1,47 @@
+.main__breadcrumbs {
+  margin-bottom: 7px;
+}
+
+.main__title {
+  font-family: $font-actor;
+  font-size: $font20;
+  font-weight: $font-regular;
+  line-height: $line38;
+  padding-left: 1px;
+  margin: 0;
+}
+
+.main__slider {
+  margin-top: 9px;
+}
+
+.main__filter {
+  margin-bottom: 24px;
+}
+
+@media (min-width: $width-tablet) {
+  .main__breadcrumbs {
+    margin-bottom: 11px;
+  }
+
+  .main__title {
+    font-size: $font30;
+    line-height: $line44;
+    padding-left: 0;
+  }
+
+  .main__slider {
+    margin-top: 26px;
+  }
+
+  .main__wrapper {
+    @include flex;
+  }
+
+  .main__filter {
+    margin-bottom: 0;
+    border-bottom: 1px solid #e2e2e2;
+  }
+
+}
+
