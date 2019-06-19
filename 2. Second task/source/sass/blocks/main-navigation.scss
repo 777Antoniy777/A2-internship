@@ -352,14 +352,76 @@
     background-color: #0098d7;
   }
 
+  .main-navigation__button-wrapper {
+    width: 140px;
+    padding-left: 9px;
+    padding-bottom: 4px;
+  }
+
   .main-navigation__user-wrapper {
     width: calc(1300 * 100% / 1440);
   }
 
   .main-navigation__form {
     @include flex;
-    justify-content: space-between;
-    width: calc(500 * 100% / 1300);
+    justify-content: flex-start;
+    position: relative;
+    width: calc(523 * 100% / 1300);
+
+    &::before,
+    &::after {
+      @include pseudo;
+      top: 26px;
+      width: 8px;
+      height: 3px;
+      background-color: $text-white;
+    }
+
+    &::before {
+      right: -2px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      right: -6px;
+      transform: rotate(-47deg);
+    }
+  }
+
+  .main-navigation__form-wrapper {
+    width: 81%;
+  }
+
+  .main-navigation__form input,
+  .main-navigation__form input::placeholder {
+    font-size: $font16;
+    padding-left: 4px;
+  }
+
+  .main-navigation__list {
+    width: calc(270 * 100% / 510);
+  }
+
+  .main-navigation__item {
+    width: 110px;
+    padding: 0 15px;
+  }
+
+  .main-navigation__link {
+    font-size: $font16;
+    background-image: none;
+  }
+
+  .main-navigation__form select {
+    font-size: $font16;
+    line-height: $line20;
+    padding-left: 1px;
+    padding-bottom: 4px;
+    margin-left: 21px;
+    color: $text-white;
+    background-color: transparent;
+    border: none;
+    appearance: none;
   }
 
   .main-navigation__wrapper--hiiden .main-navigation__list {
@@ -370,6 +432,11 @@
 
   .main-navigation__wrapper--hiiden .main-navigation__item {
     width: 150px;
+    box-shadow: none;
+
+    &:first-child {
+      box-shadow: none;
+    }
   }
 
   .main-navigation__item,
