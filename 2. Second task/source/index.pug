@@ -16,7 +16,7 @@ html(lang="ru")
     script(src="js/picturefill.min.js" async)
 
   body.main-page
-  
+
     //- Declaration
     mixin list(title, description, index)
       li.museums__item
@@ -69,19 +69,19 @@ html(lang="ru")
                   option(value="3") Honkong
 
               ul.main-navigation__list
-                li.main-navigation__item.main-navigation__item--mobile
+                li.main-navigation__item.main-navigation__item--mobile.main-navigation__item--question
                   a.main-navigation__link.main-navigation__link--question(href="#")
                     span Help
-                li.main-navigation__item
+                li.main-navigation__item.main-navigation__item--favorites
                   a.main-navigation__link.main-navigation__link--favorites(href="#")
                     span Favorites
-                li.main-navigation__item
+                li.main-navigation__item.main-navigation__item--cart
                   a.main-navigation__link.main-navigation__link--cart(href="#")
                     span Cart
-                li.main-navigation__item.main-navigation__item--mobile
+                li.main-navigation__item.main-navigation__item--mobile.main-navigation__item--desktop
                   button.main-navigation__button.main-navigation__button--search(type="button")
                     span.visually-hidden Search
-                li.main-navigation__item.main-navigation__item--mobile.main-navigation__item--tablet
+                li.main-navigation__item.main-navigation__item--mobile.main-navigation__item--tablet.main-navigation__item--user
                   a.main-navigation__link.main-navigation__link--user(href="#")
                     span Log In | Register
 

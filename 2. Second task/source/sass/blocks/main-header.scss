@@ -9,3 +9,9 @@
   }
 }
 
+@media (min-width: $width-desktop) {
+  .main-header {
+    min-height: 79px;
+  }
+}
+

@@ -189,6 +189,10 @@
   display: none;
 }
 
+.main-navigation--nojs .main-navigation__button--search {
+  display: block;
+}
+
 @media (min-width: $width-tablet) {
   .main-navigation,
   .main-navigation__wrapper,
@@ -341,21 +345,28 @@
 }
 
 @media (min-width: $width-desktop) {
-  .main-navigation__button {
-    display: none;
+  .main-navigation__item,
+  .main-navigation__link,
+  .main-navigation__form select {
+    display: block;
+
+    & > span {
+      display: block;
+    }
   }
 
-  .main-navigation--closed .main-navigation__wrapper--hiiden {
-    @include flex;
-    justify-content: center;
-    min-height: 45px;
-    background-color: #0098d7;
+  .main-navigation__wrapper .site-wrapper {
+    padding-right: 5px;
   }
 
   .main-navigation__button-wrapper {
     width: 140px;
     padding-left: 9px;
     padding-bottom: 4px;
+  }
+
+  .main-navigation__button {
+    display: none;
   }
 
   .main-navigation__user-wrapper {
@@ -366,7 +377,7 @@
     @include flex;
     justify-content: flex-start;
     position: relative;
-    width: calc(523 * 100% / 1300);
+    width: calc(534 * 100% / 1300);
 
     &::before,
     &::after {
@@ -378,60 +389,128 @@
     }
 
     &::before {
-      right: -2px;
+      right: 16px;
       transform: rotate(45deg);
     }
 
     &::after {
-      right: -6px;
+      right: 12px;
       transform: rotate(-47deg);
     }
   }
 
   .main-navigation__form-wrapper {
-    width: 81%;
+    width: 78%;
+  }
+
+  .main-navigation__form input {
+    width: 87%;
+    padding-left: 3px;
   }
 
   .main-navigation__form input,
   .main-navigation__form input::placeholder {
     font-size: $font16;
-    padding-left: 4px;
+  }
+
+  .main-navigation__form-button {
+    width: 43px;
+    padding-right: 0;
   }
 
   .main-navigation__list {
-    width: calc(270 * 100% / 510);
+    width: calc(512 * 100% / 1300);
+    padding-right: 10px;
+    padding-bottom: 7px;
   }
 
   .main-navigation__item {
-    width: 110px;
-    padding: 0 15px;
+    @include flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: calc(90 * 100% / 512);
+    padding-left: 20px;
+    margin-left: 18px;
+
+    &--tablet {
+      width: calc(143 * 100% / 512);
+      margin-left: 31px;
+
+      &::before {
+        top: 2px;
+        left: -1px;
+      }
+    }
+
+    &--desktop {
+      display: none;
+    }
+
+    &::before {
+      @include background;
+      @include pseudo;
+    }
+
+    &--question {
+      &::before {
+        top: 2px;
+        left: 14px;
+        background-image: url("../img/svg/question.svg");
+        background-size: 20px 22px;
+        width: 20px;
+        height: 22px;
+        transform: scale(0.7);
+      }
+    }
   }
 
   .main-navigation__link {
+    @include flex;
+    justify-content: center;
+    align-items: center;
     font-size: $font16;
+    width: unset;
     background-image: none;
   }
 
   .main-navigation__form select {
     font-size: $font16;
     line-height: $line20;
-    padding-left: 1px;
+    width: 22%;
     padding-bottom: 4px;
-    margin-left: 21px;
+    padding-left: 23px;
     color: $text-white;
     background-color: transparent;
     border: none;
     appearance: none;
   }
 
+  .main-navigation__form select option {
+    background-color: #0098d7;
+  }
+
+  .main-navigation--closed .main-navigation__wrapper--hiiden {
+    @include flex;
+    justify-content: center;
+    min-height: 40px;
+    background-color: #0098d7;
+  }
+
   .main-navigation__wrapper--hiiden .main-navigation__list {
     @include flex;
     justify-content: center;
-    width: 1000px;
+    width: 76%;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
   }
 
   .main-navigation__wrapper--hiiden .main-navigation__item {
-    width: 150px;
+    width: unset;
+    min-height: 40px;
+    padding: 0 40px;
+    margin-left: 0;
     box-shadow: none;
 
     &:first-child {
@@ -439,14 +518,8 @@
     }
   }
 
-  .main-navigation__item,
-  .main-navigation__link,
-  .main-navigation__form select {
-    display: block;
-
-    & > span {
-      display: block;
-    }
+  .main-navigation__wrapper--hiiden .main-navigation__link {
+    padding-bottom: 5px;
   }
 }
 
