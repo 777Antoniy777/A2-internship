@@ -345,6 +345,11 @@
 }
 
 @media (min-width: $width-desktop) {
+  .main-navigation__wrapper {
+    max-width: 1700px;
+    margin: 0 auto;
+  }
+
   .main-navigation__item,
   .main-navigation__link,
   .main-navigation__form select {
@@ -376,27 +381,8 @@
   .main-navigation__form {
     @include flex;
     justify-content: flex-start;
-    position: relative;
     width: calc(534 * 100% / 1300);
-
-    &::before,
-    &::after {
-      @include pseudo;
-      top: 26px;
-      width: 8px;
-      height: 3px;
-      background-color: $text-white;
-    }
-
-    &::before {
-      right: 16px;
-      transform: rotate(45deg);
-    }
-
-    &::after {
-      right: 12px;
-      transform: rotate(-47deg);
-    }
+    max-width: 540px;
   }
 
   .main-navigation__form-wrapper {
@@ -419,7 +405,7 @@
   }
 
   .main-navigation__list {
-    width: calc(512 * 100% / 1300);
+    width: calc(770 * 100% / 1300);
     padding-right: 10px;
     padding-bottom: 7px;
   }
@@ -429,12 +415,12 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    width: calc(90 * 100% / 512);
+    width: 85px;
     padding-left: 20px;
     margin-left: 18px;
 
     &--tablet {
-      width: calc(143 * 100% / 512);
+      width: 137px;
       margin-left: 31px;
 
       &::before {
@@ -447,9 +433,25 @@
       display: none;
     }
 
+    &:first-child {
+      margin-left: 0;
+    }
+
+
     &::before {
       @include background;
       @include pseudo;
+    }
+
+    &--question,
+    &--favorites,
+    &--cart {
+      &::before {
+        background-size: 20px 22px;
+        width: 20px;
+        height: 22px;
+        transform: scale(0.7);
+      }
     }
 
     &--question {
@@ -457,10 +459,22 @@
         top: 2px;
         left: 14px;
         background-image: url("../img/svg/question.svg");
-        background-size: 20px 22px;
-        width: 20px;
-        height: 22px;
-        transform: scale(0.7);
+      }
+    }
+
+    &--favorites {
+      &::before {
+        top: 1px;
+        left: 0;
+        background-image: url("../img/svg/star-nav.svg");
+      }
+    }
+
+    &--cart {
+      &::before {
+        top: 3px;
+        left: 14px;
+        background-image: url("../img/svg/cart.svg");
       }
     }
   }
@@ -474,10 +488,35 @@
     background-image: none;
   }
 
+  .main-navigation__select-wrapper {
+    @include flex;
+    align-items: center;
+    position: relative;
+
+    &::before,
+    &::after {
+      @include pseudo;
+      top: 26px;
+      width: 8px;
+      height: 3px;
+      background-color: $text-white;
+    }
+
+    &::before {
+      right: 0%;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      right: -3%;
+      transform: rotate(-47deg);
+    }
+  }
+
   .main-navigation__form select {
     font-size: $font16;
     line-height: $line20;
-    width: 22%;
+    width: 100px;
     padding-bottom: 4px;
     padding-left: 23px;
     color: $text-white;
@@ -500,10 +539,12 @@
   .main-navigation__wrapper--hiiden .main-navigation__list {
     @include flex;
     justify-content: center;
-    width: 76%;
+    width: 98%;
+    max-width: 1700px;
     padding-top: 0;
     padding-right: 0;
     padding-bottom: 0;
+    margin: 0 auto;
   }
 
   .main-navigation__wrapper--hiiden .main-navigation__item {

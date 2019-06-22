@@ -62,6 +62,13 @@
 }
 
 @media (min-width: $width-tablet) {
+  .filter {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 3;
+  }
+
   .filter .site-wrapper {
     @include flex;
     justify-content: space-between;
@@ -159,5 +166,51 @@
 
   .filter__item select[name="neighborhoods"] {
     padding-left: 6px;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .filter {
+    max-width: 1700px;
+    min-height: 87px;
+    margin: 0 auto;
+  }
+
+  .filter .site-wrapper {
+    justify-content: flex-start;
+    padding-left: 9px;
+    padding-top: 2px;
+  }
+
+  .filter__title {
+    min-height: $line46;
+    margin-right: 48px;
+    margin-bottom: 17px;
+  }
+
+  .filter__wrapper {
+    justify-content: flex-start;
+    width: 70%;
+    padding-bottom: 0;
+  }
+
+  .filter__list {
+    justify-content: flex-start;
+  }
+
+  .filter__item {
+    &--subcategories {
+      width: 139px;
+      margin-right: 107px;
+    }
+
+    &--neighborhoods {
+      width: 171px;
+      margin-right: 4px;
+    }
+
+    &--duration {
+      width: 116px;
+    }
   }
 }

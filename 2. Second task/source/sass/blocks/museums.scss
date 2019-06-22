@@ -23,7 +23,7 @@ select {
   &:nth-child(4),
   &:nth-child(5),
   &:nth-child(6) {
-    display: block;
+    display: flex;
   }
 }
 
@@ -136,12 +136,12 @@ select {
     }
 
     &::before {
-      right: -6px;
+      right: 24px;
       transform: rotate(45deg);
     }
 
     &::after {
-      right: -10px;
+      right: 21px;
       transform: rotate(-47deg);
     }
   }
@@ -225,18 +225,49 @@ select {
 }
 
 @media (min-width: $width-desktop) {
+  .museums {
+    max-width: 850px;
+    padding-top: 19px;
+    padding-left: 18px;
+    padding-right: 10px;
+  }
+
   .museums .site-wrapper {
-    width: 720px;
+    width: 100.3%;
+    margin: 0;
+  }
+
+  .museums__wrapper {
+    flex-direction: row-reverse;
+    padding-left: 11px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+  }
+
+  .museums__select-wrapper {
+    &::before {
+      right: 5px;
+    }
+
+    &::after {
+      right: 1px;
+    }
+  }
+
+  .museums__wrapper select {
+    padding-left: 19px;
   }
 
   .museums__item {
-    display: block;
+    display: flex;
     width: 33.3%;
+    padding-left: 10px;
+    padding-right: 10px;
 
     &:nth-child(4),
     &:nth-child(5),
     &:nth-child(6) {
-      display: block;
+      display: flex;
     }
 
     &:nth-child(10) {
@@ -274,5 +305,33 @@ select {
     &:nth-child(15) {
       order: 15;
     }
+  }
+
+  .museums__image {
+    margin-bottom: 7px;
+  }
+
+  .museums__title {
+    font-size: $font-size-desktop;
+    line-height: $line-height-desktop;
+    min-height: 72px;
+    padding-bottom: 3px;
+  }
+
+  .museums__description {
+    font-size: $font18;
+    line-height: $line21;
+    margin-top: auto;
+
+    &--results {
+      font-size: $font14;
+      line-height: $line18;
+      margin-top: unset;
+    }
+  }
+
+  .museums__input-wrapper {
+    top: 12px;
+    right: 11px;
   }
 }

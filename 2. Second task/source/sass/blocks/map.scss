@@ -1,11 +1,17 @@
 .map {
+  @include background;
   display: none;
+  background-image: url("../img/map-mobile.jpg");
+  background-size: cover;
 }
 
 @media (min-width: $width-tablet) {
   .map {
+    position: sticky;
+    top: 87px;
     display: block;
     width: 50%;
-    height: calc(100vh - 85px);
+    height: 100vh;
+    z-index: 2;
   }
 }

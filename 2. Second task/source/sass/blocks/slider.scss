@@ -83,6 +83,11 @@
 
 @media (min-width: $width-desktop) {
   .slider__item {
+    min-height: 416px;
     background-image: url("../img/slider-bg-desktop.jpg");
+  }
+
+  .slider__button {
+    top: 196px;
   }
 }

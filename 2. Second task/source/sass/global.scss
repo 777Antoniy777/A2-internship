@@ -35,6 +35,11 @@ body {
   color: $text-color;
 }
 
+/////// ПРОБА
+select {
+  cursor: pointer;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -75,14 +80,14 @@ body {
   body {
     font-size: $font-size-desktop;
     line-height: $line-height-desktop;
-    min-width: 1440px;
   }
 
   .site-wrapper {
     width: 1388px;
 
     &--main-title {
-      width: calc(1388 * 100% / 1440);
+      width: calc(1386 * 100% / 1440);
+      max-width: 1637px;
     }
   }
 }

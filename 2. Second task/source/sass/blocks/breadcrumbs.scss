@@ -63,3 +63,33 @@
     font-size: $font13;
   }
 }
+
+@media (min-width: $width-desktop) {
+  .breadcrumbs {
+    max-width: 1700px;
+    padding-top: 4px;
+    margin: 0 auto;
+  }
+
+  .breadcrumbs .site-wrapper {
+    width: calc(1382 * 100% / 1440);
+  }
+
+  .breadcrumbs__item {
+    padding-right: 20px;
+
+    &::before {
+      top: 12px;
+      right: 9px;
+    }
+
+    &::after {
+      top: 14px;
+      right: 9px;
+    }
+  }
+
+  .breadcrumbs__link {
+    font-size: $font14;
+  }
+}

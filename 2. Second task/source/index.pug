@@ -63,10 +63,11 @@ html(lang="ru")
                   input(type="search" name="nav-search" aria-label="Поиск по сайту" maxlength="50" placeholder="Search New York")
                   button.main-navigation__form-button(type="submit")
                     span.visually-hidden Искать музеи
-                select(name="nav-select" aria-label="Выберите известный город")
-                  option(value="1" selected) New York
-                  option(value="2") Moscow
-                  option(value="3") Honkong
+                .main-navigation__select-wrapper
+                  select(name="nav-select" aria-label="Выберите известный город")
+                    option(value="1" selected) New York
+                    option(value="2") Moscow
+                    option(value="3") Honkong
 
               ul.main-navigation__list
                 li.main-navigation__item.main-navigation__item--mobile.main-navigation__item--question
@@ -181,7 +182,7 @@ html(lang="ru")
               +list('The Intrepid Museum Tour with Skip-the-Line Access', 'from $26 per person', 11)
               +list('Metropolitan Museum of Art Tour with Skip-the-Line Access', 'from $26 per person', 12)
               +list('Morgan Library Tour with Skip-the-Line Access', 'from $26 per person', 13)
-              +list('The New Museum Tour with Skip-the-Line Access', 'from $26 per person', 14)
+              +list('Museum of Natural History Tour with Skip-the-Line Access', 'from $26 per person', 14)
               +list('International Center of Photography Tour with Skip-the-Line Access', 'from $26 per person', 15)
 
         //- Карта
