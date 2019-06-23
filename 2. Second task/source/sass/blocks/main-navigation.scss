@@ -318,6 +318,15 @@
     border-bottom-right-radius: 3px;
   }
 
+  /* stylelint-disable */
+  @-moz-document url-prefix() {
+    .main-navigation__form input {
+      padding-top: 17px;
+      padding-bottom: 17px;
+    }
+  }
+  /* stylelint-enable */
+
   .main-navigation__form input::placeholder {
     line-height: $line20;
     color: $text-black;
@@ -518,6 +527,14 @@
     padding-left: 3px;
   }
 
+  /* stylelint-disable */
+  @-moz-document url-prefix() {
+    .main-navigation__form input {
+      padding-left: 12px;
+    }
+  }
+  /* stylelint-enable */
+
   .main-navigation__form input,
   .main-navigation__form input::placeholder {
     font-size: $font16;
@@ -649,6 +666,15 @@
     border: none;
     appearance: none;
   }
+
+  /* stylelint-disable */
+  @-moz-document url-prefix() {
+    .main-navigation__form select {
+      padding-top: 15px;
+      padding-left: 17px;
+    }
+  }
+  /* stylelint-enable */
 
   .main-navigation__form select option {
     color: $text-white;

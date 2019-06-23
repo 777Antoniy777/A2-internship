@@ -16,6 +16,10 @@
     z-index: 2;
   }
 
+  .map__iframe {
+    border: none;
+  }
+
   .map__iframe--nojs {
     display: none;
   }
