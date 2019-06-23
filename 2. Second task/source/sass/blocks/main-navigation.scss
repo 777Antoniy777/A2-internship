@@ -193,6 +193,66 @@
   display: block;
 }
 
+// &:hover
+// mobile
+.main-navigation__button:hover {
+  border-color: lightcoral;
+
+  &::before,
+  &::after {
+    background-color: lightcoral;
+  }
+}
+
+.main-navigation--opened .main-navigation__button:hover {
+  &::before,
+  &::after {
+    background-color: lightcoral;
+  }
+}
+
+.main-navigation__link--question:hover {
+  background-image: url("../img/svg/question-hover.svg");
+}
+
+.main-navigation__link--user:hover {
+  background-image: url("../img/svg/user-hover.svg");
+}
+
+.main-navigation__button--search:hover {
+  background-image: url("../img/svg/search-hover.svg");
+}
+
+// &:active
+// mobile
+.main-navigation__button:active {
+  border-color: lightcoral;
+
+  &::before,
+  &::after {
+    background-color: lightcoral;
+  }
+}
+
+.main-navigation--opened .main-navigation__button:active {
+  &::before,
+  &::after {
+    background-color: lightcoral;
+  }
+}
+
+.main-navigation__link--question:active {
+  background-image: url("../img/svg/question-active.svg");
+}
+
+.main-navigation__link--user:active {
+  background-image: url("../img/svg/user-active.svg");
+}
+
+.main-navigation__button--search:active {
+  background-image: url("../img/svg/search-active.svg");
+}
+
 @media (min-width: $width-tablet) {
   .main-navigation,
   .main-navigation__wrapper,
@@ -341,6 +401,70 @@
     &::after {
       right: 1px;
     }
+  }
+
+  // &:hover
+  // tablet && desktop
+  .main-navigation__link--question:hover {
+    background-image: none;
+  }
+
+  .main-navigation__link--user:hover {
+    background-image: none;
+  }
+
+  .main-navigation__button--search:hover {
+    background-image: none;
+  }
+
+  .main-navigation__item:hover .main-navigation__link {
+    color: lightcoral;
+  }
+
+  .main-navigation__item--question:hover::before {
+    background-image: url("../img/svg/question-hover.svg");
+  }
+
+  .main-navigation__item--favorites:hover::before {
+    background-image: url("../img/svg/star-nav-hover.svg");
+  }
+
+  .main-navigation__item--cart:hover::before {
+    background-image: url("../img/svg/cart-hover.svg");
+  }
+
+  .main-navigation__item--tablet:hover::before {
+    background-image: url("../img/svg/user-hover.svg");
+  }
+
+  .main-navigation__select-wrapper:hover::before,
+  .main-navigation__select-wrapper:hover::after {
+    background-color: $text-black;
+  }
+
+  .main-navigation__select-wrapper:hover select {
+    color: $text-black;
+  }
+
+  // &:active
+  .main-navigation__item:active .main-navigation__link {
+    color: darkslategrey;
+  }
+
+  .main-navigation__item--question:active::before {
+    background-image: url("../img/svg/question-active.svg");
+  }
+
+  .main-navigation__item--favorites:active::before {
+    background-image: url("../img/svg/star-nav-active.svg");
+  }
+
+  .main-navigation__item--cart:active::before {
+    background-image: url("../img/svg/cart-active.svg");
+  }
+
+  .main-navigation__item--tablet:active::before {
+    background-image: url("../img/svg/user-active.svg");
   }
 }
 
@@ -517,6 +641,7 @@
     font-size: $font16;
     line-height: $line20;
     width: 100px;
+    min-height: 54px;
     padding-bottom: 4px;
     padding-left: 23px;
     color: $text-white;
@@ -526,6 +651,7 @@
   }
 
   .main-navigation__form select option {
+    color: $text-white;
     background-color: #0098d7;
   }
 
@@ -563,4 +689,3 @@
     padding-bottom: 5px;
   }
 }
-

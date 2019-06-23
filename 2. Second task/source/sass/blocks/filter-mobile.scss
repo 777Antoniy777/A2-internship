@@ -6,22 +6,25 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.71);
-  z-index: 3;
+  z-index: 4;
 }
 
 .filter-mobile__wrapper {
   position: absolute;
   right: 0;
-  width: calc(273 * 100% / 320);
+  width: 0;
   height: inherit;
   padding-top: 18px;
+  padding-bottom: 30px;
   background-color: $text-white;
+  overflow: auto;
 }
 
 .filter-mobile__inner-wrapper {
   @include flex;
   justify-content: flex-end;
-  padding-right: 25px;
+  align-items: center;
+  padding-right: 23px;
 
   &--button {
     justify-content: space-between;
@@ -33,6 +36,7 @@
   font-size: $font12;
   line-height: $line15;
   font-weight: $font-semibold;
+  margin-right: 6px;
 }
 
 .filter-mobile__button {
@@ -43,12 +47,13 @@
   &--close {
     width: 8px;
     height: 10px;
+    padding: 0;
 
     &::before,
     &::after {
       @include pseudo;
-      top: 8px;
-      left: 6px;
+      top: 5px;
+      left: 0;
       width: 6px;
       height: 2px;
       background-color: $text-color;
@@ -143,6 +148,7 @@ fieldset {
   &::before,
   &::after {
     @include pseudo;
+    cursor: pointer;
   }
 
   &::before {
@@ -170,4 +176,40 @@ fieldset {
     clip: rect(2px, auto, auto, 4px);
     transform: rotate(45deg);
   }
+}
+
+// Трансформации
+.filter-mobile__wrapper--transform {
+  width: 85vw;
+  transition: width 1s ease-out;
+}
+
+// &:hover
+.filter-mobile__button--close:hover::before,
+.filter-mobile__button--close:hover::after {
+  background-color: lightcoral;
+}
+
+.filter-mobile__button--reset:hover {
+  color: $text-white;
+  background-color: $header-bg;
+}
+
+.filter-mobile__button--submit:hover {
+  background-color: blue;
+}
+
+// &:active
+.filter-mobile__button--close:active::before,
+.filter-mobile__button--close:active::after {
+  background-color: lightcoral;
+}
+
+.filter-mobile__button--reset:active {
+  color: $text-white;
+  background-color: $header-bg;
+}
+
+.filter-mobile__button--submit:active {
+  background-color: blue;
 }

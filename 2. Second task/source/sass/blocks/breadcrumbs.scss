@@ -2,6 +2,16 @@
   padding-top: 7px;
 }
 
+/* stylelint-disable */
+// @-moz-document url-prefix() {
+//   .booking__form input,
+//   .booking__form select {
+//     padding-top: 25px;
+//     padding-bottom: 20px;
+//   }
+// }
+/* stylelint-enable */
+
 .breadcrumbs .site-wrapper {
   width: calc(280 * 100% / 320);
 }
@@ -92,4 +102,22 @@
   .breadcrumbs__link {
     font-size: $font14;
   }
+}
+
+// &:hover
+.breadcrumbs__link:hover {
+  color: lightcoral;
+}
+
+.breadcrumbs__link--active:hover {
+  color: $text-color;
+}
+
+// &:active
+.breadcrumbs__link:active {
+  color: rgba(lightcoral, 0.7);
+}
+
+.breadcrumbs__link--active:active {
+  color: $text-color;
 }

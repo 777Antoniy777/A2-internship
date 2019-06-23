@@ -91,3 +91,13 @@
     top: 196px;
   }
 }
+
+// &:hover
+.slider__button:hover {
+  background-color: $text-black;
+}
+
+// &:active
+.slider__button:active {
+  background-color: $text-black;
+}

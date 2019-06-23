@@ -1,17 +1,28 @@
 .map {
-  @include background;
   display: none;
-  background-image: url("../img/map-mobile.jpg");
-  background-size: cover;
 }
 
 @media (min-width: $width-tablet) {
   .map {
+    @include background;
     position: sticky;
     top: 87px;
     display: block;
     width: 50%;
     height: 100vh;
+    background-color: $header-bg;
+    background-image: url("../img/map-tablet.jpg");
+    background-size: cover;
     z-index: 2;
+  }
+
+  .map__iframe--nojs {
+    display: none;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .map {
+    background-image: url("../img/map-desktop.jpg");
   }
 }

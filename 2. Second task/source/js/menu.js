@@ -1,7 +1,5 @@
 var main_menu = document.querySelector(".main-navigation");
 var button_menu = document.querySelector(".main-navigation__button");
-var first_icon = document.querySelector(".main-navigation__button::before");
-var second_icon = document.querySelector(".main-navigation__button::after");
 
 main_menu.classList.remove("main-navigation--nojs");
 

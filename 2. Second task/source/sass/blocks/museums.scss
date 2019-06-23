@@ -31,6 +31,7 @@ select {
   @include flex(flex, column);
   justify-content: flex-start;
   position: relative;
+  width: 100%;
   padding-bottom: 16px;
 }
 
@@ -153,6 +154,10 @@ select {
     background-color: transparent;
     border: none;
     appearance: none;
+  }
+
+  .museums__wrapper select option {
+    color: $filter-color;
   }
 
   .museums__item {
@@ -334,4 +339,23 @@ select {
     top: 12px;
     right: 11px;
   }
+}
+
+// &:hover
+.museums__link:hover {
+  color: lightcoral;
+}
+
+.museums__select-wrapper:hover select {
+  color: lightcoral;
+}
+
+.museums__select-wrapper:hover::before,
+.museums__select-wrapper:hover::after {
+  background-color: lightcoral;
+}
+
+// &:active
+.museums__link:active {
+  color: rgba(lightcoral, 0.7);
 }

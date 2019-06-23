@@ -154,6 +154,10 @@
     appearance: none;
   }
 
+  .filter__item select option {
+    color: $filter-color;
+  }
+
   .filter__item select option[value=""] {
     display: none;
   }
@@ -213,4 +217,25 @@
       width: 116px;
     }
   }
+}
+
+// &:hover
+.filter__button:hover {
+  color: $text-white;
+  background-color: $text-black;
+}
+
+.filter__item:hover::before,
+.filter__item:hover::after {
+  background-color: lightcoral;
+}
+
+.filter__item:hover select {
+  color: lightcoral;
+}
+
+// &:active
+.filter__button:active {
+  color: $text-white;
+  background-color: rgba($text-black, 0.5);
 }

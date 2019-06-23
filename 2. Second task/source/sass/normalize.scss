@@ -381,6 +381,7 @@ ul {
  * Добавление всем кнопкам cursor: pointer
  */
 
-button {
+button,
+select {
   cursor: pointer;
 }
