@@ -82,6 +82,15 @@
 }
 
 @media (min-width: $width-desktop) {
+  .slider .site-wrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: calc(1352 * 100% / 1440);
+    max-width: 1612px;
+    transform: translateX(-50%);
+  }
+
   .slider__item {
     min-height: 416px;
     background-image: url("../img/slider-bg-desktop.jpg");
@@ -89,6 +98,14 @@
 
   .slider__button {
     top: 196px;
+
+    &--left {
+      left: 0;
+    }
+
+    &--right {
+      right: 0;
+    }
   }
 }
 
