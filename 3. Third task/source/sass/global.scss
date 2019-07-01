@@ -1,0 +1,29 @@
+body {
+  min-width: $mobile-width;
+  font-family: $font-sanspro;
+  font-size: $font-size-desktop;
+  line-height: $line-height-desktop;
+  font-weight: $font-regular;
+  font-style: $style-normal;
+  color: $text-color;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.title {
+  margin: 0;
+}
+
+.site-wrapper {
+  width: 300px;
+  margin: 0 auto;
+}
+
