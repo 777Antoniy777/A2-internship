@@ -52,6 +52,7 @@ body {
 
   &--main-title {
     width: calc(280 * 100% / 320);
+    margin-top: 7px;
   }
 }
 
@@ -67,6 +68,7 @@ body {
 
     &--main-title {
       width: calc(708 * 100% / 768);
+      margin-top: 11px;
     }
   }
 }
@@ -83,6 +85,7 @@ body {
     &--main-title {
       width: calc(1386 * 100% / 1440);
       max-width: 1637px;
+      margin-top: 17px;
     }
   }
 }

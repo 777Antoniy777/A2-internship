@@ -32,7 +32,7 @@ html(lang="ru")
           .museums__input-wrapper
             input(type="checkbox" name="favorites-" + index id="favorites-" + index)
             label(for="favorites-" + index)
-              span.visually-hidden Добавить в избранное
+              span.visually-hidden Add to favorites
 
     //- Declaration
     mixin filter(title, id)
@@ -49,22 +49,23 @@ html(lang="ru")
             .main-navigation__button-wrapper
 
               button.main-navigation__button(type="button")
-                span.visually-hidden Меню сайта
+                span.visually-hidden Site menu
               a.main-navigation__logo-link
-                img.main-navigation__logo(src="img/svg/logo.svg" width="53" height="37" alt="Лого Sity")
+                img.main-navigation__logo(src="img/svg/logo.svg" width="53" height="37" alt="Logo Sity")
 
             .main-navigation__user-wrapper
 
               form.main-navigation__form(name="search" action="https://echo.htmlacademy.ru" method="get")
                 .main-navigation__form-wrapper
-                  input(type="search" name="nav-search" aria-label="Поиск по сайту" maxlength="50" placeholder="Search New York")
+                  input(type="search" name="nav-search" aria-label="Site search" maxlength="50" placeholder="Search New York")
                   button.main-navigation__form-button(type="submit")
                     span.visually-hidden Искать музеи
                 .main-navigation__select-wrapper
-                  select(name="nav-select" aria-label="Выберите известный город")
+                  select(name="nav-select" aria-label="Choose the famouse city")
                     option(value="1" selected) New York
                     option(value="2") Moscow
                     option(value="3") Honkong
+                    option(value="3") Saint-Petersburg
 
               ul.main-navigation__list
                 li.main-navigation__item.main-navigation__item--mobile.main-navigation__item--question
@@ -89,35 +90,35 @@ html(lang="ru")
               li.main-navigation__item
                 a.main-navigation__link(href="#")= val
 
+    //- Хлебные крошки
+    section.main-header__breadcrumbs.breadcrumbs
+      .site-wrapper
+        h2.visually-hidden Site navigation
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Category
+          li.breadcrumbs__item
+            a.breadcrumbs__link.breadcrumbs__link--active Museums
+
     // Осн.часть
     main.main
-
-      //- Хлебные крошки
-      section.main__breadcrumbs.breadcrumbs
-        .site-wrapper
-          h2.visually-hidden Навигация сайта
-          ul.breadcrumbs__list
-            li.breadcrumbs__item
-              a.breadcrumbs__link(href="#") Category
-            li.breadcrumbs__item
-              a.breadcrumbs__link.breadcrumbs__link--active Museums
 
       .site-wrapper.site-wrapper--main-title
         h1.main__title New York City Museums
 
       //- Слайдер
       section.main__slider.slider
-        h2.visually-hidden Слайдер
+        h2.visually-hidden The slider
         ul.slider__list
           - for (var x = 0; x < 3; x++)
             li.slider__item
-              h3.visually-hidden Слайд с картинкой
+              h3.visually-hidden There is the slide with a picture
 
         .site-wrapper
           button.slider__button.slider__button--left(type="button")
-            span.visually-hidden Предыдущий слайд
+            span.visually-hidden The previous slide
           button.slider__button.slider__button--right(type="button")
-            span.visually-hidden Следующий слайд
+            span.visually-hidden The next slide
 
       //- Фильтр
       section.main__filter.filter
@@ -127,13 +128,13 @@ html(lang="ru")
           .filter__wrapper
             ul.filter__list
               li.filter__item.filter__item--subcategories
-                select(name="subcategories" aria-label="Выберите подкатегорию")
+                select(name="subcategories" aria-label="Choose subcategories")
                   option(value="" selected) Subcategories
                   option(value="1") Art Museums
                   option(value="2") History Museums
                   option(value="3") Outdoor Museums
               li.filter__item.filter__item--neighborhoods
-                select(name="neighborhoods" aria-label="Выберите соседей")
+                select(name="neighborhoods" aria-label="Choose neighborhoods")
                   option(value="" selected) Neighborhoods
                   option(value="1") Flatiron
                   option(value="2") Chelsea
@@ -141,7 +142,7 @@ html(lang="ru")
                   option(value="4") Upper East Side
                   option(value="5") Upper West Side
               li.filter__item.filter__item--duration
-                select(name="duration" aria-label="Выберите продолжительность")
+                select(name="duration" aria-label="Choose duration")
                   option(value="" selected) Duration
                   option(value="1") Up to 1 Hour
                   option(value="2") 1-6 Hours
@@ -156,12 +157,12 @@ html(lang="ru")
         //- Музеи
         section.main__museums.museums
           .site-wrapper
-            h2.visually-hidden Музеи
+            h2.visually-hidden Museums
             .museums__wrapper
               p.museums__description.museums__description--results 38 Results
 
               .museums__select-wrapper
-                select(name="sort" aria-label="Выберите сортировку")
+                select(name="sort" aria-label="Choose the sorting")
                   option(value="" selected) Sort
                   option(value="1") Less
                   option(value="2") More
@@ -190,11 +191,11 @@ html(lang="ru")
     // Попапы
     .filter-mobile
       .filter-mobile__wrapper
-        h2.visually-hidden Мобильный фильтр
+        h2.visually-hidden The filter mobile
         .filter-mobile__inner-wrapper
           span Filter
           button.filter-mobile__button.filter-mobile__button--close
-            span.visually-hidden Закрыть фильтр
+            span.visually-hidden Close the filter
 
         form.filter-mobile__form(name="filter-mobile" action="https://echo.htmlacademy.ru" method="post")
 
@@ -231,6 +232,6 @@ html(lang="ru")
         .site-wrapper
           button.map-popup__button.map-popup__button--left List
           button.map-popup__button.map-popup__button--right Filter
-      iframe.map-popup__iframe.map-popup_iframe--nojs(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6122088171858!2d30.32330489093596!3d59.93857674840233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538679898464" width="100%" height="100%" border="none" allowfullscreen="")
+      iframe.map-popup__iframe.map-popup_iframe--nojs(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6122088171858!2d30.32330489093596!3d59.93857674840233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538679898464" width="100%" border="none" allowfullscreen="")
 
     script(src='js/all.min.js')

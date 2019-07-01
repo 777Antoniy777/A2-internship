@@ -175,20 +175,20 @@
 
 @media (min-width: $width-desktop) {
   .filter {
-    max-width: 1700px;
     min-height: 87px;
     margin: 0 auto;
   }
 
   .filter .site-wrapper {
     justify-content: flex-start;
+    max-width: 1662px;
     padding-left: 9px;
     padding-top: 2px;
   }
 
   .filter__title {
     min-height: $line46;
-    margin-right: 48px;
+    padding-right: 48px;
     margin-bottom: 17px;
   }
 

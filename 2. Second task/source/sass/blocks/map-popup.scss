@@ -67,6 +67,7 @@
 }
 
 .map-popup__iframe {
+  height: calc(100vh - 52px);
   border: none;
 }
 

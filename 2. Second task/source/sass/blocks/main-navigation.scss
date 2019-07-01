@@ -501,6 +501,7 @@
     width: 140px;
     padding-left: 9px;
     padding-bottom: 4px;
+    margin-right: 11px;
   }
 
   .main-navigation__button {
@@ -514,8 +515,7 @@
   .main-navigation__form {
     @include flex;
     justify-content: flex-start;
-    width: calc(534 * 100% / 1300);
-    max-width: 540px;
+    width: calc(570 * 100% / 1300);
   }
 
   .main-navigation__form-wrapper {
@@ -523,7 +523,7 @@
   }
 
   .main-navigation__form input {
-    width: 87%;
+    width: 89%;
     padding-left: 3px;
   }
 
@@ -541,12 +541,12 @@
   }
 
   .main-navigation__form-button {
-    width: 43px;
-    padding-right: 0;
+    min-width: 44px;
+    width: 11%;
   }
 
   .main-navigation__list {
-    width: calc(770 * 100% / 1300);
+    width: calc(720 * 100% / 1300);
     padding-right: 10px;
     padding-bottom: 7px;
   }
@@ -644,12 +644,12 @@
     }
 
     &::before {
-      right: 0%;
+      right: 5px;
       transform: rotate(45deg);
     }
 
     &::after {
-      right: -3%;
+      right: 0;
       transform: rotate(-47deg);
     }
   }
@@ -657,10 +657,10 @@
   .main-navigation__form select {
     font-size: $font16;
     line-height: $line20;
-    width: 100px;
+    width: 154px;
     min-height: 54px;
     padding-bottom: 4px;
-    padding-left: 23px;
+    padding-left: 22px;
     color: $text-white;
     background-color: transparent;
     border: none;

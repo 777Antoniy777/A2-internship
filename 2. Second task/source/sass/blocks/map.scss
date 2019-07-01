@@ -9,7 +9,7 @@
     top: 87px;
     display: block;
     width: 50%;
-    height: 100vh;
+    height: calc(100vh - 87px);
     background-color: $header-bg;
     background-image: url("../img/map-tablet.jpg");
     background-size: cover;
@@ -27,6 +27,7 @@
 
 @media (min-width: $width-desktop) {
   .map {
+    height: calc(100vh - 87px);
     background-image: url("../img/map-desktop.jpg");
   }
 }
