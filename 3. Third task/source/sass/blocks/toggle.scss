@@ -1,0 +1,61 @@
+.toggle {
+  width: 261px;
+  min-height: 420px;
+  font-family: $geomanist;
+  color: $text-color;
+  border-right: 1px solid #e2e2e2;
+}
+
+.toogle__item {
+  border-left: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.toogle__link {
+  @include flex(row, center);
+  @include link(none, $text-color);
+  justify-content: space-between;
+  width: inherit;
+  min-height: 116px;
+  padding-right: 27px;
+  padding-bottom: 6px;
+  padding-left: 15px;
+  background-color: $text-white;
+
+  &[href] {
+    background-color: #f5f5f5;
+  }
+
+  // &:hover
+  &:hover {
+    background-color: rgba(grey, 0.5);
+  }
+
+  &:not([href]):hover {
+    background-color: $text-white;
+  }
+
+  // &:active
+  &:active {
+    background-color: rgba(grey, 0.3);
+  }
+
+  &:not([href]):active {
+    background-color: $text-white;
+  }
+}
+
+.toogle__title {
+  @include font(20, 21, $medium);
+  width: 130px;
+}
+
+.toogle__description {
+  @include font(11, 11, $medium);
+  width: 65px;
+  text-align: right;
+
+  span {
+    @include font(27, 27, $medium);
+  }
+}

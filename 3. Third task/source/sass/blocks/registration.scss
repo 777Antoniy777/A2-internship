@@ -1,0 +1,291 @@
+.registration {
+  position: relative;
+  top: -81px;
+  width: 260px;
+  padding-top: 20px;
+  background-color: $form-bg-color;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.registration__title {
+  @include font(32, 40, $medium);
+  padding-right: 21px;
+  padding-bottom: 20px;
+  font-family: $geomanist;
+  text-align: right;
+  color: $text-white;
+}
+
+.registration__form {
+  @include flex(column);
+  padding-top: 20px;
+  padding-bottom: 19px;
+  background-color: $header-bg-color;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.registration__wrapper {
+  width: 243px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.registration__subtitle {
+  @include font(12, 15, $semibold);
+  text-transform: uppercase;
+  color: #666666;
+}
+
+.registration__wrapper--date {
+  position: relative;
+  margin-bottom: 23px;
+}
+
+.registration__wrapper--tour {
+  margin-bottom: 23px;
+}
+
+.registration__wrapper--date .registration__subtitle {
+  position: absolute;
+  top: 6px;
+  left: 9px;
+  z-index: 1;
+}
+
+.registration__wrapper input,
+.registration__wrapper--tour .registration__wrapper:nth-child(1),
+.registration__wrapper--tickets .registration__wrapper:nth-child(1) {
+  @include flex(row, center);
+  width: inherit;
+  height: 55px;
+  border: 1px solid $placeholder-color;
+  border-radius: 3px;
+}
+
+.registration__wrapper--tour .registration__wrapper:nth-child(1),
+.registration__wrapper--tickets .registration__wrapper:nth-child(1) {
+  @include flex(column, flex-start);
+  @include font(15, 19);
+  position: relative;
+  padding-top: 4px;
+  padding-left: 8px;
+  color: $placeholder-color;
+  background-color: $text-white;
+  cursor: pointer;
+}
+
+.registration__wrapper--tour .registration__wrapper:nth-child(2) {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  width: 243px;
+  min-height: 222px;
+  padding-top: 14px;
+  background-color: $text-white;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.265087);
+}
+
+.registration__item {
+  @include font(15, 19);
+  @include flex(row, center);
+  width: 206px;
+  min-height: 31px;
+  margin-left: 10px;
+  margin-right: 27px;
+  padding-left: 13px;
+  color: $text-black;
+  border-radius: 3px;
+  cursor: pointer;
+
+  // &:hover
+  &:hover {
+    background-color: #ececec;
+  }
+}
+
+.registration__wrapper--tickets .registration__wrapper:nth-child(2) {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  width: 243px;
+  min-height: 257px;
+  padding-top: 14px;
+  padding-left: 24px;
+  padding-right: 28px;
+  background-color: $text-white;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.265087);
+}
+
+.registration__wrapper--tickets .registration__inner-wrapper {
+  @include flex(row, center);
+  width: 191px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 23px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.registration__inner-wrapper .registration__description {
+  @include font(15, 19);
+}
+
+.registration__wrapper--tickets .registration__input-wrapper {
+  @include flex(row, center);
+  justify-content: flex-end;
+  width: 92px;
+  margin-left: auto;
+}
+
+.registration__wrapper--tickets input {
+  @include font(16, 20, $semibold);
+  width: 38px;
+  height: 38px;
+  margin-right: 11px;
+  text-align: center;
+  border: 2px solid #e2e2e2;
+  border-radius: 3px;
+  appearance: textfield;
+}
+
+.registration__wrapper--tickets .registration__button {
+  position: relative;
+  width: 16px;
+  height: 23px;
+  background-color: transparent;
+  border: none;
+
+  &::before,
+  &::after {
+    @include pseudo;
+    left: 0;
+    width: 16px;
+    height: 4px;
+    background-color: #0098d7;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+
+  &--left {
+    margin-right: 11px;
+
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.registration__wrapper--tickets input::-webkit-outer-spin-button,
+.registration__wrapper--tickets input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.registration__wrapper--tour .registration__subtitle,
+.registration__wrapper--tickets .registration__subtitle {
+  padding-bottom: 4px;
+}
+
+.registration__description--total {
+  @include font(16, 20, $bold);
+  display: none;
+  padding-top: 27px;
+  padding-left: 14px;
+}
+
+.registration__button--submit {
+  @include font(33, 35, $medium);
+  width: 243px;
+  min-height: 68px;
+  margin-left: auto;
+  margin-top: 22px;
+  margin-right: auto;
+  font-family: $geomanist;
+  color: $text-white;
+  background-color: $form-bg-color;
+  border: none;
+  border-radius: 3px;
+}
+
+// decoration
+.registration__decoration {
+  position: absolute;
+  top: 28px;
+  width: 9px;
+  height: 3px;
+  background-color: $text-black;
+}
+
+.registration__wrapper--tour .registration__decoration--left,
+.registration__wrapper--tickets .registration__decoration--left {
+  right: 9px;
+  transform: rotate(-45deg);
+}
+
+.registration__wrapper--tour .registration__decoration--right,
+.registration__wrapper--tickets .registration__decoration--right {
+  right: 13px;
+  transform: rotate(45deg);
+}
+
+// classes for different status inputs and buttons
+// display: none
+.hidden {
+  display: none;
+}
+
+// btn-disabled
+#btn-disabled {
+  &::before,
+  &::after {
+    background-color: #e2e2e2;
+  }
+}
+
+// input-disabled
+#disabled {
+  border: 1px solid #e2e2e2;
+  cursor: auto;
+
+  .registration__subtitle {
+    color: $placeholder-color;
+  }
+
+  .registration__decoration {
+    background-color: $placeholder-color;
+  }
+}
+
+#focus {
+  background-color: $header-bg-color;
+
+  .registration__decoration--left {
+    transform: rotate(45deg);
+  }
+
+  .registration__decoration--right {
+    transform: rotate(-45deg);
+  }
+}
+
+#success {
+  .registration__description {
+    color: $text-black;
+  }
+}
+
+#error {
+  background: #ffefee;
+  border-color: #e0b4b4;
+
+  .registration__decoration {
+    background-color: $placeholder-color;
+  }
+}
