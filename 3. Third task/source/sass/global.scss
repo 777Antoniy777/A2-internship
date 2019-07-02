@@ -1,11 +1,13 @@
 body {
-  min-width: $mobile-width;
-  font-family: $font-sanspro;
-  font-size: $font-size-desktop;
-  line-height: $line-height-desktop;
-  font-weight: $font-regular;
-  font-style: $style-normal;
-  color: $text-color;
+  @include font($font-size-desktop, $line-height-desktop);
+  // min-width: $mobile-width;
+  min-width: 1440px;
+  font-family: $sanspro;
+  // font-size: $font-size-desktop;
+  // line-height: $line-height-desktop;
+  // font-weight: $font-regular;
+  // font-style: $style-normal;
+  color: $text-black;
 }
 
 .visually-hidden {
