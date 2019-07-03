@@ -69,7 +69,9 @@ html(lang="en")
           // Content
           section.content
             h2.content__title.title One World Observatory Admission
-            h3.content__subtitle.title Standard Admission to One World Observatory.
+            h3.content__subtitle.title 
+              span#link-title Standard 
+              | Admission to One World Observatory.
 
             .content__wrapper
               ul.content__list
@@ -98,7 +100,9 @@ html(lang="en")
           // Registration
           section.registration
             h2.visually-hidden Registration form
-            p.registration__title.title From $28
+            p.registration__title.title
+              | From $
+              span#link-price 28
 
             form.registration__form(name="registration" action="https://echo.htmlacademy.ru" method="post")
 
@@ -143,7 +147,7 @@ html(lang="en")
 
     // Popups
     // Page scroll
-    .popup-scroll
+    .popup-scroll.popup-scroll-close
       .site-wrapper
 
         h2.popup-scroll__title.title One World Observatory
@@ -154,35 +158,35 @@ html(lang="en")
           br
           span per person
 
-    // Form fail
-    .popup-fail  
-      p.popup-fail__description.title You need to choose at least one adult or senior
+    //- // Form fail
+    //- .popup-fail  
+    //-   p.popup-fail__description.title You need to choose at least one adult or senior
 
-    // Form success
-    .popup-success
-      h2.popup-success__title.title Text to Phone
-      button.popup-success__button.popup-success__button--close 
-        span.visually-hidden Close the popup
+    //- // Form success
+    //- .popup-success
+    //-   h2.popup-success__title.title Text to Phone
+    //-   button.popup-success__button.popup-success__button--close 
+    //-     span.visually-hidden Close the popup
 
-      .popup-success__image-wrapper
-        img.popup-scroll__image(src="" width="" height="" alt="One World Observator")
+    //-   .popup-success__image-wrapper
+    //-     img.popup-scroll__image(src="" width="" height="" alt="One World Observator")
 
-        .popup-success__title-wrapper
-          h3.popup-success__subtitle.title One World Observatory Admission
-          p.popup-success__description.popup-success__description--price.title from $26 per person
+    //-     .popup-success__title-wrapper
+    //-       h3.popup-success__subtitle.title One World Observatory Admission
+    //-       p.popup-success__description.popup-success__description--price.title from $26 per person
 
-      p.popup-success__description.title Text a link to your phone so we can notify you about the event
-      p.popup-success__description.title You chose:
+    //-   p.popup-success__description.title Text a link to your phone so we can notify you about the event
+    //-   p.popup-success__description.title You chose:
 
-      ul.popup-success__list
-        li.popup-success__item#adult-popup Adult: 0 person
-        li.popup-success__item#senior-popup Senior: 0 person
-        li.popup-success__item#yuth-popup Yuth: 0 person
-        li.popup-success__item#children-popup Children: 0 person
-        li.popup-success__item.popup-success__item--total Subtotal: $0
+    //-   ul.popup-success__list
+    //-     li.popup-success__item#adult-popup Adult: 0 person
+    //-     li.popup-success__item#senior-popup Senior: 0 person
+    //-     li.popup-success__item#yuth-popup Yuth: 0 person
+    //-     li.popup-success__item#children-popup Children: 0 person
+    //-     li.popup-success__item.popup-success__item--total Subtotal: $0
 
-      .popup-success__form(name="phone" action="https://echo.htmlacademy.ru" method="post")
-        input(type="phone" name="phone" placeholder="Phone Number" aria-label="Add your phone")
-        button.popup-success__button(type="submit") Book Now
+    //-   .popup-success__form(name="phone" action="https://echo.htmlacademy.ru" method="post")
+    //-     input(type="phone" name="phone" placeholder="Phone Number" aria-label="Add your phone")
+    //-     button.popup-success__button(type="submit") Book Now
 
-    script(src='js/all.min.js')
+    script(src='js/all.js')
