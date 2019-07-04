@@ -20,14 +20,14 @@
 }
 
 .popup-scroll__description {
-  @include flex(column, flex-end);
-  @include font(32, 32, $medium);
+  @include font(32, 13, $medium);
   justify-content: center;
   width: 170px;
   margin-left: auto;
+  padding-top: 10px;
   text-align: right;
 
-  span {
+  span:nth-of-type(2) {
     @include font(11, 13, $medium);
     text-transform: uppercase;
   }

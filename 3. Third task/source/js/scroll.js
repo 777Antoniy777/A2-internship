@@ -28,7 +28,6 @@
 
       popupScroll.classList.add('popup-scroll-close');
     }
-    console.log(bodyCoord);
   });
 
   // The function for scrolling popup

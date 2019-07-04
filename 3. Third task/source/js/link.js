@@ -3,6 +3,7 @@
   var links = document.querySelectorAll('.toogle__list .toogle__link');
   var linkTitle = document.querySelector('#link-title');
   var linkPrice = document.querySelector('#link-price');
+  var linkPopupScroll = document.querySelector('#link-popup-scroll');
 
   var arrValues = [
     {
@@ -14,42 +15,20 @@
     }
   ];
 
-  var setHref = function (link, index) {
-    if (i === index) {
-      link.removeAttribute('href');
-    }
-
-    link.href = '#';
-  }
-
   var linkClickHandler = function (link, index) {
     link.addEventListener('click', function () {
 
-      for (var i = 0; i < links.length; i++) {
-        setHref(links[i], i);
-      }
-      
+      links.forEach(function (elem , i, arr) {
+        elem.href = '#';
+        elem.style.cursor = 'pointer';
+      });
 
-      // for (var i = 0; i < links.length; i++) {
-      //   if (i === index) {
-      //     link.removeAttribute('href');
-      //   }
-
-      //   link.href = '#';
-      // }
-
-      // links.forEach(function (elem , i, arr) {
-      //   if (i === index) {
-      //     link.removeAttribute('href');
-      //   }
-
-      //   link.href = '#';
-      // });
-  
-      // link.href = '#';
-      // link.removeAttribute('href');
+      link.removeAttribute('href');
+      link.style.cursor = 'auto';
+        
       linkTitle.textContent = arrValues[index].title;
       linkPrice.textContent = arrValues[index].price;
+      linkPopupScroll.textContent = arrValues[index].price;
     });
   };
 
