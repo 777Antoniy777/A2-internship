@@ -34,6 +34,7 @@
     "images": "gulp images",
     "webp": "gulp webp",
     "html": "gulp html",
+    "js": "gulp js",
     "copy": "gulp copy",
     "clean": "gulp clean"
   },

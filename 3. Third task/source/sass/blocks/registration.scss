@@ -59,9 +59,25 @@
 .registration__wrapper--tickets .registration__wrapper:nth-child(1) {
   @include flex(row, center);
   width: inherit;
-  height: 55px;
+  padding-right: 27px;
+  padding-bottom: 10px;
   border: 1px solid $placeholder-color;
   border-radius: 3px;
+}
+
+.registration__wrapper input,
+.registration__wrapper--tour .registration__wrapper:nth-child(1) {
+  height: 55px;
+}
+
+.registration__wrapper--tickets .registration__wrapper:nth-child(1) {
+  min-height: 55px;
+}
+
+.registration__wrapper--date input {
+  padding-left: 7px;
+  padding-top: 13px;
+  padding-bottom: 0;
 }
 
 .registration__wrapper--tour .registration__wrapper:nth-child(1),
@@ -148,6 +164,7 @@
   width: 38px;
   height: 38px;
   margin-right: 11px;
+  padding: 0;
   text-align: center;
   border: 2px solid #e2e2e2;
   border-radius: 3px;
@@ -196,7 +213,7 @@
 .registration__description--total {
   @include font(16, 20, $bold);
   display: none;
-  padding-top: 27px;
+  padding-top: 22px;
   padding-left: 14px;
 }
 
@@ -242,50 +259,55 @@
 }
 
 // btn-disabled
-#btn-disabled {
+.btn-disabled {
+  cursor: auto !important;
+
   &::before,
   &::after {
-    background-color: #e2e2e2;
+    background-color: #e2e2e2 !important;
   }
 }
 
 // input-disabled
-#disabled {
-  border: 1px solid #e2e2e2;
-  cursor: auto;
+.disabled-wrapper {
+  border: 1px solid #e2e2e2 !important;
+  cursor: auto !important;
 
   .registration__subtitle {
-    color: $placeholder-color;
+    color: $placeholder-color !important;
   }
 
   .registration__decoration {
-    background-color: $placeholder-color;
+    background-color: $placeholder-color !important;
   }
 }
 
-#focus {
-  background-color: $header-bg-color;
+// input-focus
+.focus-wrapper {
+  background-color: $header-bg-color !important;
 
   .registration__decoration--left {
-    transform: rotate(45deg);
+    transform: rotate(45deg) !important;
   }
 
   .registration__decoration--right {
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) !important;
   }
 }
 
-#success {
+// input-success
+.success-wrapper {
   .registration__description {
-    color: $text-black;
+    color: $text-black !important;
   }
 }
 
-#error {
-  background: #ffefee;
-  border-color: #e0b4b4;
+// input-error
+.error-wrapper {
+  background: #ffefee !important;
+  border-color: #e0b4b4 !important;
 
   .registration__decoration {
-    background-color: $placeholder-color;
+    background-color: $placeholder-color !important;
   }
 }

@@ -1,0 +1,18 @@
+.popup-fail {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  display: none;
+  width: 100%;
+  min-height: 50px;
+  background-color: $fail-bg-color;
+}
+
+.popup-fail__description {
+  @include flex(row, center);
+  @include font(23, 24, $medium);
+  justify-content: center;
+  min-height: inherit;
+  font-family: $geomanist;
+  color: $text-white;
+}

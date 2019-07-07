@@ -11,10 +11,16 @@ html(lang="en")
     link(href="/fonts/SourceSansPro-SemiBold.woff2" as="font" rel="preload" crossorigin="anonymous")
     link(href="/fonts/Actor-Regular.woff2" as="font" rel="preload" crossorigin="anonymous")
     link(href="/fonts/Geomanist-Medium.woff2" as="font" rel="preload" crossorigin="anonymous")
+    link(rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
+    link(rel="stylesheet" href="/resources/demos/style.css")
+    script(src="https://code.jquery.com/jquery-1.12.4.js")
+    script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+
+    //- link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css")
+    //- script(src="https://cdn.jsdelivr.net/npm/flatpickr")
     script
       // Picture element HTML5 shiv
       document.createElement("picture")
-    script(src="js/picturefill.min.js" async)
 
   body.main-page
 
@@ -25,7 +31,7 @@ html(lang="en")
           p.registration__description.title= description
 
           .registration__input-wrapper
-            button#btn-disabled.registration__button.registration__button--left(type="button" disabled)
+            button.btn-disabled.registration__button.registration__button--left(type="button")
             input(type="number" name= name id= name value="0" minlength="0" maxlength="10" step="1" aria-label="Add count")
             button.registration__button.registration__button--right(type="button")
         
@@ -108,7 +114,7 @@ html(lang="en")
 
               .registration__wrapper.registration__wrapper--date
                 label.registration__subtitle Date
-                input(type="text" name="data" aria-label="Add date")
+                input(type="text" name="data" id="datepicker" aria-label="Add date")
 
               .registration__wrapper.registration__wrapper--tour
 
@@ -141,7 +147,9 @@ html(lang="en")
                   +ticket-wrapper("Yuth $28", "yuth")
                   +ticket-wrapper("Child Free", "child")
 
-              p.registration__description.registration__description--total.title Subtotal: $42
+              p.registration__description.registration__description--total.title 
+                | Subtotal: $
+                span#total-price 42
 
               button.registration__button.registration__button--submit(type="submit") Book Now
 
@@ -159,35 +167,54 @@ html(lang="en")
           br
           span per person
 
-    //- // Form fail
-    //- .popup-fail  
-    //-   p.popup-fail__description.title You need to choose at least one adult or senior
+    // Form fail
+    .popup-fail  
+      p.popup-fail__description.title You need to choose at least one adult or senior
 
-    //- // Form success
-    //- .popup-success
-    //-   h2.popup-success__title.title Text to Phone
-    //-   button.popup-success__button.popup-success__button--close 
-    //-     span.visually-hidden Close the popup
+    // Form success
+    .popup-success
 
-    //-   .popup-success__image-wrapper
-    //-     img.popup-scroll__image(src="" width="" height="" alt="One World Observator")
+      .popup-success__wrapper
+        h2.popup-success__title.title Text to Phone
+        button.popup-success__button.popup-success__button--close 
+          span.visually-hidden Close the popup
 
-    //-     .popup-success__title-wrapper
-    //-       h3.popup-success__subtitle.title One World Observatory Admission
-    //-       p.popup-success__description.popup-success__description--price.title from $26 per person
+      .popup-success__image-wrapper
+        img.popup-success__image(src="img/popup-image.jpg" width="109" height="79" alt="One World Observator")
 
-    //-   p.popup-success__description.title Text a link to your phone so we can notify you about the event
-    //-   p.popup-success__description.title You chose:
+        .popup-success__title-wrapper
+          h3.popup-success__subtitle.title One World Observatory Admission
+          p.popup-success__description.popup-success__description--price.title 
+            | from $
+            span 28
+            |  per person
 
-    //-   ul.popup-success__list
-    //-     li.popup-success__item#adult-popup Adult: 0 person
-    //-     li.popup-success__item#senior-popup Senior: 0 person
-    //-     li.popup-success__item#yuth-popup Yuth: 0 person
-    //-     li.popup-success__item#children-popup Children: 0 person
-    //-     li.popup-success__item.popup-success__item--total Subtotal: $0
+      p.popup-success__description.title Text a link to your phone so we can notify you about the event
+      p.popup-success__description.title You chose:
 
-    //-   .popup-success__form(name="phone" action="https://echo.htmlacademy.ru" method="post")
-    //-     input(type="phone" name="phone" placeholder="Phone Number" aria-label="Add your phone")
-    //-     button.popup-success__button(type="submit") Book Now
+      ul.popup-success__list
+        li.popup-success__item#adult-popup 
+          | Adult: 
+          span 0 
+          |  person
+        li.popup-success__item#senior-popup
+          | Senior: 
+          span 0 
+          |  person
+        li.popup-success__item#yuth-popup
+          | Yuth: 
+          span 0 
+          |  person
+        li.popup-success__item#children-popup
+          | Children:
+          span 0 
+          |  person
+        li.popup-success__item.popup-success__item--total 
+          | Subtotal: $
+          span#popup-total-price 0
+
+      .popup-success__form(name="phone" action="https://echo.htmlacademy.ru" method="post")
+        input(type="phone" name="phone" placeholder="Phone Number" aria-label="Add your phone")
+        button.popup-success__button(type="submit") Book Now
 
     script(src='js/all.js')
