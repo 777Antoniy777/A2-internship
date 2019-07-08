@@ -1,8 +1,9 @@
 .popup-success {
-  @include flex(column);
   position: fixed;
   top: 50%;
   left: 50%;
+  display: none;
+  flex-direction: column;
   width: 547px;
   min-height: 517px;
   margin-left: auto;
@@ -53,6 +54,18 @@
     top: 11px;
     left: 1px;
     transform: rotate(-45deg);
+  }
+
+  // &:hover
+  &:hover::before,
+  &:hover::after {
+    background-color: $text-black;
+  }
+
+  // &:active
+  &:active::before,
+  &:active::after {
+    background-color: rgba($text-black, 0.7);
   }
 }
 
@@ -141,4 +154,14 @@
   background-color: $form-bg-color;
   border: none;
   border-radius: 3px;
+
+  // &:hover
+  &:hover {
+    background-color: #0a5c7d;
+  }
+
+  // &:active
+  &:active {
+    background-color: #51bae4;
+  }
 }

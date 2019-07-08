@@ -30,11 +30,12 @@
 
   // popups
   var popupFail = document.querySelector('.popup-fail');
-  var popupTotalPrice = document.querySelector('#popup-total-price');
-  var adultPopupItem = document.querySelector('#adult-popup');
-  var seniorPopupItem = document.querySelector('#senior-popup');
-  var yuthPopupItem = document.querySelector('#yuth-popup');
-  var childPopupItem = document.querySelector('#children-popup');
+  var popupSuccess = document.querySelector('.popup-success');
+  var popupTotalPrice = popupSuccess.querySelector('#popup-total-price');
+  var adultPopupItem = popupSuccess.querySelector('#adult-popup');
+  var seniorPopupItem = popupSuccess.querySelector('#senior-popup');
+  var yuthPopupItem = popupSuccess.querySelector('#yuth-popup');
+  var childPopupItem = popupSuccess.querySelector('#children-popup');
   var adultPopup = adultPopupItem.querySelector('#adult-popup span');
   var seniorPopup = seniorPopupItem.querySelector('#senior-popup span');
   var yuthPopup = yuthPopupItem.querySelector('#yuth-popup span');
@@ -63,6 +64,7 @@
     var totalYuthPrice = yuthPrice.value * prices[2];
     var totalChildPrice = childPrice.value * prices[3];
 
+    // for popup
     if (adultPrice.value > 0) {
       adultPopup.textContent = adultPrice.value;
       adultPopupItem.style.display = 'block';
@@ -115,6 +117,7 @@
       return emptyArr;
     };
 
+    // create new tickets arr with persons
     var createArr = function () {
       var adults = createPerson(0, adultCount, adultArr);
       var seniors = createPerson(1, seniorCount, seniorArr);
@@ -138,7 +141,7 @@
       }
     }
 
-    var changleIndex = function (newIndex) {
+    var changeIndex = function (newIndex) {
 
       if (newIndex >= 1) {
         inputIndex = newIndex;
@@ -153,14 +156,14 @@
     };
   
     buttonLeft.addEventListener('click', function () {
-      changleIndex(inputIndex - 1);
+      changeIndex(inputIndex - 1);
 
       // create main arr all persons
       createArr();
     });
   
     buttonRight.addEventListener('click', function () {
-      changleIndex(inputIndex + 1);
+      changeIndex(inputIndex + 1);
 
       // create main arr all persons
       createArr();
@@ -170,9 +173,9 @@
       var inputIndex = parseInt(input.value);
 
       if (inputIndex <= 0) {
-        changleIndex(inputIndex);
+        changeIndex(inputIndex);
       } else if (inputIndex >= 1) {
-        changleIndex(inputIndex);
+        changeIndex(inputIndex);
       }
     });
 
@@ -185,6 +188,58 @@
   for (var i = 0; i < ticketsInputWrappers.length; i++) {
     buttonClickHandler(ticketsInputWrappers[i], ticketsInputs[i], persons[i], i);
   }
+
+  // function of the choosing item of tour select
+  var tourItemClickHandler = function (item) {
+    item.addEventListener('click', function () {
+      tourDescription.textContent = item.textContent;
+
+      innerPresentWrapperTour.classList.remove('focus-wrapper');
+      innerPresentWrapperTour.classList.add('success-wrapper');
+    });
+  };
+
+  tourItems.forEach(function(elem, i, arr) {
+    tourItemClickHandler(tourItems[i]);
+  })
+
+  // function of form button
+  buttonSubmit.addEventListener('click', function () {
+    for (var i = 0; i < tourItems.length; i++) {
+      if (tourItems[i].textContent === tourDescription.textContent) {
+        innerPresentWrapperTour.classList.remove('error-wrapper');
+        break;
+      } else {
+        innerPresentWrapperTour.classList.add('error-wrapper');
+      }
+    }
+    
+    var totalErrorValue = 0;
+    ticketsInputs.forEach(function (elem, i, arr) {
+      totalErrorValue += parseInt(elem.value);
+
+      if (totalErrorValue <= 0) {
+        innerPresentWrapperTickets.classList.add('error-wrapper');
+      } else if (totalErrorValue > 10) {
+        popupFail.style.display = 'block';
+      } else if (adultPrice.value <= 0 && seniorPrice.value <= 0) {
+        popupFail.style.display = 'block';
+      } else {
+        innerPresentWrapperTickets.classList.remove('error-wrapper');
+        popupFail.style.display = 'none';
+      }
+    });
+
+    var isContainErrorTour = innerPresentWrapperTour.classList.contains('error-wrapper');
+    var isContainErrorTickets = innerPresentWrapperTickets.classList.contains('error-wrapper');
+
+    // condition for showing popup
+    if (!isContainErrorTour && !isContainErrorTickets) {
+      popupSuccess.style.display = 'flex';
+    } else {
+      popupSuccess.style.display = 'none';
+    }
+  });
 
   // function of showing select
   var wrapperClickHandler = function (presentWrapper, innerWrapper) {
@@ -213,49 +268,6 @@
       innerWrapper.style.display = 'none';
     });
   };
-
-  // function of the choosing item of tour select
-  var tourItemClickHandler = function (item) {
-    item.addEventListener('click', function () {
-      tourDescription.textContent = item.textContent;
-
-      innerPresentWrapperTour.classList.remove('focus-wrapper');
-      innerPresentWrapperTour.classList.add('success-wrapper');
-    });
-  };
-
-  tourItems.forEach(function(elem, i, arr) {
-    tourItemClickHandler(tourItems[i]);
-  })
-
-  // function of form button
-  buttonSubmit.addEventListener('click', function (evt) {
-
-    for (var i = 0; i < tourItems.length; i++) {
-      if (tourItems[i].textContent === tourDescription.textContent) {
-        innerPresentWrapperTour.classList.remove('error-wrapper');
-        break;
-      } else {
-        innerPresentWrapperTour.classList.add('error-wrapper');
-      }
-    }
-    
-    var totalErrorValue = 0;
-    ticketsInputs.forEach(function (elem, i, arr) {
-      totalErrorValue += parseInt(elem.value);
-
-      if (totalErrorValue <= 0) {
-        innerPresentWrapperTickets.classList.add('error-wrapper');
-      } else if (totalErrorValue > 10) {
-        popupFail.style.display = 'block';
-      } else if (adultPrice.value <= 0 && seniorPrice.value <= 0) {
-        popupFail.style.display = 'block';
-      } else {
-        innerPresentWrapperTickets.classList.remove('error-wrapper');
-        popupFail.style.display = 'none';
-      }
-    });
-  });
 
   wrapperClickHandler(innerPresentWrapperTour, innerWrapperTour);
   bodyClickHandler(innerWrapperTour, innerPresentWrapperTour, 'registration__wrapper--tour');

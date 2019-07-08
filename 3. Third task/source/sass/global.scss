@@ -1,6 +1,5 @@
 body {
   @include font($font-size-desktop, $line-height-desktop);
-  // min-width: $mobile-width;
   min-width: 1440px;
   font-family: $sanspro;
   color: $text-black;

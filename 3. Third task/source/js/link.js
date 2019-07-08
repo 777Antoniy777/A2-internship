@@ -4,6 +4,7 @@
   var linkTitle = document.querySelector('#link-title');
   var linkPrice = document.querySelector('#link-price');
   var linkPopupScroll = document.querySelector('#link-popup-scroll');
+  var popupStartPrice = document.querySelector('#popup-start-price');
 
   var arrValues = [
     {
@@ -29,6 +30,7 @@
       linkTitle.textContent = arrValues[index].title;
       linkPrice.textContent = arrValues[index].price;
       linkPopupScroll.textContent = arrValues[index].price;
+      popupStartPrice.textContent = arrValues[index].price;
     });
   };
 

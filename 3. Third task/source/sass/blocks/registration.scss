@@ -229,6 +229,16 @@
   background-color: $form-bg-color;
   border: none;
   border-radius: 3px;
+
+  // &:hover
+  &:hover {
+    background-color: #0a5c7d;
+  }
+
+  // &:active
+  &:active {
+    background-color: #51bae4;
+  }
 }
 
 // decoration

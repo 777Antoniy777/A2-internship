@@ -40,10 +40,4 @@
   
     return days[date.getDay()];
   }
-
-  // dateInput.addEventListener('input', function (evt) {
-  //   getWeekDay();
-  //   console.log(evt.target.value);
-  // });
-  // console.log(getWeekDay());
 })();
