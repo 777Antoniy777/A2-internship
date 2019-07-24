@@ -1,0 +1,24 @@
+body {
+  @include font(16, 18);
+  min-width: 320px;
+  font-family: $montserrat;
+  color: $text-black;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.title {
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
