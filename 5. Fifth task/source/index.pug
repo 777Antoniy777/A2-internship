@@ -27,29 +27,14 @@ html(lang="en")
           
           ul.blog__list.row
 
-            li.blog__item.col-4
-              a.blog__link(href="#")
-                arcticle.blog__content
-                  img.blog__avatar(src="img/user-1.png" alt="Иконка юзера")
-            li.blog__item.col-4
-              a.blog__link(href="#")
-                arcticle.blog__content
-                  img.blog__avatar(src="img/user-1.png" alt="Иконка юзера")
-            li.blog__item.col-4
-              a.blog__link(href="#")
-                arcticle.blog__content
-                  img.blog__avatar(src="img/user-1.png" alt="Иконка юзера")
-            li.blog__item.col-4
-              a.blog__link(href="#")
-                arcticle.blog__content
-                  img.blog__avatar(src="img/user-1.png" alt="Иконка юзера")
-            li.blog__item.col-4
-              a.blog__link(href="#")
-                arcticle.blog__content
-                  img.blog__avatar(src="img/user-1.png" alt="Иконка юзера")
-            li.blog__item.col-4
-              a.blog__link(href="#")
-                arcticle.blog__content
-                  img.blog__avatar(src="img/user-1.png" alt="Иконка юзера")
+    template#user 
+      li.blog__item.col-4 
+        a.blog__link(href="#") 
+          arcticle.blog__content 
+            img.blog__avatar(src="img/user-1.png" alt="Иконка юзера") 
+            p.blog__user-name Naruto Uzumaki
 
-    script(src='js/all.js')
+    script(src="js/backend.js")
+    script(src="js/users.js")
+    script(src="js/main.js")
+    //- script(src='js/all.js')

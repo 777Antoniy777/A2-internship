@@ -9,8 +9,8 @@ var css_min = require("gulp-csso");
 var rename = require("gulp-rename");
 var image = require("gulp-image");
 var webp = require("gulp-webp");
-var js_concat = require('gulp-concat');
-var js_uglify = require("gulp-uglify");
+// var js_concat = require('gulp-concat');
+// var js_uglify = require("gulp-uglify");
 // var svgsprite = require("gulp-svgstore");
 var html_min = require("gulp-posthtml");
 // var html_include = require("posthtml-include");
@@ -35,11 +35,11 @@ gulp.task("css", function () {
 
 gulp.task("js", function () {
   return gulp.src("source/js/*.js")
-    .pipe(js_concat("all.js"))
+    // .pipe(js_concat("all.js"))
     .pipe(gulp.dest("build/js"))
-    .pipe(js_uglify())
-    .pipe(rename("all.min.js"))
-    .pipe(gulp.dest("build/js"))
+    // .pipe(js_uglify())
+    // .pipe(rename("all.min.js"))
+    // .pipe(gulp.dest("build/js"))
     .pipe(server.stream());
 });
 
@@ -97,7 +97,8 @@ gulp.task("reload", function(done) {
 
 gulp.task("copy", function() {
   return gulp.src([
-    "source/fonts/**/*.{woff,woff2}"
+    "source/fonts/**/*.{woff,woff2}",
+    "source/js/*.js"
   ], {
     base: "source"
   })
